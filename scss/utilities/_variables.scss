@@ -1,0 +1,85 @@
+// ==========================================================================
+// Variables
+//==========================================================================
+
+// Fonts
+$icon-font--google      : "https://fonts.googleapis.com/icon?family=Material+Icons";
+$font-url--google       :"https://fonts.googleapis.com/css2?family=Federo&family=Jura&family=Megrim&display=swap";
+$font-family--primary   : 'Megrim', 'cursive', Helvetica, Arial, 'sans-serif';
+$font-family--secondary : 'Federo', Helvetica, Arial, 'sans-serif';
+
+$font-family--body       : 'Jura', Helvetica, Arial, 'sans-serif';
+// Font Weights
+
+$font-weight--regular    : 400;
+$font-weight--medium     : 500;
+$font-weight--bold       : 700;  
+
+//Text
+
+$base__font-size        : 16px;
+$base__line             : 24px;
+$letter-spacing         : 1px;
+
+//Asset Paths
+$path-img               : '../images';
+$path-svg               : '../icons';
+
+
+
+//Border Radius
+$br-rad                  : 0.25em;
+$br-round                : 50%;
+
+
+//Breakpoints
+$brkpoint-xs            :375px;
+$brkpoint-sm            :425px;
+$brkpoint-md            :768px;
+$brkpoint-lg            :1024px;
+$brkpoint-xlg           :1200px;
+$brkpoint-xxlg          :1440px;
+
+
+//Breakpoint Map
+
+$breakpoints: (
+xs   :  $brkpoint-xs,
+sm   :  $brkpoint-sm,
+med  :  $brkpoint-md,
+lg   :  $brkpoint-lg,
+x-lg :  $brkpoint-xlg,
+xx-lg:  $brkpoint-xxlg,
+
+);
+
+
+
+
+
+//DEBUG COLOURS
+//COLORS
+$black                  : #0b0b0b;
+$lipstick               : #db006d;
+$japanese-laurel        : #009700;
+$jaffa                  : #f68741;
+$luckyPoint             : #13185d;
+
+//DASHBOARD COLOUR PALETTE
+//COLORS
+$jaffa                  : #f68741;
+$salomie                : #fcdf87;
+$keppel                 : #43b5a0;
+$hollywoodCerise        : #ef0195;
+$dodgerBlue             : #1b96f3;
+$veniceBlue             : #064b8b;
+$daisyBush              : #491d88;
+$luckyPoint             : #13185d;
+$haiti                  : #10133a;
+
+//END COLORS
+
+//Colour Usage
+$color-primary          : $keppel ;      //aqua blue
+$color-secondary        : $daisyBush;   //purple
+$color-accent           : $salomie ;    //goldish

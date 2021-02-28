@@ -1,0 +1,14 @@
+// ==========================================================================
+// Functions
+// ==========================================================================
+
+//Function to import google font
+@if variable-exists(font-url--google ) {
+	@import url($font-url--google);
+}
+
+
+//Function to get em values from pixel arguments
+@function em($target, $context: $base__font-size) {
+	@return ($target / $context) * 1em;
+}
