@@ -67,6 +67,8 @@ $luckyPoint             : #13185d;
 
 //DASHBOARD COLOUR PALETTE
 //COLORS
+$mystic                 : #e5edf0; //blue white
+$whisper                : #f7f2f8;//pink white
 $jaffa                  : #f68741;
 $salomie                : #fcdf87;
 $keppel                 : #43b5a0;
@@ -83,3 +85,9 @@ $haiti                  : #10133a;
 $color-primary          : $keppel ;      //aqua blue
 $color-secondary        : $daisyBush;   //purple
 $color-accent           : $salomie ;    //goldish
+
+//THEME RGBA COLOURS
+//Linear Gradient Colours for body
+$haitiBody                 :rgba(16, 19, 58, .3);
+$daisyBushBody             :rgba(73, 29, 136, .3);
+$hollywoodCeriseBody       :rgba(239, 1, 149, .3);
