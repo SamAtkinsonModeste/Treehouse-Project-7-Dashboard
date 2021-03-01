@@ -645,7 +645,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: solid 3px #0b0b0b;
+}
+
+.wrapper--user-bell {
+  padding: 0 0.1875em;
+  display: flex;
+  align-items: center;
+  border: solid 1px #0b0b0b;
 }
 
 /*WRAPPERS*/

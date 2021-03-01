@@ -36,8 +36,23 @@
 	background: $dodgerBlue;
 	background: linear-gradient(45deg, $haiti, $daisyBush, $hollywoodCerise);
 	@include flexy($just: space-between, $align: center);
-	@include debug($pix:3px, $color:$black); //BUG: Debugger Mixin
+	// @include debug($pix:3px, $color:$black); //BUG: Debugger Mixin
 }
+
+
+
+
+
+
+//WRAPPERS
+    .wrapper {
+        @include m(user-bell) {
+        padding: 0 em(3px);
+        @include flexy($align: center);
+        @include debug($color: $black); //BUG: Debugger Mixin
+
+        }
+    }
 
  //BELL SVG & USER WRAPPER
  // .flex-wrapper{
