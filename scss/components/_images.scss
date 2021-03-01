@@ -1,0 +1,28 @@
+.avatar {
+    @extend %img;
+    border-radius:$br-round;
+      
+    @include m(user) {
+        			margin: 0 0;
+        			margin-right: em(5px);
+        			width: 75px;
+        			@include br-default($colu: transparent);
+        	        @include box-shdow($hr:1px, $vrt:1px, $blur:5px, $col: $haiti);
+        			// @include debug($luckyPoint); //BUG: Debugger Mixin
+        
+        			@include mq("med") {
+        				width: 80px;
+        				margin: 0 em(5px);
+        			}
+        
+        			@include mq("lg") {
+        				width: 100px;
+                        
+        			}
+        
+                    
+        	   }  
+        
+	
+
+}

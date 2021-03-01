@@ -20,6 +20,15 @@
   margin-bottom: 0.625em;
 }
 
+.avatar {
+  display: block;
+  padding: 0.3125em;
+  margin: 0 auto;
+  margin-bottom: 0.3125em;
+  max-width: 100%;
+  height: auto;
+}
+
 .svgImg {
   display: block;
   padding: 0.3125em;
@@ -665,14 +674,12 @@ body {
   padding: 0 0.1875em;
   display: flex;
   align-items: center;
-  border: solid 1px #0b0b0b;
 }
 
 .container--member-user {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  border: solid #db006d;
 }
 @media (min-width: 768px) {
   .container--member-user {
@@ -684,10 +691,70 @@ body {
     padding-right: 3.125em;
   }
 }
+.container--bell {
+  position: relative;
+  width: 3.125em;
+  height: 3.125em;
+  right: 0.4375em;
+  align-self: center;
+  border-right: solid 2px #fcdf87;
+  padding: 0.25em;
+}
+@media (min-width: 768px) {
+  .container--bell {
+    width: 3.4375em;
+    align-self: flex-start;
+    border-right: none;
+  }
+  .container--bell::after {
+    width: 2px;
+    height: 75px;
+    content: "";
+    display: block;
+    position: absolute;
+    background: #fcdf87;
+    left: 3.375em;
+    top: 0em;
+    box-shadow: 0 1px 2px 1px #10133a;
+  }
+}
+@media (min-width: 768px) and (min-width: 1024px) {
+  .container--bell::after {
+    left: 80px;
+    top: 8px;
+  }
+}
+@media (min-width: 1024px) {
+  .container--bell {
+    width: 4.6875em;
+  }
+}
 
 /*WRAPPERS*/
 /*CONTAINERS*/
 /*chart widgets*/
+.avatar {
+  border-radius: 50%;
+}
+.avatar--user {
+  margin: 0 0;
+  margin-right: 0.3125em;
+  width: 75px;
+  border: 1px solid transparent;
+  box-shadow: 1px 1px 5px #10133a;
+}
+@media (min-width: 768px) {
+  .avatar--user {
+    width: 80px;
+    margin: 0 0.3125em;
+  }
+}
+@media (min-width: 1024px) {
+  .avatar--user {
+    width: 100px;
+  }
+}
+
 .svgImg {
   width: 2.5em;
 }

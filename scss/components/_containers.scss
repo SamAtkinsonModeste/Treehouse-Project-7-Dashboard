@@ -49,7 +49,7 @@
         @include m(user-bell) {
         padding: 0 em(3px);
         @include flexy($align: center);
-        @include debug($color: $black); //BUG: Debugger Mixin
+        // @include debug($color: $black); //BUG: Debugger Mixin
 
         }
     }
@@ -61,7 +61,7 @@
 
           @include m(member-user) {
             @include flexy($just: flex-end, $align: center);
-            @include debug($lipstick); //BUG: Debugger Mixin
+            // @include debug($lipstick); //BUG: Debugger Mixin
         
               @include mq("med") {
                   padding-right: em(40px);
@@ -73,6 +73,48 @@
               
             }
           }
+
+
+
+          @include m(bell) {
+            position: relative;
+            width: em(50px);
+            height: em(50px);
+            right:em(7px);
+            align-self: center;
+            border-right: solid 2px $salomie;
+            padding: em(4px);
+            
+            // @include debug($jaffa); //BUG: Debugger Mixin
+        
+            @include mq('med') {
+                width: em(55px);
+                align-self:flex-start;
+                border-right: none;
+                //HACK: Need to add pseudo element - DONE 
+                @include el-pseudo(after, 2px, 75px) {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    background: $salomie;
+                    left: em(54px);
+                    top: em(0px);
+                    @include box-shdow($hr:0, $vrt:1px, $blur:2px, $sphd:1px, $col:$haiti);
+                      
+                    @include mq('lg') {
+                        left:80px;
+                        top: 8px;
+                        
+                    }
+                    
+                }
+            }
+        
+            @include mq('lg') {
+                width: em(75px);
+                
+            }
+        }
 
     }
 
