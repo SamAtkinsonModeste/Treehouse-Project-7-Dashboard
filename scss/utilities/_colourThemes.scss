@@ -1,11 +1,12 @@
 :root {
-    --color-body-background: #{$mystic};
-    --color-text: #{$haiti};
-    --color-lin1-body: #{$haitiBody };
-    --color-lin2-body: #{$daisyBushBody};
-    --color-lin3-body: #{$hollywoodCeriseBody};
-    --color-border: #{$daisyBush};
-    --color-text-shdow: #{$luckyPoint};
+    --color-body-background:  #{$mystic};
+    --color-body-text:        #{$black};
+    --color-lin1-body:        #{$haitiBody };
+    --color-lin2-body:        #{$daisyBushBody};
+    --color-lin3-body:        #{$hollywoodCeriseBody};
+    --color-border:           #{$daisyBush};
+    --color-text-shdow:       #{$luckyPoint};
+    
     
 }
 
@@ -14,6 +15,7 @@
     --color-lin1-body: #{$black};
     --color-lin2-body: #{$haiti};
     --color-lin3-body: #{$black};
+    --color-body-text: #{$mystic};
 
 }
 
