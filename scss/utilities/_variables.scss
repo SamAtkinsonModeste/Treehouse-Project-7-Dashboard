@@ -71,6 +71,7 @@ $mystic                 : #e5edf0; //blue white
 $whisper                : #f7f2f8;//pink white
 $jaffa                  : #f68741;
 $salomie                : #fcdf87;
+$goldenrod              : #FAD871;
 $keppel                 : #43b5a0;
 $hollywoodCerise        : #ef0195;
 $dodgerBlue             : #1b96f3;
@@ -78,6 +79,7 @@ $veniceBlue             : #064b8b;
 $daisyBush              : #491d88;
 $luckyPoint             : #13185d;
 $haiti                  : #10133a;
+$grey                   : #272829;
 
 //END COLORS
 
@@ -91,3 +93,25 @@ $color-accent           : $salomie ;    //goldish
 $haitiBody                 :rgba(16, 19, 58, .3);
 $daisyBushBody             :rgba(73, 29, 136, .3);
 $hollywoodCeriseBody       :rgba(239, 1, 149, .3);
+
+
+
+$color-shades: (
+      grey:(
+
+       xx-light:    ligthen($grey, 43%),
+        x-light:    ligthen($grey, 35%),
+        light  :    ligthen($grey, 12%),
+        base   :    $grey,
+        dark   :    darken($grey, 8%),
+        x-dark :    darken($grey, 16%),
+
+    ),
+
+    black:(
+
+        light:   lighten($black, 10%),
+        base :   $black,  
+        dark :   darken($black, 10%),
+    ),
+);
