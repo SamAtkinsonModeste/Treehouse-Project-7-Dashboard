@@ -668,6 +668,23 @@ body {
   border: solid 1px #0b0b0b;
 }
 
+.container--member-user {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border: solid #db006d;
+}
+@media (min-width: 768px) {
+  .container--member-user {
+    padding-right: 2.5em;
+  }
+}
+@media (min-width: 1024px) {
+  .container--member-user {
+    padding-right: 3.125em;
+  }
+}
+
 /*WRAPPERS*/
 /*CONTAINERS*/
 /*chart widgets*/

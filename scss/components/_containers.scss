@@ -54,6 +54,28 @@
         }
     }
 
+
+
+    //CONTAINERS
+    .container {
+
+          @include m(member-user) {
+            @include flexy($just: flex-end, $align: center);
+            @include debug($lipstick); //BUG: Debugger Mixin
+        
+              @include mq("med") {
+                  padding-right: em(40px);
+                
+              }
+        
+              @include mq("lg") {
+                padding-right: em(50px);
+              
+            }
+          }
+
+    }
+
  //BELL SVG & USER WRAPPER
  // .flex-wrapper{
 	
