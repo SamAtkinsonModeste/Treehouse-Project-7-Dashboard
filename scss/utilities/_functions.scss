@@ -12,3 +12,8 @@
 @function em($target, $context: $base__font-size) {
 	@return ($target / $context) * 1em;
 }
+
+
+@function color-shade($color-shade, $shade:"base" ){
+	@return map-get(map-get($color-shades, $color-shade), $shade);
+ }
