@@ -40,6 +40,18 @@
 }
 
 
+//NAV
+nav {
+	grid-area: nav;
+	@extend %pad-sides;
+	background: var(--color-nav-background);
+	box-shadow:inset 1px 1px  12px var(--color-nav-boxShdow);
+
+	  @include mq("med") {
+		@include flexy($dir: column);
+	  }
+	
+}
 
 
 

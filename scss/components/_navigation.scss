@@ -1,0 +1,153 @@
+nav {
+
+    @include mq("med") {
+        padding-right: em(10px);
+    }
+  // @include debug($black); //BUG: Debugger Mixin
+  
+  }
+
+
+  .nav {
+	padding: em(10px);
+	width: 99%;
+	max-width: em(375px);
+	@extend %marg-cen;
+	@include flexy();
+
+            @include m(top) {
+                justify-content: center;
+                // @include debug($haiti); //BUG: DEBUGGING MIXIN
+                
+            }
+            @include e(icons) {
+                position: relative;
+                // @include debug($golden-fizz); //BUG: DEBUGGING MIXIN
+                height: em(70px);
+                width: em(80px);
+                margin: 0 em(6px);
+
+                        @include mq("med") {
+                            margin-top: em(10px);
+                            margin-bottom: em(10px);
+                        }
+
+                a {
+                    @extend %nav-link-bg-img;
+                    height: em(58px);
+                    width: em(58px);
+                    margin-top: em(3px);
+                    margin-bottom: em(3px);
+
+                }
+
+					
+			}
+
+			  @include m(current) {
+                @include pseudo-el(before, $el-w:em(72px), $el-h:em(6px)) {
+                bottom: -9px;
+                    left: -7px; //BUG: Fixed by adding padding
+                    border-radius: em(4px) em(4px) 0 0;
+                @include grad($color1:$haiti, $color2:$hollywoodCerise);
+                    
+                }
+
+				
+
+                        @include mq("med") {
+
+                            @include pseudo-el(before, $el-w:em(4px), $el-h:em(65px)) {
+                                bottom: em(5px);
+                                left: em(2px);
+                                border-radius: 0 em(4px) em(4px) 0;
+                            @include grad($dir:-90deg, $color1:$hollywoodCerise 10%, $color2:$haiti);
+                            
+                        }
+			   }
+		}
+
+			@include m(dash) {
+				a {
+					
+					@include bg-img($img:"icon-dashboard.svg");
+				    // @include debug($black); //BUG: DEBUGGING MIXIN
+					
+              }
+			}
+
+			 @include m(members) {
+				a {
+					
+					@include bg-img($img:"icon-members.svg");
+				    // @include debug($black); //BUG: DEBUGGING MIXIN
+				  
+			 }
+
+			}
+
+			@include m(visits) {
+				a {
+					
+					@include bg-img($img:"icon-visits.svg");
+				    // @include debug($black); //BUG: DEBUGGING MIXIN
+				  
+			 }
+
+			}
+
+			@include m(set) {
+				a {
+					
+					@include bg-img($img:"icon-settings.svg");
+				    // @include debug($black); //BUG: DEBUGGING MIXIN
+				  
+			 }
+
+			}
+
+	@include mq("med"){
+		@include flexy($dir:column, $just:center, $align: center);
+	}
+	
+	  //Traffic Nav
+	  @include m(traffic-nav) {
+		@extend %nav-item-dis;
+		padding: 0;
+        justify-content: space-around;
+		align-items: center;
+	    @include debug($jaffa); //BUG: Debug Mixin
+		  
+				@include mq("med") {
+					flex-direction: row;
+					margin: 0;
+					margin-left: auto;
+				}
+
+	  }
+
+	  @include e(traffic) {
+		 @extend %nav-item-link;
+		 @include text($size:em(14px), $weight: $font-weight--bold , $color: $haiti); 
+		 @include text-shdow($col:$black);
+		 border-radius: $br-rad;
+		 border-bottom: none;
+		 @include br-default($colu:$haiti);
+		 @include debug($hollywoodCerise);//BUG: Debug Mixin
+		  
+
+				@include mq("med") {
+					font-size: em(16px);
+				}
+
+				@include mq("lg") {
+					font-size: em(18px);
+				}
+				@include mq("x-lg") {
+					font-size: em(20px);
+				}
+
+	  }
+
+   }
+ 

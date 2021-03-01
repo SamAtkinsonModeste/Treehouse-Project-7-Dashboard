@@ -6,16 +6,20 @@
     --color-lin3-body:        #{$hollywoodCeriseBody};
     --color-border:           #{$daisyBush};
     --color-text-shdow:       #{$luckyPoint};
+    --color-nav-background:   #{$keppel};
+    --color-nav-boxShdow:     #{$haiti};
     
     
 }
 
 
 .dark {
-    --color-lin1-body: #{$black};
-    --color-lin2-body: #{$haiti};
-    --color-lin3-body: #{$black};
-    --color-body-text: #{$mystic};
+    --color-lin1-body:        #{$black};
+    --color-lin2-body:        #{$haiti};
+    --color-lin3-body:        #{$black};
+    --color-body-text:        #{$mystic};
+    --color-nav-background:   #{$haiti};
+    --color-nav-boxShdow:     #{$daisyBush };
 
 }
 
