@@ -30,6 +30,14 @@
 
 
  //HEADER CONTAINER STYLING
+ .top-header {
+	grid-area: header;
+	padding: em(5px);
+	background: $dodgerBlue;
+	background: linear-gradient(45deg, $haiti, $daisyBush, $hollywoodCerise);
+	@include flexy($just: space-between, $align: center);
+	@include debug($pix:3px, $color:$black); //BUG: Debugger Mixin
+}
 
  //BELL SVG & USER WRAPPER
  // .flex-wrapper{

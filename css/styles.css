@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Federo&family=Jura&family=Megrim&display=swap");
 :root {
   --color-body-background: #e5edf0;
-  --color-text: #10133a;
+  --color-body-text: #0b0b0b;
   --color-lin1-body: rgba(16, 19, 58, 0.3);
   --color-lin2-body: rgba(73, 29, 136, 0.3);
   --color-lin3-body: rgba(239, 1, 149, 0.3);
@@ -13,6 +13,11 @@
   --color-lin1-body: #0b0b0b;
   --color-lin2-body: #10133a;
   --color-lin3-body: #0b0b0b;
+  --color-body-text: #e5edf0;
+}
+
+.headline--primary {
+  margin-bottom: 0.625em;
 }
 
 /* CSS Document */
@@ -545,6 +550,75 @@ p {
   margin-bottom: 1.25em;
 }
 
+.grid-container {
+  font-family: "Jura", Helvetica, Arial, "sans-serif";
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-body-text);
+}
+@media (min-width: 768px) {
+  .grid-container {
+    font-size: 1.125em;
+  }
+}
+
+.headline--primary {
+  font-family: "Megrim", "cursive", Helvetica, Arial, "sans-serif";
+}
+
+.headline--secondary,
+.link,
+.headline--user,
+input {
+  font-family: "Federo", Helvetica, Arial, "sans-serif";
+}
+
+.headline--primary {
+  margin: 0;
+  font-size: 1em;
+  line-height: 2.375;
+  color: #43b5a0;
+  text-shadow: 1px 1px 0 #FAD871, -1px -1px 2px black;
+}
+@media (min-width: 768px) {
+  .headline--primary {
+    font-size: 2.125em;
+    text-shadow: 1px 1px 0 #facb3c, -2px -2px 2px black;
+  }
+}
+@media (min-width: 1024px) {
+  .headline--primary {
+    font-size: 2.8125em;
+    line-height: 0.1111111111;
+  }
+}
+@media (min-width: 1200px) {
+  .headline--primary {
+    font-size: 3.125em;
+  }
+}
+
+.headline--dashboard {
+  padding-left: 0.625em;
+}
+.headline--user {
+  font-size: 0.625em;
+  line-height: 1.4;
+  color: #fcdf87;
+  letter-spacing: 0.0625em;
+  text-align: center;
+  padding-right: 0.3125em;
+  margin: 0 0.375em 0 0;
+  text-shadow: 2px 2px 1px #252525;
+}
+@media (min-width: 768px) {
+  .headline--user {
+    font-size: 0.9375em;
+    letter-spacing: 0.125em;
+    text-shadow: 3px 3px 2px #252525;
+  }
+}
+
 body {
   background: linear-gradient(225deg, var(--color-lin1-body) 0%, var(--color-lin2-body) 50%, var(--color-lin3-body) 100%);
   height: 100vh;
@@ -561,6 +635,17 @@ body {
     grid-template-columns: 75px 1fr;
     grid-template-areas: "header header" "nav main" "nav footer";
   }
+}
+
+.top-header {
+  grid-area: header;
+  padding: 0.3125em;
+  background: #1b96f3;
+  background: linear-gradient(45deg, #10133a, #491d88, #ef0195);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: solid 3px #0b0b0b;
 }
 
 /*WRAPPERS*/

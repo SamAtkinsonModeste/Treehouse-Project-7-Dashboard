@@ -1,0 +1,81 @@
+// ==========================================================================
+// Typography
+//==========================================================================
+.grid-container {
+	font-family: $font-family--body;
+	@include text($base__font-size, ($base__line/$base__font-size ), $color:var(--color-body-text));
+	
+
+	@include mq("med"){
+		@include text($size: em(18px));
+		 
+	   }
+}
+
+
+.headline--primary{
+	font-family: $font-family--primary;
+}
+.headline--secondary,
+.link,
+.headline--user,
+input {
+	font-family: $font-family--secondary;
+
+}
+
+.headline--primary {
+	margin: 0;
+	@extend %h-prim;
+	@include text(em(16px), (38px/16px), $color: $color-primary);
+	text-shadow: 1px 1px 0 $goldenrod,
+	             -1px -1px 2px color-shade(black, dark);
+	
+	// @include debug($japanese-laurel); //BUG:
+	
+	
+
+	   @include mq("med"){
+		 
+		  @include text($size:em(34px));
+          text-shadow: 1px 1px 0   darken($salomie, 15%),
+	             -2px -2px 2px darken($black, 10%);
+		  
+		  
+	    }
+
+	   @include mq("lg"){
+		@include text(em(45px), (5px/45px));
+		
+	    }
+
+	   @include mq("x-lg"){
+		  @include text(em(50px));
+	    }
+}
+
+
+.headline {
+	@include m(dashboard) {
+	padding-left: em(10px);
+}
+
+     @include m(user) {
+		@include text(em(10px), (14px/10px), $color: $salomie);
+		letter-spacing: em(1px);
+		text-align: center;
+		padding-right: em(5px);
+		margin: 0 em(6px) 0 0;
+		@include text-shdow($hr: 2px, $vrt: 2px, $blur:1px, $col: color-shade(black, light) );
+		// @include debug( $color:$luckyPoint); //BUG: Debugging Mixin
+
+                @include mq("med") {
+                    @include text(em(15px));
+                    letter-spacing: em(2px);
+                    @include text-shdow($hr: 3px, $vrt: 3px, $blur:2px, $col: color-shade(black, light) );
+                    
+                }
+
+     }
+
+    }
