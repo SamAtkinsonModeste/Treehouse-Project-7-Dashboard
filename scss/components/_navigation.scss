@@ -52,12 +52,13 @@ nav {
 
 			  @include m(current)  {
 						position: relative;
-						@include indepent-pseudo(before, $el-w:em(72px), $el-h:em(6px)) {
+						@include indepent-pseudo(before, $el-w:em(62px), $el-h:em(6px)) {
 						content: "";
 						display:block;
-						position: fixed;
-						top: 173px;
-						left: 18px; //BUG: Fixed by adding padding
+						position: absolute;
+						padding-right: em(5px);
+						bottom: -8px;
+						right: -2px; //BUG: Fixed by adding padding
 						border-radius: em(4px) em(4px) 0 0;
 						@include grad($color1:$haiti, $color2:$hollywoodCerise);
 								
@@ -68,10 +69,11 @@ nav {
 
 					@include mq("med") {
 
-						@include indepent-pseudo(before, $el-w:em(4px), $el-h:em(65px)) {
-							position: fixed;
-							top: em(100px);
-							left: em(2px);
+						@include indepent-pseudo(before, $el-w:em(4px), $el-h:em(75px)) {
+							position: absolute;
+							// padding-top: em(10px);
+							top: em(-4px);
+							right: em(71px);
 							border-radius: 0 em(4px) em(4px) 0;
 						@include grad($dir:-90deg, $color1:$hollywoodCerise 10%, $color2:$haiti);
 						

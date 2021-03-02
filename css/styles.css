@@ -839,13 +839,14 @@ input {
   position: relative;
 }
 .nav--current::before {
-  width: 4.5em;
+  width: 3.875em;
   height: 0.375em;
   content: "";
   display: block;
-  position: fixed;
-  top: 173px;
-  left: 18px;
+  position: absolute;
+  padding-right: 0.3125em;
+  bottom: -8px;
+  right: -2px;
   border-radius: 0.25em 0.25em 0 0;
   background: -webkit-linear-gradient(0deg, #10133a, #ef0195);
   background: -moz-linear-gradient(0deg, #10133a, #ef0195);
@@ -855,10 +856,10 @@ input {
 @media (min-width: 768px) {
   .nav--current::before {
     width: 0.25em;
-    height: 4.0625em;
-    position: fixed;
-    top: 6.25em;
-    left: 0.125em;
+    height: 4.6875em;
+    position: absolute;
+    top: -0.25em;
+    right: 4.4375em;
     border-radius: 0 0.25em 0.25em 0;
     background: -webkit-linear-gradient(-90deg, #ef0195 10%, #10133a);
     background: -moz-linear-gradient(-90deg, #ef0195 10%, #10133a);
