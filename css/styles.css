@@ -1105,7 +1105,7 @@ main {
   width: 96%;
   max-width: 1000px;
   margin: 0.9375em auto 0.5em;
-  height: 1.875em;
+  height: 3.75em;
   background: -webkit-linear-gradient(-242deg, var(--color-alert-bg-lin1) 10%, var(--color-alert-bg-lin2) 90%);
   background: -moz-linear-gradient(-242deg, var(--color-alert-bg-lin1) 10%, var(--color-alert-bg-lin2) 90%);
   background: -o-linear-gradient(-242deg, var(--color-alert-bg-lin1) 10%, var(--color-alert-bg-lin2) 90%);
@@ -1127,7 +1127,7 @@ main {
 .container--alert p {
   width: 99%;
   margin: auto;
-  margin-top: 1em;
+  margin-top: 1.125em;
 }
 @media (min-width: 768px) {
   .container--alert p {

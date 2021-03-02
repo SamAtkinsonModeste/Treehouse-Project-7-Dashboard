@@ -233,7 +233,7 @@ main {
            width: 96%;
            max-width: 1000px;
            margin: em(15px) auto em(8px);
-           height:em(30px);
+           height:em(60px);
            @include grad($dir:-242deg, $color1:var(--color-alert-bg-lin1) 10%,  $color2:var(--color-alert-bg-lin2) 90%);
            @include br-default($colu: var(--color-alert-border) );
            border-radius: em(7px);
@@ -252,7 +252,7 @@ main {
             p {
                 width: 99%;
                 margin: auto;
-                margin-top:em(16px);
+                margin-top:em(18px);
                    @include mq("med") {
                        margin-top: em(10px);
                    }
