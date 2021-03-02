@@ -1,5 +1,5 @@
  body{
-	background: linear-gradient(225deg, var(--color-lin1-body) 0%, var(--color-lin2-body) 50%,var(--color-lin3-body) 100%);
+	background: linear-gradient(23deg, var(--color-lin1-body) 0%, var(--color-lin2-body) 50%,var(--color-lin3-body) 100%);
 	height: 100vh;
 
 }
@@ -46,6 +46,27 @@
 	// @include debug($pix:3px, $color:$black); //BUG: Debugger Mixin
 }
 
+//GREEN DOT ABOVE BELL
+.notifi-circle {
+    width: em(15px);
+    height: em(15px);
+    position: absolute;
+    top: em(-7px);
+    left:em(28px);
+    border-radius: $br-round;
+    background-image: radial-gradient(circle, lighten($japanese-laurel, 20%), color-shade(black, light));
+
+    @include mq("med") {
+        top: em(-1px);
+        left: em(30px);
+    }
+
+   @include mq("lg") {
+       top: em(0px);
+       left: em(48px);
+   }
+}
+
 
 //NAV
 nav {
@@ -60,7 +81,7 @@ nav {
 	
 }
 
-
+//MAIN
 main {
 	grid-area: main;
 	@include debug($pix:3px, $color: $black); //BUG: DEBUG MIXIN
@@ -83,13 +104,24 @@ main {
 	border-radius: em(15px);
 	@include box-shdow($in:inset, $hr:em(1px), $vrt: em(1px), $col:rgba($haiti,.3));
 	@include br-default($colu: rgba($haiti,.4));
-	@include debug($pix:2px, $color:$japanese-laurel); //BUG: DEBUG MIXIN
+	@include debug($pix:2px, $color:$jaffa); //BUG: DEBUG MIXIN
+
+
+	      //MAIN 2 COLUMNS
+                @include mq('med') {
+                    grid-template-columns: 50%;
+                    
+                }
 	
-	@include mq('med') {
-		grid-template-columns: 50%;
-		
-	}
-	
+}
+
+//MAIN GRID CONTAINERS
+
+.grid {
+    @include grid-br-radius-bg;
+
+  
+
 }
 
 

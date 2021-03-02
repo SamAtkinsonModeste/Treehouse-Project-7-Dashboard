@@ -9,6 +9,9 @@
   --color-text-shdow: #13185d;
   --color-nav-background: #43b5a0;
   --color-nav-boxShdow: #10133a;
+  --color-grid-linear13-bg: #e5edf0;
+  --color-grid-linearMed-bg: #ffffff;
+  --color-grid-box-shdow: #491d88;
 }
 
 .dark {
@@ -18,6 +21,9 @@
   --color-body-text: #e5edf0;
   --color-nav-background: #10133a;
   --color-nav-boxShdow: #491d88;
+  --color-grid-linear13-bg: #220B41;
+  --color-grid-linearMed-bg: #0b0b0b;
+  --color-grid-box-shdow: #2b6d61;
 }
 
 nav {
@@ -807,7 +813,7 @@ input {
 }
 
 body {
-  background: linear-gradient(225deg, var(--color-lin1-body) 0%, var(--color-lin2-body) 50%, var(--color-lin3-body) 100%);
+  background: linear-gradient(23deg, var(--color-lin1-body) 0%, var(--color-lin2-body) 50%, var(--color-lin3-body) 100%);
   height: 100vh;
 }
 
@@ -838,6 +844,28 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.notifi-circle {
+  width: 0.9375em;
+  height: 0.9375em;
+  position: absolute;
+  top: -0.4375em;
+  left: 1.75em;
+  border-radius: 50%;
+  background-image: radial-gradient(circle, #00fd00, #252525);
+}
+@media (min-width: 768px) {
+  .notifi-circle {
+    top: -0.0625em;
+    left: 1.875em;
+  }
+}
+@media (min-width: 1024px) {
+  .notifi-circle {
+    top: 0em;
+    left: 3em;
+  }
 }
 
 nav {
@@ -872,11 +900,41 @@ main {
   border-radius: 0.9375em;
   box-shadow: inset 0.0625em 0.0625em rgba(16, 19, 58, 0.3);
   border: 1px solid rgba(16, 19, 58, 0.4);
-  border: solid 2px #009700;
+  border: solid 2px #f68741;
 }
 @media (min-width: 768px) {
   .main {
     grid-template-columns: 50%;
+  }
+}
+
+.grid {
+  background: linear-gradient(223deg, var(--color-grid-linear13-bg) 0%, var(--color-grid-linearMed-bg) 50%, var(--color-grid-linear13-bg) 100%);
+  border-radius: 0.9375em;
+  margin-bottom: 0.625em;
+  -webkit-box-shadow: 0 3px 2px -2px var(--color-grid-box-shdow);
+  -moz-box-shadow: 0 3px 2px -2px var(--color-grid-box-shdow);
+  box-shadow: 0 3px 2px -2px var(--color-grid-box-shdow);
+}
+@media (min-width: 768px) {
+  .grid {
+    -webkit-box-shadow: 0 3px 2px -2px var(--color-grid-box-shdow);
+    -moz-box-shadow: 0 3px 2px -2px var(--color-grid-box-shdow);
+    box-shadow: 0 3px 2px -2px var(--color-grid-box-shdow);
+  }
+}
+@media (min-width: 1024px) {
+  .grid {
+    -webkit-box-shadow: 0 5px 3px -3px var(--color-grid-box-shdow);
+    -moz-box-shadow: 0 5px 3px -3px var(--color-grid-box-shdow);
+    box-shadow: 0 5px 3px -3px var(--color-grid-box-shdow);
+  }
+}
+@media (min-width: 1200px) {
+  .grid {
+    -webkit-box-shadow: 0 7px 4px -4px var(--color-grid-box-shdow);
+    -moz-box-shadow: 0 7px 4px -4px var(--color-grid-box-shdow);
+    box-shadow: 0 7px 4px -4px var(--color-grid-box-shdow);
   }
 }
 
