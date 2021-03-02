@@ -57,19 +57,6 @@ nav {
   margin: 0 auto;
 }
 
-.nav--traffic-nav {
-  margin: 0 0.1875em;
-  display: block;
-}
-
-.nav__traffic {
-  display: block;
-  padding: 0.4em;
-  text-decoration: none;
-  text-align: center;
-  border-radius: 0.25em;
-}
-
 .headline--primary {
   margin-bottom: 0.625em;
 }
@@ -851,6 +838,9 @@ input {
   margin-top: 0.1875em;
   margin-bottom: 0.1875em;
 }
+.nav--current {
+  position: relative;
+}
 .nav--current::before {
   width: 4.5em;
   height: 0.375em;
@@ -869,6 +859,7 @@ input {
   .nav--current::before {
     width: 0.25em;
     height: 4.0625em;
+    position: fixed;
     top: 6.25em;
     left: 0.125em;
     border-radius: 0 0.25em 0.25em 0;
@@ -876,6 +867,14 @@ input {
     background: -moz-linear-gradient(-90deg, #ef0195 10%, #10133a);
     background: -o-linear-gradient(-90deg, #ef0195 10%, #10133a);
     background: linear-gradient(-90deg, #ef0195 10%, #10133a);
+  }
+}
+@media (min-width: 1024px) {
+  .nav--current::before {
+    width: 0.25em;
+    height: 4.0625em;
+    top: 8.125em;
+    left: 0.125em;
   }
 }
 .nav--dash a {
@@ -904,44 +903,6 @@ input {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-}
-.nav--traffic-nav {
-  padding: 0;
-  justify-content: space-around;
-  align-items: center;
-  border: solid #f68741;
-}
-@media (min-width: 768px) {
-  .nav--traffic-nav {
-    flex-direction: row;
-    margin: 0;
-    margin-left: auto;
-  }
-}
-.nav__traffic {
-  font-size: 0.875em;
-  font-weight: 700;
-  color: #10133a;
-  text-shadow: 0.5px 0.5px #0b0b0b;
-  border-radius: 0.25em;
-  border-bottom: none;
-  border: 1px solid #10133a;
-  border: solid #ef0195;
-}
-@media (min-width: 768px) {
-  .nav__traffic {
-    font-size: 1em;
-  }
-}
-@media (min-width: 1024px) {
-  .nav__traffic {
-    font-size: 1.125em;
-  }
-}
-@media (min-width: 1200px) {
-  .nav__traffic {
-    font-size: 1.25em;
   }
 }
 

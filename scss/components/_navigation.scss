@@ -45,8 +45,13 @@ nav {
 					
 			}
 
-			  @include m(current) {
-				// position: relative;
+	
+
+
+
+
+			  @include m(current)  {
+						position: relative;
 						@include indepent-pseudo(before, $el-w:em(72px), $el-h:em(6px)) {
 						content: "";
 						display:block;
@@ -55,25 +60,47 @@ nav {
 						left: 18px; //BUG: Fixed by adding padding
 						border-radius: em(4px) em(4px) 0 0;
 						@include grad($color1:$haiti, $color2:$hollywoodCerise);
-						
-							
+								
+								
+									
 					}
 
-				
 
-                        @include mq("med") {
+					@include mq("med") {
 
-                            @include indepent-pseudo(before, $el-w:em(4px), $el-h:em(65px)) {
-                                top: em(100px);
-                                left: em(2px);
-                                border-radius: 0 em(4px) em(4px) 0;
-                            @include grad($dir:-90deg, $color1:$hollywoodCerise 10%, $color2:$haiti);
-                            
-                        }
-			   }
-		}
+						@include indepent-pseudo(before, $el-w:em(4px), $el-h:em(65px)) {
+							position: fixed;
+							top: em(100px);
+							left: em(2px);
+							border-radius: 0 em(4px) em(4px) 0;
+						@include grad($dir:-90deg, $color1:$hollywoodCerise 10%, $color2:$haiti);
+						
 
-			@include m(dash) {
+					}
+
+
+
+				 }
+
+
+				 @include mq("lg") {
+
+					@include indepent-pseudo(before, $el-w:em(4px), $el-h:em(65px)) {
+						
+						top: em(130px);
+						left: em(2px);
+						
+					
+
+				}
+
+
+
+		
+				}
+	
+			}
+		@include m(dash) {
 				a {
 					
 					@include bg-img($img:"icon-dashboard.svg");
@@ -81,6 +108,8 @@ nav {
 					
               }
 			}
+
+
 
 			 @include m(members) {
 				a {
@@ -115,45 +144,16 @@ nav {
 	@include mq("med"){
 		@include flexy($dir:column, $just:center, $align: center);
 	}
+
+
+
+}
 	
-	  //Traffic Nav
-	  @include m(traffic-nav) {
-		@extend %nav-item-dis;
-		padding: 0;
-        justify-content: space-around;
-		align-items: center;
-	    @include debug($jaffa); //BUG: Debug Mixin
-		  
-				@include mq("med") {
-					flex-direction: row;
-					margin: 0;
-					margin-left: auto;
-				}
-
-	  }
-
-	  @include e(traffic) {
-		 @extend %nav-item-link;
-		 @include text($size:em(14px), $weight: $font-weight--bold , $color: $haiti); 
-		 @include text-shdow($col:$black);
-		 border-radius: $br-rad;
-		 border-bottom: none;
-		 @include br-default($colu:$haiti);
-		 @include debug($hollywoodCerise);//BUG: Debug Mixin
-		  
-
-				@include mq("med") {
-					font-size: em(16px);
-				}
-
-				@include mq("lg") {
-					font-size: em(18px);
-				}
-				@include mq("x-lg") {
-					font-size: em(20px);
-				}
-
-	  }
-
-   }
+  	
+	  
+	 
+	 
+	 
+	 
+   
  
