@@ -24,6 +24,8 @@ input {
 
 }
 
+//HEADLINE PRIMARY
+
 .headline--primary {
 	margin: 0;
 	@extend %h-prim;
@@ -53,6 +55,33 @@ input {
 		  @include text(em(50px));
 	    }
 }
+
+//HEADLINE SECONDAY
+
+.headline--secondary {
+	@extend %h-sec;
+	padding-left: em(5px);
+	@include text(em(15px), $color: var( --color-text-headSec ));
+	@include text-shdow($blur:0, $col:var(--color-textShadow-headSec));
+	
+ 
+	@include mq("med") {
+		  @include text(em(22px));
+		
+	   }
+
+	   @include mq("lg") {
+		  @include text(em(23px));
+	   }
+
+	   @include mq("x-lg") {
+		  @include text(em(24px));
+	   }
+}
+
+
+
+//HEADLINE MODIFIERS
 
 
 .headline {

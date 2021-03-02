@@ -55,7 +55,7 @@
 //Background Colours and Border Radius
 @mixin grid-br-radius-bg 
  {
-    background: linear-gradient(223deg, var(--color-grid-linear13-bg) 0%, var(--color-grid-linearMed-bg) 50%, var(--color-grid-linear13-bg) 100%);
+    background: linear-gradient(217deg, var(--color-grid-linear13-bg) 20%, var(--color-grid-linearMed-bg) 100%);
 	border-radius: em(15px);
 	margin-bottom: em(10px);
 	-webkit-box-shadow: 0 3px 2px -2px var(--color-grid-box-shdow);

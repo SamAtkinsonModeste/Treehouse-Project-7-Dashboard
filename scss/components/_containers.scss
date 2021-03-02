@@ -104,7 +104,7 @@ main {
 	border-radius: em(15px);
 	@include box-shdow($in:inset, $hr:em(1px), $vrt: em(1px), $col:rgba($haiti,.3));
 	@include br-default($colu: rgba($haiti,.4));
-	@include debug($pix:2px, $color:$jaffa); //BUG: DEBUG MIXIN
+	// @include debug($pix:2px, $color:$jaffa); //BUG: DEBUG MIXIN
 
 
 	      //MAIN 2 COLUMNS
