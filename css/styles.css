@@ -60,12 +60,6 @@ nav {
   border-radius: 0.25em;
 }
 
-.nav--current::before {
-  content: "";
-  display: block;
-  position: absolute;
-}
-
 .headline--primary {
   margin-bottom: 0.625em;
 }
@@ -788,6 +782,7 @@ input {
 }
 
 .nav {
+  position: relative;
   padding: 0.625em;
   width: 99%;
   max-width: 23.4375em;
@@ -817,8 +812,11 @@ input {
 .nav--current::before {
   width: 4.5em;
   height: 0.375em;
-  bottom: -9px;
-  left: -7px;
+  content: "";
+  display: block;
+  position: fixed;
+  top: 173px;
+  left: 18px;
   border-radius: 0.25em 0.25em 0 0;
   background: -webkit-linear-gradient(0deg, #10133a, #ef0195);
   background: -moz-linear-gradient(0deg, #10133a, #ef0195);
@@ -829,7 +827,7 @@ input {
   .nav--current::before {
     width: 0.25em;
     height: 4.0625em;
-    bottom: 0.3125em;
+    top: 6.25em;
     left: 0.125em;
     border-radius: 0 0.25em 0.25em 0;
     background: -webkit-linear-gradient(-90deg, #ef0195 10%, #10133a);

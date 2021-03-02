@@ -186,7 +186,7 @@ main {
                     align-self:flex-start;
                     border-right: none;
                     //HACK: Need to add pseudo element - DONE 
-                    @include el-pseudo(after, 2px, 75px) {
+                    @include indepent-pseudo(after, 2px, 75px) {
                         content: "";
                         display: block;
                         position: absolute;

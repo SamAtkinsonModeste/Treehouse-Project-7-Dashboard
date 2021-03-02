@@ -97,7 +97,7 @@
 }
 
 //Without Placeholder
-@mixin el-pseudo ($el, $el-w:null, $el-h:null){
+@mixin indepent-pseudo ($el, $el-w:null, $el-h:null){
 	&::#{$el} {
 		width: $el-w;
 		height: $el-h;
