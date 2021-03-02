@@ -157,15 +157,15 @@ main {
             @include flexy($just: flex-end, $align: center);
             // @include debug($lipstick); //BUG: Debugger Mixin
         
-              @include mq("med") {
-                  padding-right: em(40px);
+                @include mq("med") {
+                    padding-right: em(40px);
+                    
+                }
+            
+                @include mq("lg") {
+                    padding-right: em(50px);
                 
-              }
-        
-              @include mq("lg") {
-                padding-right: em(50px);
-              
-            }
+                }
           }
 
 
@@ -180,6 +180,7 @@ main {
             padding: em(4px);
             
             // @include debug($jaffa); //BUG: Debugger Mixin
+          
         
                 @include mq('med') {
                     width: em(55px);
@@ -225,6 +226,45 @@ main {
 	
 	
 	   }
+
+
+       @include m(alert) {
+           position: relative;
+           width: 96%;
+           max-width: 1000px;
+           margin: em(15px) auto em(8px);
+           height:em(27px);
+           padding: em(16px) em(5px);
+           @include grad($dir:-242deg, $color1:var(--color-alert-bg-lin1) 10%,  $color2:var(--color-alert-bg-lin2) 90%);
+           @include br-default($colu: var(--color-alert-border) );
+           border-radius: em(7px);
+           @include debug($color:$jaffa);
+           .material-icons--alert {
+               position: absolute;
+               top: em(-1px);
+               right: em(1px);
+
+
+                        @include mq("med") {
+                              top:em(2px);
+                        }
+           }
+
+            p {
+                width: 99%;
+                margin: 0 auto;
+            }
+                    @include mq("med") {
+                        padding: em(20px) em(10px);
+                    }
+
+                    @include mq("lg") {
+                        padding: em(30px) em(20px);
+                    }
+
+       }
+
+       
 		 
 
     }

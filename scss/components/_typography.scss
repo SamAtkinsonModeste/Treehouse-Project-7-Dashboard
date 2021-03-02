@@ -160,8 +160,44 @@ input {
   
 
 .material-icons {
-	color: var(--color-material-icons);
-	@include text-shdow();
+	@include m(search) {
+	  color: var(--color-material-icons-search);
+	  @include text-shdow();
+	}
+
+	@include m(alert) {
+		color: var(--color-material-icons-alert);
+		@include text-shdow();
+		font-size: em(20px);
+		    @include mq("med") {
+				font-size: em(25px);
+			}
+	  }
 }
   
   
+.container {
+	@include m(alert) {
+		
+		
+		p {
+		 @include text($size: em(10px), $l-height:(10px/20px), $weight: $font-weight--bold, $color: var( --color-alert-text));
+		 text-align: center;
+
+
+		      @include mq("med") {
+				@include text($size: em(20px), $l-height:(20px/40px));
+				text-align: left;
+
+			  }
+
+			  @include mq("lg") {
+				@include text($size: em(25px), $l-height:(25px/50px));
+				text-align: left;
+
+			  }
+		}
+      
+
+	}
+}

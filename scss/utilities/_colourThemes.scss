@@ -17,28 +17,39 @@
     --color-input-brBox:            #{$haiti};
     --color-input-text:            #{$luckyPoint};
     --color-input-placeholder:      #{$daisyBush};
-    --color-material-icons:      #{$haiti};
+    --color-material-icons-search:      #{$haiti};
+    --color-material-icons-alert:    #{$salomie};
+    --color-alert-bg-lin1:           #{$hollywoodCerise};
+    --color-alert-bg-lin2:           #{$daisyBush};
+    --color-alert-border:           #{$hollywoodCerise};
+    --color-alert-text:           #{$salomie};
     
     
 }
 
 
 .dark {
-    --color-lin1-body:          #{$black};
-    --color-lin2-body:          #{$haiti};
-    --color-lin3-body:          #{$black};
-    --color-body-text:          #{$mystic};
-    --color-nav-background:     #{$haiti};
-    --color-nav-boxShdow:       #{$daisyBush};
-    --color-grid-linear13-bg:   #{$hollywoodCeriseDark};
-    --color-grid-linearMed-bg:  #{$violet};
-    --color-grid-box-shdow:     #{$keppelDark};
-    --color-text-headSec:        #{$keppel};
-    --color-textShadow-headSec:   #{$goldenrod};
-    --color-input-background:      #{$haiti};
+        --color-lin1-body:          #{$black};
+        --color-lin2-body:          #{$haiti};
+        --color-lin3-body:          #{$black};
+        --color-body-text:          #{$mystic};
+        --color-nav-background:     #{$haiti};
+        --color-nav-boxShdow:       #{$daisyBush};
+        --color-grid-linear13-bg:   #{$hollywoodCeriseDark};
+        --color-grid-linearMed-bg:  #{$violet};
+        --color-grid-box-shdow:     #{$keppelDark};
+        --color-text-headSec:       #{$keppel};
+        --color-textShadow-headSec: #{$goldenrod};
+    --color-input-background:       #{$haiti};
     --color-input-brBox:            #{$keppel};
     --color-input-placeholder:      #{$mystic};
-    --color-material-icons:      #{$mystic};
+    --color-material-icons-search:  #{$mystic};
+    --color-material-icons-alert:   #{$keppelDark};
+    --color-alert-bg-lin1:          #{$hollywoodCerise};
+    --color-alert-bg-lin2:          #{$salomie};
+    --color-alert-border:           #{$keppel};
+    --color-alert-text:             #{$haiti};
+    
 
 }
 
