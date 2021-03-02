@@ -56,7 +56,7 @@ nav {
 						content: "";
 						display:block;
 						position: absolute;
-						padding-right: em(5px);
+						padding-right: em(8px);
 						bottom: -8px;
 						right: -2px; //BUG: Fixed by adding padding
 						border-radius: em(4px) em(4px) 0 0;
@@ -85,21 +85,7 @@ nav {
 				 }
 
 
-				 @include mq("lg") {
-
-					@include indepent-pseudo(before, $el-w:em(4px), $el-h:em(65px)) {
-						
-						top: em(130px);
-						left: em(2px);
-						
-					
-
-				}
-
-
-
-		
-				}
+				
 	
 			}
 		@include m(dash) {
