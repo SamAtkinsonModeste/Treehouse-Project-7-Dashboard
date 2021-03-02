@@ -784,22 +784,19 @@ input {
 
 .container--alert p {
   font-size: 0.625em;
-  line-height: 0.5;
   font-weight: 700;
   color: var(--color-alert-text);
   text-align: center;
 }
 @media (min-width: 768px) {
   .container--alert p {
-    font-size: 1.25em;
-    line-height: 0.5;
+    font-size: 0.75em;
     text-align: left;
   }
 }
 @media (min-width: 1024px) {
   .container--alert p {
-    font-size: 1.5625em;
-    line-height: 0.5;
+    font-size: 0.9375em;
     text-align: left;
   }
 }
@@ -1115,8 +1112,7 @@ main {
   width: 96%;
   max-width: 1000px;
   margin: 0.9375em auto 0.5em;
-  height: 1.6875em;
-  padding: 1em 0.3125em;
+  height: 1.875em;
   background: -webkit-linear-gradient(-242deg, var(--color-alert-bg-lin1) 10%, var(--color-alert-bg-lin2) 90%);
   background: -moz-linear-gradient(-242deg, var(--color-alert-bg-lin1) 10%, var(--color-alert-bg-lin2) 90%);
   background: -o-linear-gradient(-242deg, var(--color-alert-bg-lin1) 10%, var(--color-alert-bg-lin2) 90%);
@@ -1137,16 +1133,22 @@ main {
 }
 .container--alert p {
   width: 99%;
-  margin: 0 auto;
+  margin: auto;
+  margin-top: 1em;
+}
+@media (min-width: 768px) {
+  .container--alert p {
+    margin-top: 0.625em;
+  }
 }
 @media (min-width: 768px) {
   .container--alert {
-    padding: 1.25em 0.625em;
+    height: 2.5em;
   }
 }
 @media (min-width: 1024px) {
   .container--alert {
-    padding: 1.875em 1.25em;
+    height: 2.8125em;
   }
 }
 

@@ -181,18 +181,18 @@ input {
 		
 		
 		p {
-		 @include text($size: em(10px), $l-height:(10px/20px), $weight: $font-weight--bold, $color: var( --color-alert-text));
+		 @include text($size: em(10px),$weight: $font-weight--bold, $color: var( --color-alert-text));
 		 text-align: center;
 
 
 		      @include mq("med") {
-				@include text($size: em(20px), $l-height:(20px/40px));
+				@include text($size: em(12px));
 				text-align: left;
 
 			  }
 
 			  @include mq("lg") {
-				@include text($size: em(25px), $l-height:(25px/50px));
+				@include text($size: em(15px));
 				text-align: left;
 
 			  }
