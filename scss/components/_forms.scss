@@ -1,0 +1,87 @@
+//==========================
+//FORMS
+//==========================
+
+	
+	
+input {
+    width: 100%;
+    height: em(25px);
+    padding: em(15px) em(5px);
+    border-radius: $br-rad;
+    background: var( --color-input-background);
+    @include br-default($colu:var(--color-input-brBox));
+    @include box-shdow($in:inset, $hr:1px, $vrt:1px,  $sphd:0, $blur:10px, $col:var(--color-input-brBox));
+    transition: background-color, border .5s ease-in;
+
+
+        &:focus {
+            
+            outline: none;
+            @include box-shdow($in:inset, $hr:1px, $vrt:1px,  $sphd:0, $blur:10px, $col:$daisyBush);
+            @include br-default($colu:$daisyBush);
+        }
+
+
+        @include mq("med"){
+                    width: 60%;
+                    padding: em(14px) em(10px);
+        }
+
+        @include mq("lg"){
+            width: 55%;
+            padding: em(18px) em(14px);
+      }
+
+      @include mq("x-lg"){
+        width: 40%;
+        
+  }
+    
+}
+
+
+.material-icons {
+    display: block;
+    position: absolute;//NEED POSITION FIXED HERE
+    right: em(10px);
+    
+}
+
+
+
+
+label{
+    display: block;
+    margin-bottom: em(30px);
+    
+      @include m(hidden) {
+        visibility: hidden;
+   }
+    
+}
+
+  
+
+
+// @include mq("med"){
+//     width: 450px;
+    
+    
+// }
+
+
+// @include mq("lg"){
+//     width: 400px;
+//     margin: em(153px) auto 0;
+    
+// }
+
+// @include mq("x-lg"){
+    
+//     margin: em(63px) auto 0;
+    
+// }
+
+
+

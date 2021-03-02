@@ -120,7 +120,11 @@ main {
 .grid {
     @include grid-br-radius-bg;
 
-  
+      @include m(main-header) {
+          @include mq("med") {
+              grid-column: 1/ span 2;
+          }
+      }
 
 }
 
@@ -133,6 +137,15 @@ main {
         // @include debug($color: $black); //BUG: Debugger Mixin
 
         }
+
+
+        @include m(dashboard) {
+			@include flexy($just: space-around);
+			// @include debug($lipstick); //BUG: Debugger Mixin
+			
+
+		
+	  }
     }
 
 
@@ -168,34 +181,51 @@ main {
             
             // @include debug($jaffa); //BUG: Debugger Mixin
         
-            @include mq('med') {
-                width: em(55px);
-                align-self:flex-start;
-                border-right: none;
-                //HACK: Need to add pseudo element - DONE 
-                @include el-pseudo(after, 2px, 75px) {
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    background: $salomie;
-                    left: em(54px);
-                    top: em(0px);
-                    @include box-shdow($hr:0, $vrt:1px, $blur:2px, $sphd:1px, $col:$haiti);
-                      
-                    @include mq('lg') {
-                        left:80px;
-                        top: 8px;
+                @include mq('med') {
+                    width: em(55px);
+                    align-self:flex-start;
+                    border-right: none;
+                    //HACK: Need to add pseudo element - DONE 
+                    @include el-pseudo(after, 2px, 75px) {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        background: $salomie;
+                        left: em(54px);
+                        top: em(0px);
+                        @include box-shdow($hr:0, $vrt:1px, $blur:2px, $sphd:1px, $col:$haiti);
+                        
+                        @include mq('lg') {
+                            left:80px;
+                            top: 8px;
+                            
+                        }
                         
                     }
+                }
+            
+                @include mq('lg') {
+                    width: em(75px);
                     
                 }
-            }
-        
-            @include mq('lg') {
-                width: em(75px);
-                
-            }
         }
+
+
+
+
+        @include m(search) {
+			position: relative;
+			@include flexy($just: flex-end, $align: center);
+			width: 70%;
+			margin-left: auto;
+			border-radius: 0 em(15px) 0 em(15px);
+			background: linear-gradient(45deg, rgba($haiti,.5), rgba($daisyBush, .5), rgba($hollywoodCerise, .5));
+			padding: em(10px);
+			// @include debug($japanese-laurel); //BUG: Debugger Mixin
+	
+	
+	   }
+		 
 
     }
 
