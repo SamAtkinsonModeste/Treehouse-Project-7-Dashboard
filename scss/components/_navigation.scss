@@ -16,6 +16,23 @@ nav {
 	@extend %marg-cen;
 	@include flexy();
 
+//TRAFFIC NAV
+    @include m(traffic-nav) {
+		@extend %nav-item-dis;
+		padding: 0;
+        justify-content: space-around;
+		align-items: center;
+	    @include debug($black); //BUG: Debug Mixin
+				@include mq("med") {
+					flex-direction: row;
+					margin: 0;
+					margin-left: auto;
+				}
+
+	}
+
+
+
             @include m(top) {
                 justify-content: center;
                 // @include debug($haiti); //BUG: DEBUGGING MIXIN
