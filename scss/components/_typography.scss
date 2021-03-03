@@ -58,7 +58,9 @@ input {
 
 //HEADLINE SECONDAY
 
-.headline--secondary {
+.headline--secondary,
+ .social--name,
+ .social--number {
 	@extend %h-sec;
 	padding-left: em(5px);
 	@include text(em(15px), $color: var( --color-text-headSec ));
@@ -207,4 +209,15 @@ input {
 	@include text-shdow($col:$black);
 		 border-radius: $br-rad;
 
+}
+
+
+
+.social{
+	margin: em(5px) auto;
+	align-self: center;
+
+	   @include m(number) {
+          font-weight: $font-weight--bold;
+	   }
 }

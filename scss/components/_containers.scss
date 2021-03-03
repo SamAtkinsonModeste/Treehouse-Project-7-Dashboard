@@ -150,7 +150,8 @@ main {
 
     @include m(social) {
         @include flexy($just: space-around, $align: center);
-        @include debug($black); //BUG: Debugger Mixin
+        @include br-default($colu: var( --color-social-border));
+        // @include debug($black); //BUG: Debugger Mixin
     }
 
 }
@@ -186,7 +187,13 @@ main {
            width: 60%;
            height: em(80px);
            text-align: center;
-           @include debug($lipstick); //BUG: Debugger Mixin
+           padding: em(10px) em(5px);
+        //    @include debug($lipstick); //BUG: Debugger Mixin
+
+
+             p {
+                 margin: 0;
+             }
        }
     }
 
@@ -322,8 +329,10 @@ main {
     @include e(svg) {
         width:em(70px);
         height: em(70px);
-        @include br-default($colu: var( --color-bar-pie-border));
+        @include br-default($pix: em(2px), $colu: var( --color-social-border));
         border-radius: $br-round;
+        @include box-shdow($hr:0, $vrt:1px, $blur: 1px, $sphd:1px, $col:var(--color-svg-con-boxShdow));
+
 
     }
 		 

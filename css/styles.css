@@ -27,6 +27,8 @@
   --color-traffic-border: rgba(73, 29, 136, 0.5);
   --color-traffic-text: #10133a;
   --color-bar-pie-border: rgba(27, 150, 243, 0.5);
+  --color-social-border: #20F989;
+  --color-svg-con-boxShdow: #837F83;
 }
 
 .dark {
@@ -40,7 +42,7 @@
   --color-grid-linearMed-bg: #220B41;
   --color-grid-box-shdow: #2b6d61;
   --color-text-headSec: #43b5a0;
-  --color-textShadow-headSec: #FAD871;
+  --color-textShadow-headSec: #10133a;
   --color-input-background: #10133a;
   --color-input-brBox: #43b5a0;
   --color-input-placeholder: #e5edf0;
@@ -72,7 +74,9 @@ nav {
   margin-bottom: 0.625em;
 }
 
-.headline--secondary {
+.headline--secondary,
+.social--name,
+.social--number {
   letter-spacing: 1px;
   margin-right: 0.3125em;
 }
@@ -643,6 +647,10 @@ img {
   width: 100%;
 }
 
+h3 {
+  margin: 0;
+}
+
 .grid-container {
   font-family: "Jura", Helvetica, Arial, "sans-serif";
   font-size: 16px;
@@ -691,24 +699,32 @@ input {
   }
 }
 
-.headline--secondary {
+.headline--secondary,
+.social--name,
+.social--number {
   padding-left: 0.3125em;
   font-size: 0.9375em;
   color: var(--color-text-headSec);
   text-shadow: 0.5px 0.5px 0 var(--color-textShadow-headSec);
 }
 @media (min-width: 768px) {
-  .headline--secondary {
+  .headline--secondary,
+.social--name,
+.social--number {
     font-size: 1.375em;
   }
 }
 @media (min-width: 1024px) {
-  .headline--secondary {
+  .headline--secondary,
+.social--name,
+.social--number {
     font-size: 1.4375em;
   }
 }
 @media (min-width: 1200px) {
-  .headline--secondary {
+  .headline--secondary,
+.social--name,
+.social--number {
     font-size: 1.5em;
   }
 }
@@ -822,6 +838,14 @@ input {
   color: var(--color-traffic-text);
   text-shadow: 0.5px 0.5px #0b0b0b;
   border-radius: 0.25em;
+}
+
+.social {
+  margin: 0.3125em auto;
+  align-self: center;
+}
+.social--number {
+  font-weight: 700;
 }
 
 @media (min-width: 768px) {
@@ -1074,7 +1098,7 @@ main {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: solid #0b0b0b;
+  border: 1px solid var(--color-social-border);
 }
 
 .wrapper--user-bell {
@@ -1096,7 +1120,10 @@ main {
   width: 60%;
   height: 5em;
   text-align: center;
-  border: solid #db006d;
+  padding: 0.625em 0.3125em;
+}
+.wrapper--social-text p {
+  margin: 0;
 }
 
 .container--member-user {
@@ -1216,8 +1243,9 @@ main {
 .container__svg {
   width: 4.375em;
   height: 4.375em;
-  border: 1px solid var(--color-bar-pie-border);
+  border: 0.125em solid var(--color-social-border);
   border-radius: 50%;
+  box-shadow: 0 1px 1px 1px var(--color-svg-con-boxShdow);
 }
 
 /*WRAPPERS*/
