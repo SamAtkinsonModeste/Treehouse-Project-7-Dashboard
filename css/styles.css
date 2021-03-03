@@ -839,7 +839,6 @@ input {
   padding: 0;
   justify-content: space-around;
   align-items: center;
-  border: solid #0b0b0b;
 }
 @media (min-width: 768px) {
   .nav--traffic-nav {
@@ -1073,6 +1072,10 @@ main {
   display: flex;
   justify-content: space-around;
 }
+.wrapper--nav-traf {
+  display: flex;
+  flex-direction: column;
+}
 
 .container--member-user {
   display: flex;
@@ -1181,6 +1184,12 @@ main {
   .container--alert {
     height: 2.8125em;
   }
+}
+.container--widget-full {
+  width: 80vw;
+}
+.container--widget-half {
+  width: 80vw;
 }
 
 /*WRAPPERS*/

@@ -22,7 +22,7 @@ nav {
 		padding: 0;
         justify-content: space-around;
 		align-items: center;
-	    @include debug($black); //BUG: Debug Mixin
+	    // @include debug($black); //BUG: Debug Mixin
 				@include mq("med") {
 					flex-direction: row;
 					margin: 0;

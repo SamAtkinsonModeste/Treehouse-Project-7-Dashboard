@@ -154,6 +154,12 @@ main {
 
 		
 	  }
+
+       @include m(nav-traf) {
+        @include flexy($dir:column);
+        // @include debug($lipstick); //BUG: Debugger Mixin
+        
+       }
     }
 
 
@@ -276,6 +282,13 @@ main {
        }
 
        
+       @include m(widget-full) {
+           width: 80vw;
+       }
+
+       @include m(widget-half) {
+        width: 80vw;
+    }
 		 
 
     }
