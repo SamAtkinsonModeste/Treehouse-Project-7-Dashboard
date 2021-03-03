@@ -48,6 +48,7 @@
   --color-alert-bg-lin2: #fcdf87;
   --color-alert-border: #43b5a0;
   --color-alert-text: #10133a;
+  --color-traffic-border: rgba(27, 150, 243, 0.5);
 }
 
 nav {
