@@ -25,6 +25,7 @@
   --color-alert-border: #ef0195;
   --color-alert-text: #fcdf87;
   --color-traffic-border: rgba(73, 29, 136, 0.5);
+  --color-traffic-text: #10133a;
 }
 
 .dark {
@@ -49,6 +50,7 @@
   --color-alert-border: #43b5a0;
   --color-alert-text: #10133a;
   --color-traffic-border: rgba(27, 150, 243, 0.5);
+  --color-traffic-text: #fcdf87;
 }
 
 nav {
@@ -810,6 +812,14 @@ input {
     font-size: 0.9375em;
     text-align: left;
   }
+}
+
+.nav__traffic {
+  font-size: 0.875em;
+  font-weight: 700;
+  color: var(--color-traffic-text);
+  text-shadow: 0.5px 0.5px #0b0b0b;
+  border-radius: 0.25em;
 }
 
 @media (min-width: 768px) {

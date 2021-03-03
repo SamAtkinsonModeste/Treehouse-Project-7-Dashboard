@@ -4,26 +4,28 @@
     --color-lin1-body:        #{$haitiBody};
     --color-lin2-body:        #{$daisyBushBody};
     --color-lin3-body:        #{$hollywoodCeriseBody};
-    --color-border:           #{$daisyBush};
-    --color-text-shdow:       #{$luckyPoint};
-    --color-nav-background:   #{$keppel};
-    --color-nav-boxShdow:     #{$haiti};
-    --color-grid-linear13-bg:  #{$mystic};
-    --color-grid-linearMed-bg:  #{$white};
-    --color-grid-box-shdow:     #{$daisyBush};
-    --color-text-headSec:        #{$haiti};
-    --color-textShadow-headSec:   #{$keppel};
-    --color-input-background:     #{$mystic};
-    --color-input-brBox:            #{$haiti};
-    --color-input-text:            #{$luckyPoint};
-    --color-input-placeholder:      #{$daisyBush};
-    --color-material-icons-search:      #{$haiti};
-    --color-material-icons-alert:    #{$salomie};
-    --color-alert-bg-lin1:           #{$hollywoodCerise};
-    --color-alert-bg-lin2:           #{$daisyBush};
-    --color-alert-border:           #{$hollywoodCerise};
-    --color-alert-text:           #{$salomie};
-    --color-traffic-border:      #{$daisyBushBorder};
+    --color-border:                   #{$daisyBush};
+    --color-text-shdow:               #{$luckyPoint};
+    --color-nav-background:           #{$keppel};
+    --color-nav-boxShdow:             #{$haiti};
+    --color-grid-linear13-bg:         #{$mystic};
+    --color-grid-linearMed-bg:        #{$white};
+    --color-grid-box-shdow:           #{$daisyBush};
+    --color-text-headSec:             #{$haiti};
+    --color-textShadow-headSec:       #{$keppel};
+    --color-input-background:         #{$mystic};
+    --color-input-brBox:              #{$haiti};
+    --color-input-text:               #{$luckyPoint};
+    --color-input-placeholder:        #{$daisyBush};
+    --color-material-icons-search:    #{$haiti};
+    --color-material-icons-alert:     #{$salomie};
+    --color-alert-bg-lin1:            #{$hollywoodCerise};
+    --color-alert-bg-lin2:            #{$daisyBush};
+    --color-alert-border:             #{$hollywoodCerise};
+    --color-alert-text:               #{$salomie};
+    --color-traffic-border:           #{$daisyBushBorder};
+    --color-traffic-text:             #{$haiti};
+    
     
     
 }
@@ -51,6 +53,7 @@
     --color-alert-border:           #{$keppel};
     --color-alert-text:             #{$haiti};
     --color-traffic-border:         #{$dodgerBlueBorder};
+    --color-traffic-text:           #{$salomie};
     
     
 

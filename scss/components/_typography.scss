@@ -201,3 +201,10 @@ input {
 
 	}
 }
+
+.nav__traffic {
+	@include text($size:em(14px), $weight: $font-weight--bold , $color: var(--color-traffic-text)); 
+	@include text-shdow($col:$black);
+		 border-radius: $br-rad;
+
+}
