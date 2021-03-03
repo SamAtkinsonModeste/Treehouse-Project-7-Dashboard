@@ -21,6 +21,11 @@
         }
 
        }
+
+
+       @include e(social) {
+           fill: url(#grad1)
+       }
 }
 
 
