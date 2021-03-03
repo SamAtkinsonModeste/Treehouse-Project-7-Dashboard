@@ -26,6 +26,7 @@
   --color-alert-text: #fcdf87;
   --color-traffic-border: rgba(73, 29, 136, 0.5);
   --color-traffic-text: #10133a;
+  --color-bar-pie-border: rgba(27, 150, 243, 0.5);
 }
 
 .dark {
@@ -51,6 +52,7 @@
   --color-alert-text: #10133a;
   --color-traffic-border: rgba(27, 150, 243, 0.5);
   --color-traffic-text: #fcdf87;
+  --color-bar-pie-border: #fcdf87;
 }
 
 nav {
@@ -1031,6 +1033,7 @@ main {
   -webkit-box-shadow: 0 3px 2px -2px var(--color-grid-box-shdow);
   -moz-box-shadow: 0 3px 2px -2px var(--color-grid-box-shdow);
   box-shadow: 0 3px 2px -2px var(--color-grid-box-shdow);
+  padding: 0.625em;
 }
 @media (min-width: 768px) {
   .grid {
@@ -1059,8 +1062,13 @@ main {
   }
 }
 .grid--traffic {
-  padding: 0.625em;
   border: 1px solid var(--color-traffic-border);
+}
+.grid--bar-chart {
+  border: 1px solid var(--color-bar-pie-border);
+}
+.grid--pie-chart {
+  border: 1px solid var(--color-bar-pie-border);
 }
 
 .wrapper--user-bell {

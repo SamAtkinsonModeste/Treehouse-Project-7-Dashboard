@@ -119,6 +119,7 @@ main {
 
 .grid {
     @include grid-br-radius-bg;
+    padding: em(10px);
 
       @include m(main-header) {
           @include mq("med") {
@@ -128,11 +129,23 @@ main {
 
 
       @include m(traffic) {
-        padding: em(10px);
 		@include br-default($colu: var(--color-traffic-border));
 // 		// @include debug($electric-violet); //BUG: Debugger Mixin
 
       }
+
+
+      @include m(bar-chart) {
+		
+		@include br-default($colu: var(--color-bar-pie-border));
+		// @include debug($japanese-laurel); //BUG: Debugger Mixin
+	}
+
+    @include m(pie-chart) {
+		
+		@include br-default($colu: var(--color-bar-pie-border));
+		// @include debug($japanese-laurel); //BUG: Debugger Mixin
+	}
 
 }
 
