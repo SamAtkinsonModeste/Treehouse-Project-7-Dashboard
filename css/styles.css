@@ -1070,6 +1070,12 @@ main {
 .grid--pie-chart {
   border: 1px solid var(--color-bar-pie-border);
 }
+.grid--social {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: solid #0b0b0b;
+}
 
 .wrapper--user-bell {
   padding: 0 0.1875em;
@@ -1083,6 +1089,14 @@ main {
 .wrapper--nav-traf {
   display: flex;
   flex-direction: column;
+}
+.wrapper--social-text {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 5em;
+  text-align: center;
+  border: solid #db006d;
 }
 
 .container--member-user {
@@ -1198,6 +1212,12 @@ main {
 }
 .container--widget-half {
   width: 80vw;
+}
+.container__svg {
+  width: 4.375em;
+  height: 4.375em;
+  border: 1px solid var(--color-bar-pie-border);
+  border-radius: 50%;
 }
 
 /*WRAPPERS*/

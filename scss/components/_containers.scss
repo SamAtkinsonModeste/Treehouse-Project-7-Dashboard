@@ -147,6 +147,12 @@ main {
 		// @include debug($japanese-laurel); //BUG: Debugger Mixin
 	}
 
+
+    @include m(social) {
+        @include flexy($just: space-around, $align: center);
+        @include debug($black); //BUG: Debugger Mixin
+    }
+
 }
 
 
@@ -172,6 +178,15 @@ main {
         @include flexy($dir:column);
         // @include debug($lipstick); //BUG: Debugger Mixin
         
+       }
+
+
+       @include m(social-text) {
+           @include flexy($dir: column);
+           width: 60%;
+           height: em(80px);
+           text-align: center;
+           @include debug($lipstick); //BUG: Debugger Mixin
        }
     }
 
@@ -301,6 +316,15 @@ main {
 
        @include m(widget-half) {
         width: 80vw;
+    }
+
+
+    @include e(svg) {
+        width:em(70px);
+        height: em(70px);
+        @include br-default($colu: var( --color-bar-pie-border));
+        border-radius: $br-round;
+
     }
 		 
 
