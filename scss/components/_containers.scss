@@ -154,6 +154,11 @@ main {
         // @include debug($black); //BUG: Debugger Mixin
     }
 
+    @include m(members-contact) {
+        @include br-default($colu: var(--color-membersGrid-border));
+
+    }
+
 }
 
 

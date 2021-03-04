@@ -33,6 +33,7 @@
   --color-social-textShdow: #491d88;
   --color-socialSvg-bg: url(#grad1);
   --color-socialSvg-bg2: url(#grad2);
+  --color-membersGrid-border: #ef0195;
 }
 
 .dark {
@@ -1115,6 +1116,9 @@ main {
   justify-content: space-around;
   align-items: center;
   border: 1px solid var(--color-social-border);
+}
+.grid--members-contact {
+  border: 1px solid var(--color-membersGrid-border);
 }
 
 .wrapper--user-bell {
