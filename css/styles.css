@@ -27,8 +27,12 @@
   --color-traffic-border: rgba(73, 29, 136, 0.5);
   --color-traffic-text: #10133a;
   --color-bar-pie-border: rgba(27, 150, 243, 0.5);
-  --color-social-border: #20F989;
+  --color-social-border: #491d88;
   --color-svg-con-boxShdow: #837F83;
+  --color-social-text: #ef0195;
+  --color-social-textShdow: #491d88;
+  --color-socialSvg-bg: url(#grad1);
+  --color-socialSvg-bg2: url(#grad2);
 }
 
 .dark {
@@ -55,6 +59,12 @@
   --color-traffic-border: rgba(27, 150, 243, 0.5);
   --color-traffic-text: #fcdf87;
   --color-bar-pie-border: #fcdf87;
+  --color-social-border: #20F989;
+  --color-svg-con-boxShdow: #10133a;
+  --color-social-text: #20F989;
+  --color-social-textShdow: #10133a;
+  --color-socialSvg-bg: url(#grad1);
+  --color-socialSvg-bg2: url(#gradDark);
 }
 
 nav {
@@ -729,6 +739,12 @@ input {
   }
 }
 
+.social--name,
+.social--number {
+  color: var(--color-social-text);
+  text-shadow: 0.5px 0.5px 0 var(--color-social-textShdow);
+}
+
 .headline--dashboard {
   padding-left: 0.625em;
 }
@@ -1277,7 +1293,7 @@ main {
   width: 2.5em;
 }
 .svgImg--bell {
-  fill: url(#grad1);
+  fill: var(--color-socialSvg-bg);
 }
 @media (min-width: 768px) {
   .svgImg--bell {
@@ -1294,7 +1310,7 @@ main {
   }
 }
 .svgImg__social {
-  fill: url(#grad1);
+  fill: var(--color-socialSvg-bg2);
 }
 
 input {

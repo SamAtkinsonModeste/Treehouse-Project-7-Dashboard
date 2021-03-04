@@ -81,6 +81,12 @@ input {
 	   }
 }
 
+.social--name,
+ .social--number {
+	 color: var(--color-social-text);
+	 @include text-shdow($blur:0, $col:var(--color-social-textShdow));
+	
+ }
 
 
 //HEADLINE MODIFIERS
@@ -219,5 +225,6 @@ input {
 
 	   @include m(number) {
           font-weight: $font-weight--bold;
+		  
 	   }
 }

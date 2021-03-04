@@ -53,7 +53,10 @@ xx-lg:  $brkpoint-xxlg,
 
 );
 
-
+$svg-fill-1           : url(#grad1);
+$svg-fill-2           : url(#grad2);
+$svg-hover            : url(#gradHover);
+$svg-fill-dark        : url(#gradDark);
 
 
 
@@ -70,9 +73,10 @@ $luckyPoint             : #13185d;
 $white                  : #ffffff;
 $mystic                 : #e5edf0; //blue white
 $whisper                : #f7f2f8;//pink white
-$jaffa                  : #f68741;
 $salomie                : #fcdf87;
 $goldenrod              : #FAD871;
+$corn                   : #eeb406;
+$jaffa                  : #f68741;
 $springGreen            : #20F989;
 $keppel                 : #43b5a0;
 $keppelDark             : #2b6d61;
@@ -106,7 +110,6 @@ $hollywoodCeriseBody       :rgba(239, 1, 149, .3);
 $daisyBushBorder           :rgba(73, 29, 136, 0.5);
 $dodgerBlueBorder          :rgba(27, 150, 243, .5);
 
-$corn              : #eeb406;
 
 
 

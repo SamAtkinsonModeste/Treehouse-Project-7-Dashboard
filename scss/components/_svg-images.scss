@@ -4,7 +4,7 @@
     width: em(40px);
 
        @include m(bell) {
-          fill: url(#grad1);
+          fill: var(--color-socialSvg-bg);
 
         @include mq ("med") {
             margin-left: 0;
@@ -24,7 +24,7 @@
 
 
        @include e(social) {
-           fill: url(#grad1)
+           fill: var(--color-socialSvg-bg2);
        }
 }
 
