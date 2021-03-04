@@ -340,6 +340,16 @@ main {
 
 
     }
+
+    @include m(member){
+        @include flexy($dir: column, $align: center);
+        background: linear-gradient(45deg, var(--color-members-bg-grad1), var(--color-members-bg-grad2), var(--color-members-bg-grad3));
+        border-radius: em(7px);
+        margin: em(20px) auto;
+        padding: em(5px);
+        @include br-default($pix: em(2px), $colu: var( --color-members-border));
+        @include box-shdow($hr:0, $vrt:1px, $blur: 1px, $sphd:1px, $col:var(--color-members-boxShdow));
+    }
 		 
 
     }

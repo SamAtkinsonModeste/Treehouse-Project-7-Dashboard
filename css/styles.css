@@ -34,6 +34,12 @@
   --color-socialSvg-bg: url(#grad1);
   --color-socialSvg-bg2: url(#grad2);
   --color-membersGrid-border: #ef0195;
+  --color-members-bg-grad1: #10133a;
+  --color-members-bg-grad2: #491d88;
+  --color-members-bg-grad3: #ef0195;
+  --color-members-border: #1b96f3;
+  --color-members-boxShdow: #10133a;
+  --color-members-text: #fcdf87;
 }
 
 .dark {
@@ -848,6 +854,15 @@ input {
     text-align: left;
   }
 }
+.container--member-info {
+  text-align: center;
+  color: var(--color-members-text);
+  text-shadow: 2px 2px 1px #252525;
+}
+.container--member-info a {
+  color: #43b5a0;
+  text-shadow: 1px 1px 1px #252525;
+}
 
 .nav__traffic {
   font-size: 0.875em;
@@ -1267,6 +1282,17 @@ main {
   border-radius: 50%;
   box-shadow: 0 1px 1px 1px var(--color-svg-con-boxShdow);
 }
+.container--member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(45deg, var(--color-members-bg-grad1), var(--color-members-bg-grad2), var(--color-members-bg-grad3));
+  border-radius: 0.4375em;
+  margin: 1.25em auto;
+  padding: 0.3125em;
+  border: 0.125em solid var(--color-members-border);
+  box-shadow: 0 1px 1px 1px var(--color-members-boxShdow);
+}
 
 /*WRAPPERS*/
 /*CONTAINERS*/
@@ -1291,6 +1317,12 @@ main {
   .avatar--user {
     width: 100px;
   }
+}
+.avatar--member {
+  padding: 0;
+  border: 0.1875em solid rgba(252, 223, 135, 0.5);
+  width: 50%;
+  box-shadow: 0 1px 6px 2px #10133a;
 }
 
 .svgImg {

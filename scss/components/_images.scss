@@ -22,6 +22,13 @@
         
                     
         	   }  
+
+	@include m(member) {
+		padding: 0;
+		@include br-default($pix: em(3px), $colu:rgba($salomie, .5));
+		width: 50%;
+		@include box-shdow($vrt:1px, $blur: 6px, $sphd:2px, $col:$haiti);
+	}
         
 	
 

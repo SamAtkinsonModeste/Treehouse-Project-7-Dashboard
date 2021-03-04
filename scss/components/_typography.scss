@@ -208,6 +208,18 @@ input {
       
 
 	}
+
+
+	@include m(member-info){
+		text-align: center;
+		color: var(--color-members-text);
+		@include text-shdow($hr: 2px, $vrt:2px, $blur:1px, $col: color-shade(black, light) );
+		 a {
+			color: $keppel;
+			@include text-shdow($hr: 1px, $vrt:1px, $blur:1px, $col: color-shade(black, light) );
+
+		 }
+	}
 }
 
 .nav__traffic {
