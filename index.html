@@ -309,6 +309,82 @@
             </div>
             
       </section>
+
+      <!-- Row 6 Message and Settings-->
+   
+        <!--Messaging Widget-->
+        <section class="grid__col--message">
+          <h2 class="headline--secondary">Message User</h2>
+          <form action="" class="form__widget">
+              <label class="form__label--search"for="userField">Search for user</label>
+              <input type="text" name="search-user" id="userField" class="form__input--searchMember">
+              <label class="form__label--message" for="message">Message For User</label>
+              <textarea class="form__textarea--message-user" name="message-to-user" id="message" cols="30" rows="10" class="form-area"></textarea>
+              <button type="submit"  class="btn__submit" id="send">Send</button>
+          </form>
+      </section>
+
+      <!--Settings Widget-->
+      <section class="grid__col--settings">
+          <h2 class="headline--secondary">Settings</h2>
+                <!-- custom CSS Toggle Email-->
+          <div class="container__setting-box--email">
+              <h3 class="checkbox-labels">Send Email Notifications </h3> 
+              <input type="checkbox" name="settings" id="email" class="checkbox">
+              <label class="switch" for="email">
+                <div class="ball-email"><span class="ball-text"></span></div>
+              </label>
+          </div>
+              <!-- custom CSS Toggle Profile-->
+          <div class="container__setting-box--profile">
+              <h3 class="checkbox-labels">Set Profile to Publice </h3> 
+              <input type="checkbox" name="settings" id="profile" class="checkbox">
+              <label class="switch" for="profile">
+                  <div class="ball-profile"><span class="ball-text"></span></div>
+              </label>
+          </div>
+
+          <!-- custom CSS Toggle code Dark Mode-->
+          <div class="container__setting-box--dark-mode">
+              <h3 class="checkbox-labels">Dark Mode </h3> 
+              <input type="checkbox" name="settings" id="dark-mode" class="checkbox">
+              <label class="switch" for="dark-mode">
+                  <div class="ball-mode"><span class="ball-text"></span></div>
+              </label>
+          </div>
+                        <!-- Time Zone-->
+          <select class= "select--timezone" name="timezone" id="timezone">                
+            <option selected="true" disabled="disabled">Select Timezone</option> 
+            <option value="-12:00">(GMT -12:00) Zanarkand Ruins/Pilgrim End</option>
+            <option value="-11:00">(GMT -11:00)Mount Gagazet,Ronso Territory</option>
+            <option value="-10:00">(GMT -10:00) Gagazet Ruins/ Gagazet Old</option>
+            <option value="-09:50">(GMT -9:30) Calm Lands</option>
+            <option value="-09:00">(GMT -9:00) Bevelle / Monk City</option>
+            <option value="-08:00">(GMT -8:00) Bikanel Island/ Al Bhed Desert</option>
+            <option value="-07:00">(GMT -7:00) Mushroom Rock Road/Greater 'Mi'ihen </option>
+            <option value="-06:00">(GMT -6:00) Mi'ihen Highroad</option>
+            <option value="-05:00">(GMT -5:00) Djose/South 'Mi'ihen</option>
+            <option value="-04:50">(GMT -4:30) Cavern of the Stolen Fayth</option>
+            <option value="-04:00">(GMT -4:00) Baaj Temple (Zanarkand Out Waste)</option>
+            <option value="-03:50">(GMT -3:30) Thunder Plains</option>
+            <option value="-03:00">(GMT -3:00) Guadosalam</option>
+            <option value="-02:00">(GMT -2:00) Mid-Farplane</option>
+            <option value="-01:00">(GMT -1:00) Farplane</option>
+            <option value="+00:00">(GMT-00:00) Besaid Island</option>
+            <option value="+01:00">(GMT +1:00) Kilika Island</option>
+            <option value="+02:00">(GMT +2:00) Luca</option>
+            <option value="+03:00">(GMT +3:00) Moonflow</option>
+            <option value="+03:50">(GMT +3:30) Macalania</option>
+            <option value="+04:00">(GMT +4:00) Dream Zanarkand</option>
+            <option value="+04:50">(GMT +4:30) Omega Ruins</option>
+          </select>
+                            <!--Settings Buttons-->
+          <div class="setting--buttons">
+              <button class="but__set--save" id="save">Save</button>
+              <button class="but__set--reset" id="rest">Reset</button>
+          </div>
+      </section>
+ 
  
 
 
