@@ -64,7 +64,7 @@ input {
 	@extend %h-sec;
 	padding-left: em(5px);
 	@include text(em(15px), $color: var( --color-text-headSec ));
-	@include text-shdow($blur:0, $col:var(--color-textShadow-headSec));
+	@include text-shdow($hr:0, $vrt:em(2px), $blur:0, $col:var(--color-textShadow-headSec));
 	
  
 	@include mq("med") {
@@ -181,6 +181,16 @@ input {
 				font-size: em(25px);
 			}
 	  }
+
+
+	  @include m(chevron-right){
+		
+			color: $springGreen;
+			font-size: em(48px);
+			@include text-shdow($hr: 1px, $vrt:1px, $blur:1px, $col: color-shade(black, light) );
+
+		 
+	  }
 }
   
   
@@ -215,9 +225,28 @@ input {
 		color: var(--color-members-text);
 		@include text-shdow($hr: 2px, $vrt:2px, $blur:1px, $col: color-shade(black, light) );
 		 a {
-			color: $keppel;
+			color: $springGreen;
 			@include text-shdow($hr: 1px, $vrt:1px, $blur:1px, $col: color-shade(black, light) );
 
+		 }
+	}
+
+
+	@include m(members-message){
+		text-align: center;
+		color: var(--color-members-text);
+		@include text-shdow($hr: 2px, $vrt:2px, $blur:1px, $col: color-shade(black, light) );
+		
+		.time {
+			color: $springGreen;
+			@include text-shdow($hr: 1px, $vrt:1px, $blur:1px, $col: color-shade(black, light) );
+
+		 }
+
+		 .members--text-actions {
+			 text-align: left;
+			 
+			 
 		 }
 	}
 }

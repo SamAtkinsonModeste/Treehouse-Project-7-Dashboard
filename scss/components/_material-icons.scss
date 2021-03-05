@@ -1,6 +1,23 @@
 .material-icons {
     display: block;
     position: absolute;//NEED POSITION FIXED HERE
-    right: em(10px);
+    
+        @include m(search) {
+            right: em(10px);
+        }
+
+        @include m(alert) {
+            top: em(-1px);
+            right: em(1px);
+
+                @include mq("med") {
+                    top:em(2px);
+               }
+        }
+
+        @include m(chevron-right) {
+              top: em(5px);
+              right: em(-3px);
+        }
     
 }
