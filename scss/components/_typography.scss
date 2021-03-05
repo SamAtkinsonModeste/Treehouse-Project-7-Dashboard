@@ -64,7 +64,7 @@ input {
 	@extend %h-sec;
 	padding-left: em(5px);
 	@include text(em(15px), $color: var( --color-text-headSec ));
-	@include text-shdow($hr:0, $vrt:em(2px), $blur:0, $col:var(--color-textShadow-headSec));
+	@include text-shdow($hr:0, $vrt:em(1px), $blur:0, $col:var(--color-textShadow-headSec));
 	
  
 	@include mq("med") {
@@ -239,7 +239,7 @@ input {
 		
 		.time {
 			color: $springGreen;
-			@include text-shdow($hr: 1px, $vrt:1px, $blur:1px, $col: color-shade(black, light) );
+			@include text-shdow($hr:1px, $vrt:1px, $blur:1px, $col: color-shade(black, light) );
 
 		 }
 

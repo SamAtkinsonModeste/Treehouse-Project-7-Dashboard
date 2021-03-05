@@ -722,7 +722,7 @@ input {
   padding-left: 0.3125em;
   font-size: 0.9375em;
   color: var(--color-text-headSec);
-  text-shadow: 0 0.125em 0 var(--color-textShadow-headSec);
+  text-shadow: 0 0.0625em 0 var(--color-textShadow-headSec);
 }
 @media (min-width: 768px) {
   .headline--secondary,
