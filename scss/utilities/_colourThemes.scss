@@ -1,31 +1,42 @@
 :root {
+    //BODY
     --color-body-background:          #{$mystic};
     --color-body-text:                #{$black};
-    --color-lin1-body:                #{$haitiBody};
+    --color-lin1-body:                #{$hollywoodCeriseBody};
     --color-lin2-body:                #{$daisyBushBody};
     --color-lin3-body:                #{$hollywoodCeriseBody};
     --color-border:                   #{$daisyBush};
     --color-text-shdow:               #{$luckyPoint};
+    //NAV
     --color-nav-background:           #{$keppel};
     --color-nav-boxShdow:             #{$haiti};
+    //GRIDS
     --color-grid-linear13-bg:         #{$mystic};
     --color-grid-linearMed-bg:        #{$white};
     --color-grid-box-shdow:           #{$daisyBush};
+    //HEADERS
     --color-text-headSec:             #{$haiti};
     --color-textShadow-headSec:       #{$keppel};
+    //FORM
     --color-input-background:         #{$mystic};
     --color-input-brBox:              #{$haiti};
     --color-input-text:               #{$luckyPoint};
     --color-input-placeholder:        #{$daisyBush};
+    --color-input-focus:              #{$hollywoodCerise};
+    --color-input-focusbrBox:         #{$daisyBush};
+    //MATERIAL
     --color-material-icons-search:    #{$haiti};
     --color-material-icons-alert:     #{$salomie};
+    //ALERT
     --color-alert-bg-lin1:            #{$hollywoodCerise};
     --color-alert-bg-lin2:            #{$daisyBush};
     --color-alert-border:             #{$hollywoodCerise};
     --color-alert-text:               #{$salomie};
+    //CHARTS
     --color-traffic-border:           #{$daisyBushBorder};
     --color-traffic-text:             #{$haiti};
     --color-bar-pie-border:           #{$dodgerBlueBorder};
+    //SVGS
     --color-social-border:            #{$daisyBush};
     --color-svg-con-boxShdow:         #{$suvaGray};
     --color-social-text:              #{$hollywoodCerise};
@@ -45,29 +56,40 @@
 
 
 .dark {
+    //BODY
         --color-lin1-body:          #{$black};
         --color-lin2-body:          #{$haiti};
         --color-lin3-body:          #{$black};
         --color-body-text:          #{$mystic};
+        //NAV
         --color-nav-background:     #{$haiti};
         --color-nav-boxShdow:       #{$daisyBush};
+        //GRID
         --color-grid-linear13-bg:   #{$hollywoodCeriseDark};
         --color-grid-linearMed-bg:  #{$violet};
         --color-grid-box-shdow:     #{$keppelDark};
+        //HEADER
         --color-text-headSec:       #{$springGreen};
         --color-textShadow-headSec: #{$haiti};
+        //FORM
     --color-input-background:       #{$haiti};
     --color-input-brBox:            #{$keppel};
     --color-input-placeholder:      #{$mystic};
+    --color-input-focus:            #{$salomie};
+    --color-input-focusbrBox:       #{$springGreen};
+    //MATERIAL
     --color-material-icons-search:  #{$mystic};
     --color-material-icons-alert:   #{$keppelDark};
+    //ALERT
     --color-alert-bg-lin1:          #{$hollywoodCerise};
     --color-alert-bg-lin2:          #{$salomie};
     --color-alert-border:           #{$keppel};
     --color-alert-text:             #{$haiti};
+    //CHARTS
     --color-traffic-border:         #{$dodgerBlueBorder};
     --color-traffic-text:           #{$salomie};
     --color-bar-pie-border:         #{$salomie};
+    //SVG SOCIAL
     --color-social-border:          #{$springGreen};
     --color-svg-con-boxShdow:       #{$haiti};
     --color-social-text:            #{$springGreen};

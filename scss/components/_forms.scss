@@ -10,17 +10,11 @@ input {
     padding: em(15px) em(5px);
     border-radius: $br-rad;
     background: var( --color-input-background);
-    @include br-default($colu:var(--color-input-brBox));
+    @include br-default($pix: 2px, $colu:var(--color-input-brBox));
     @include box-shdow($in:inset, $hr:1px, $vrt:1px,  $sphd:0, $blur:10px, $col:var(--color-input-brBox));
     transition: background-color, border .5s ease-in;
 
 
-        &:focus {
-            
-            outline: none;
-            @include box-shdow($in:inset, $hr:1px, $vrt:1px,  $sphd:0, $blur:10px, $col:$daisyBush);
-            @include br-default($colu:$daisyBush);
-        }
 
 
         @include mq("med"){
@@ -37,11 +31,41 @@ input {
         width: 40%;
         
   }
+
+
+   
     
 }
 
 
+      .input {
+        
+        @include m(searchMember) {
+          margin-bottom: em(30px);
+        }
+      }
 
+
+      input:focus,
+      textarea:focus {
+            
+        outline: none;
+        @include box-shdow($in:inset, $hr:1px, $vrt:1px,  $sphd:0, $blur:10px, $col:var( --color-input-focus));
+        @include br-default($pix: 2px, $colu:var(--color-input-focusbrBox));
+    }
+
+
+.textarea {
+
+    width: 100%;
+    padding: em(15px) em(5px);
+    border-radius: $br-rad;
+    background: var( --color-input-background);
+    @include br-default($pix: 2px, $colu:var(--color-input-brBox));
+    @include box-shdow($in:inset, $hr:1px, $vrt:1px,  $sphd:0, $blur:10px, $col:var(--color-input-brBox));
+    transition: background-color, border .5s ease-in;
+
+}
 
 
 
@@ -49,13 +73,14 @@ input {
 .label{
     display: block;
     margin-bottom: em(10px);
+    color: var(--color-social-text);
+    @include text-shdow($col: var(--color-social-textShdow));
     
-      @include m(hidden) {
-        visibility: hidden;
-   }
+     
 
    @include m(search-label) {
-       color: red;
+       color: var(--color-social-text);
+       @include text-shdow($col: var(--color-social-textShdow));
        margin-bottom: em(8px);
     
    }

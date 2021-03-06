@@ -19,5 +19,11 @@
               top: em(5px);
               right: em(-3px);
         }
+
+
+        @include m(searchMembers) {
+            top: em(25px);
+            right: em(3px);
+      }
     
 }

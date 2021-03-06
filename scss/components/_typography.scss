@@ -120,7 +120,8 @@ input {
 
 	//FORM ELEMENTS
  
-input {
+input,
+textarea {
 	@include text(em(13px), (20px/13px),$font-weight--bold, var( --color-input-text));
 
 	@include mq("med") {
@@ -129,11 +130,14 @@ input {
 	
 }
 
-::-webkit-input-placeholder {
+
+
+:placeholder-shown { /* Standard one last! */
 	color: var(--color-input-placeholder);
-	@include text(em(16px));
+	@include text(em(14px));
 	
   }
+
   
   :-moz-placeholder { /* Firefox 18- */
 	color: var(--color-input-placeholder);
@@ -147,23 +151,33 @@ input {
 	
   }
   
-  :-ms-input-placeholder { /* IE 10+ */
+  :-ms-input-placeholder,
+  :-ms-textarea-placeholder { /* IE 10+ */
 	color: var(--color-input-placeholder);
 	@include text(em(16px));
 	
   }
   
-  ::-ms-input-placeholder { /* Edge */
+  ::-ms-input-placeholder,
+  :-ms-textarea-placeholder { /* Edge */
+
+	@include text(em(14px));
+	
+  }
+
+  ::-webkit-input-placeholder,
+  ::-webkit-textarea-placeholder {
 	color: var(--color-input-placeholder);
 	@include text(em(16px));
+	
+  }
+
+  ::-webkit-textarea-placeholder {
+	@include text(em(14px));
 	
   }
   
-  :placeholder-shown { /* Standard one last! */
-	color: var(--color-input-placeholder);
-	@include text(em(16px));
-	
-  }
+  
   
   
 
