@@ -46,12 +46,18 @@ input {
 
 
 
-label{
+.label{
     display: block;
-    margin-bottom: em(30px);
+    margin-bottom: em(10px);
     
       @include m(hidden) {
         visibility: hidden;
+   }
+
+   @include m(search-label) {
+       color: red;
+       margin-bottom: em(8px);
+    
    }
     
 }

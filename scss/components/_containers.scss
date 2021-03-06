@@ -155,13 +155,18 @@ main {
     }
 
     @include m(members-contact) {
-        @include br-default($colu: var(--color-membersGrid-border));
+        @include br-default($colu:$dodgerBlue);
 
     }
 
         @include m(members-active) {
-            @include br-default($colu: var(--color-membersGrid-border));
+            @include br-default($colu:$hollywoodCerise);
 
+        }
+
+
+        @include m(message) {
+            @include br-default($colu: $jaffa );
         }
 
 }
@@ -339,23 +344,23 @@ main {
 
     @include m(member){
         @include flexy($dir: column, $align: center);
-        background: linear-gradient(0deg, var(--color-members-bg-grad1), var(--color-members-bg-grad2), var(--color-members-bg-grad3));
+        background: linear-gradient(0deg, $haiti, $daisyBush, $hollywoodCerise);
         border-radius: em(7px);
         margin: em(20px) auto;
         padding: em(5px);
-        @include br-default($pix: em(2px), $colu: var( --color-members-border));
-        @include box-shdow($hr:0, $vrt:1px, $blur: 1px, $sphd:1px, $col:var(--color-members-boxShdow));
+        @include br-default($pix: em(2px), $colu: $dodgerBlue);
+        @include box-shdow($hr:0, $vrt:1px, $blur: 1px, $sphd:1px, $col:$haiti);
     }
 
 
     @include m(members-act) {
         @include flexy($dir: column, $align: center);
-        background: linear-gradient(0deg, var(--color-members-bg-grad1), var(--color-members-bg-grad2), var(--color-members-bg-grad3));
+        background: linear-gradient(0deg, $haiti, $daisyBush, $hollywoodCerise);
         border-radius: em(7px);
         margin: em(20px) auto;
         padding: em(5px);
-        @include br-default($pix: em(2px), $colu: var( --color-members-border));
-        @include box-shdow($hr:0, $vrt:1px, $blur: 1px, $sphd:1px, $col:var(--color-members-boxShdow));
+        @include br-default($pix: em(2px), $colu: $dodgerBlue);
+        @include box-shdow($hr:0, $vrt:1px, $blur: 1px, $sphd:1px, $col:$haiti);
     }
 		 @include m(members-message) {
              position: relative;
