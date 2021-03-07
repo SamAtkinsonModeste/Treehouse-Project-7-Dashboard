@@ -1395,7 +1395,6 @@ main {
   position: relative;
   display: flex;
   flex-direction: column;
-  border: solid 1px #0b0b0b;
 }
 
 /*WRAPPERS*/
