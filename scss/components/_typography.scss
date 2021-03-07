@@ -131,7 +131,10 @@ textarea {
 	
 }
 
+.label--switch {
+	@include text(em(14px), (18px/14px),$font-weight--bold, var( --color-input-text));
 
+}
 
 :placeholder-shown { /* Standard one last! */
 	color: var(--color-input-placeholder);

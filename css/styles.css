@@ -808,6 +808,13 @@ textarea {
   }
 }
 
+.label--switch {
+  font-size: 0.875em;
+  line-height: 1.2857142857;
+  font-weight: 700;
+  color: var(--color-input-text);
+}
+
 :placeholder-shown {
   /* Standard one last! */
   color: var(--color-input-placeholder);
@@ -1221,6 +1228,12 @@ main {
 .grid--message {
   border: 1px solid #f68741;
 }
+.grid--settings {
+  border: 1px solid #f68741;
+  display: flex;
+  flex-direction: column;
+  border: solid 1px #0b0b0b;
+}
 
 .wrapper--user-bell {
   padding: 0 0.1875em;
@@ -1501,6 +1514,14 @@ textarea:focus {
   transition: background-color, border 0.5s ease-in;
 }
 
+input[type=checkbox] {
+  width: 3.125em;
+  position: absolute;
+  top: 1.875em;
+  left: 0;
+  border: solid 1px #db006d;
+}
+
 .label {
   display: block;
   margin-bottom: 0.625em;
@@ -1511,6 +1532,13 @@ textarea:focus {
   color: var(--color-social-text);
   text-shadow: 0.5px 0.5px var(--color-social-textShdow);
   margin-bottom: 0.5em;
+}
+.label--switch {
+  position: relative;
+  width: 18.75em;
+  height: 6.25em;
+  padding-top: 2.1875em;
+  border: solid 1px #009700;
 }
 
 .btn {

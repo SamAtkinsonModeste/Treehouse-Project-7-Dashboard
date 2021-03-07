@@ -169,6 +169,11 @@ main {
         @include m(message) {
             @include br-default($colu: $jaffa );
         }
+        @include m(settings) {
+            @include br-default($colu: $jaffa );
+            @include flexy($dir:column);
+             @include debug($color: $black); //BUG: Debugger Mixin
+        }
 
 }
 
@@ -382,68 +387,25 @@ main {
          @include m(form-widget) {
              position: relative;
              @include flexy($dir: column);
-            //  @include debug($color:$black); //BUG: Debugger Mixin
+            //@include debug($color:$black); //BUG: Debugger Mixin
 
          }
 
     }
 
- //BELL SVG & USER WRAPPER
- // .flex-wrapper{
-	
-
- //HEADER MEMBER USER CONTAINER
- // .container__member--user {
-
-   // CONTAINERS - BELL
-   // .container { 
-
-    //GREEN DOT ABOVE BELL
-// .notifi-circle {
-
-    //NAV
-
-// nav {
-// 	grid-area: nav;
-
-//MAIN
-// main {
-// 	grid-area: main;
-
-//CLASS MAIN 
-
-// .main {
-
-    // .grid {
-// 	@include grid-br-radius-bg;
-// 	margin-bottom: em(10px);
-
-//GRID__COL MODIFIERS
-// .grid__col{
-// 	@include m(main-header)
-//MEDIA QUERIES FROM GRID__COL CONTAINERS
+ 
+//SETTINGS LABEL & BALL CONTAINERS
+.ball {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    padding: 0.250em;
+    //@include debug($color:$black); //BUG: Debugger Mixin
+}
 
 
 
-/*WRAPPERS*/	
-	
-// .wrapper {
-		
-// 		@include m(dashboard) {
 
-
-
-    /*CONTAINERS*/
-
-// .container {
-
-
-
-    /*chart widgets*/
-//VW SETTINGS
-// .container__widget {
-
-
-//FOOTER
+    
 
 
