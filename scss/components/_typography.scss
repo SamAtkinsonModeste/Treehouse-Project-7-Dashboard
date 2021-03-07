@@ -122,6 +122,7 @@ input {
  
 input,
 textarea {
+	
 	@include text(em(13px), (20px/13px),$font-weight--bold, var( --color-input-text));
 
 	@include mq("med") {
@@ -282,4 +283,13 @@ textarea {
           font-weight: $font-weight--bold;
 		  
 	   }
+}
+
+
+.btn {
+	font-family: $font-family--primary;
+	font-weight: $font-weight--bold;
+	@include text-shdow($hr:0, $vrt:1px, $col:var( --color-btn-sub-text-shadw));
+	color: $mystic;
+	letter-spacing: em(1.5px);
 }

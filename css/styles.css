@@ -35,6 +35,12 @@
   --color-social-textShdow: #491d88;
   --color-socialSvg-bg: url(#grad1);
   --color-socialSvg-bg2: url(#grad2);
+  --color-btn-sub-border: #1b96f3;
+  --color-btn-sub-boxShdow: #837F83;
+  --color-btn-sub-bg-grad1: #10133a;
+  --color-btn-sub-bg-grad2: #491d88;
+  --color-btn-sub-bg-grad3: #ef0195;
+  --color-btn-sub-text-shadw: #f68741;
 }
 
 .dark {
@@ -69,6 +75,12 @@
   --color-social-textShdow: #10133a;
   --color-socialSvg-bg: url(#grad1);
   --color-socialSvg-bg2: url(#gradDark);
+  --color-btn-sub-border: #10133a;
+  --color-btn-sub-boxShdow: #837F83;
+  --color-btn-sub-bg-grad1: #fcdf87;
+  --color-btn-sub-bg-grad2: #43b5a0;
+  --color-btn-sub-bg-grad3: #20F989;
+  --color-btn-sub-text-shadw: #10133a;
 }
 
 nav {
@@ -914,6 +926,14 @@ textarea {
   font-weight: 700;
 }
 
+.btn {
+  font-family: "Megrim", "cursive", Helvetica, Arial, "sans-serif";
+  font-weight: 700;
+  text-shadow: 0 1px var(--color-btn-sub-text-shadw);
+  color: #e5edf0;
+  letter-spacing: 0.09375em;
+}
+
 .material-icons {
   display: block;
   position: absolute;
@@ -1495,24 +1515,15 @@ textarea:focus {
 }
 
 .btn {
-  background-image: linear-gradient(to right, #1D2B64 0%, #F8CDDA 51%, #1D2B64 100%);
+  background-size: 100% auto;
+  box-shadow: 0 0 0.625em 0.1875em var(--color-btn-sub-boxShdow);
 }
-
-.btn {
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
+.btn--submit {
+  background: linear-gradient(to right, var(--color-btn-sub-bg-grad1) 0%, var(--color-btn-sub-bg-grad2) 51%, var(--color-btn-sub-bg-grad3) 100%);
+  border: 0.0625em solid var(--color-btn-sub-border);
 }
-.btn:hover {
-  background-position: right center;
-  /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
+.btn--submit:hover {
+  background: linear-gradient(to right, var(--color-btn-sub-bg-grad3) 0%, var(--color-btn-sub-bg-grad2) 51%, var(--color-btn-sub-bg-grad1) 100%);
 }
 
 /*# sourceMappingURL=styles.css.map */

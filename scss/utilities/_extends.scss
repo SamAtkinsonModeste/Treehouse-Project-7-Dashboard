@@ -113,3 +113,16 @@ padding: 0 em(16px);
 
 
 
+//BUTTONS
+%btn {
+	margin: em(7px) auto;
+	width: 98%;
+	padding: em(20px,30px);
+	border: 0;
+	border-radius: $br-rad;
+	width: 100%;
+	color: $white;
+	font-size: em(18px);
+	display: block;
+	
+}

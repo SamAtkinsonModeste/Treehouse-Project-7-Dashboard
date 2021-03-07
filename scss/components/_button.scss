@@ -1,0 +1,41 @@
+.btn {
+    @extend %btn;
+    background-size: 100% auto;
+    @include box-shdow($sphd: em(3px), $blur: em(10px), $col:var(--color-btn-sub-boxShdow));
+   
+
+       @include m(submit) {
+        background: linear-gradient(to right,var( --color-btn-sub-bg-grad1) 0%, var( --color-btn-sub-bg-grad2)  51%, var( --color-btn-sub-bg-grad3)  100%);
+        @include br-default($pix: em(1px), $colu:var(--color-btn-sub-border));
+
+            &:hover {
+                background: linear-gradient(to right,var( --color-btn-sub-bg-grad3) 0%, var( --color-btn-sub-bg-grad2)  51%, var( --color-btn-sub-bg-grad1)  100%);
+        }
+       
+     }
+
+
+     
+
+}
+
+
+
+
+// .btn {
+//    text-align: center;
+//    text-transform: uppercase;
+//    transition: 0.5s;
+   
+//    color: white;            
+//    box-shadow: 0 0 20px #eee;
+
+
+//    &:hover {
+//     background-position: right center; /* change the direction of the change here */
+//     color: #fff;
+//     text-decoration: none;
+//   }
+//  }
+
+ 
