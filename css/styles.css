@@ -1410,9 +1410,13 @@ main {
   flex-direction: column;
 }
 
-/*WRAPPERS*/
-/*CONTAINERS*/
-/*chart widgets*/
+.ball {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  padding: 0.25em;
+}
+
 .avatar {
   border-radius: 50%;
 }
