@@ -370,7 +370,7 @@ main {
     }
 		 @include m(members-message) {
              position: relative;
-             @include flexy($wrap: wrap, $just:center);
+             @include flexy($dir: column);
             //  @include debug($color:$jaffa); //BUG: Debugger Mixin
 
              .members--text-actions {

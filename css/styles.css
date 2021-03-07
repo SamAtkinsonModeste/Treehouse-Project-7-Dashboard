@@ -1396,8 +1396,7 @@ main {
 .container--members-message {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
 }
 .container--members-message .members--text-actions {
   margin-right: 0.625em;
