@@ -298,3 +298,10 @@ textarea {
 	color: $mystic;
 	letter-spacing: em(1.5px);
 }
+
+
+.ball-text::before {
+    content: "Off";
+	color:black;
+    
+  }
