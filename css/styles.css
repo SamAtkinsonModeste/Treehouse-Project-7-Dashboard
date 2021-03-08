@@ -1546,7 +1546,7 @@ main {
   content: "";
   position: absolute;
   top: 58px;
-  right: 18px;
+  right: 17px;
   border-radius: 5px 0 0 5px;
   background: red;
   transition: background 0.3s ease-in 1.5s;
