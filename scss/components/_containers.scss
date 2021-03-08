@@ -395,15 +395,51 @@ main {
 
  
 //SETTINGS LABEL & BALL CONTAINERS
+
+.label__switch {
+    position: relative;
+    width: em(75px);
+    height: em(75px);
+    left: 164px;
+    bottom: 72px;
+    transform: rotate(45deg);
+    @include debug($color:$japanese-laurel); //BUG: Debugger Mixin   
+    
+      @include indepent-pseudo(before, 10px, 70px) {
+          display: block;
+          content: "";
+          position: absolute;
+          right:0;
+          @include debug($color:$lipstick); //BUG: Debugger Mixin   
+
+      }
+
+
+      @include indepent-pseudo(after, 30px, 10px) {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 60px;
+        right:10px;
+        @include debug($color:$lipstick); //BUG: Debugger Mixin   
+
+    }
+            
+
+}
+
+
+
 .ball {
     width: 20px;
     height: 20px;
     position: absolute;
+    bottom: 0;
+    right: 50px;
     padding: 0.250em;
-    //@include debug($color:$black); //BUG: Debugger Mixin
+    border-radius: $br-round;
+    @include debug($color:$black); //BUG: Debugger Mixin
 }
-
-
 
 
     

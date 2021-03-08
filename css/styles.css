@@ -808,13 +808,6 @@ textarea {
   }
 }
 
-.label--switch {
-  font-size: 0.875em;
-  line-height: 1.2857142857;
-  font-weight: 700;
-  color: var(--color-input-text);
-}
-
 :placeholder-shown {
   /* Standard one last! */
   color: var(--color-input-placeholder);
@@ -855,6 +848,15 @@ textarea {
 
 ::-webkit-textarea-placeholder {
   font-size: 0.875em;
+}
+
+.checkbox-labels {
+  font-size: 0.875em;
+  line-height: 1.2857142857;
+  font-weight: 700;
+  color: var(--color-social-text);
+  text-shadow: 0.5px 0.5px var(--color-social-textShdow);
+  margin-top: 1.875em;
 }
 
 .material-icons--search {
@@ -1409,11 +1411,44 @@ main {
   flex-direction: column;
 }
 
+.label__switch {
+  position: relative;
+  width: 4.6875em;
+  height: 4.6875em;
+  left: 164px;
+  bottom: 72px;
+  transform: rotate(45deg);
+  border: solid 1px #009700;
+}
+.label__switch::before {
+  width: 10px;
+  height: 70px;
+  display: block;
+  content: "";
+  position: absolute;
+  right: 0;
+  border: solid 1px #db006d;
+}
+.label__switch::after {
+  width: 30px;
+  height: 10px;
+  display: block;
+  content: "";
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  border: solid 1px #db006d;
+}
+
 .ball {
   width: 20px;
   height: 20px;
   position: absolute;
+  bottom: 0;
+  right: 50px;
   padding: 0.25em;
+  border-radius: 50%;
+  border: solid 1px #0b0b0b;
 }
 
 .avatar {
@@ -1535,13 +1570,6 @@ input[type=checkbox] {
   color: var(--color-social-text);
   text-shadow: 0.5px 0.5px var(--color-social-textShdow);
   margin-bottom: 0.5em;
-}
-.label--switch {
-  position: relative;
-  width: 18.75em;
-  height: 6.25em;
-  padding-top: 2.1875em;
-  border: solid 1px #009700;
 }
 
 .btn {

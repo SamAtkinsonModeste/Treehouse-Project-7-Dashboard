@@ -94,15 +94,36 @@ input[type=checkbox] {
     
    }
 
-        @include m(switch) {
-          position: relative;
-          width: em(300px);
-          height: em(100px);
-          padding-top: em(35px);
-          @include debug($color:$japanese-laurel); //BUG: Debugger Mixin
+        // @include m(switch-email) {
+        //   position: relative;
+        //   width: em(75px);
+        //   height: em(75px);
+        //   left: em(170px);
+        //   padding-top: em(50px);
+        //   @include debug($color:$japanese-laurel); //BUG: Debugger Mixin
              
 
-        }
+        // }
+
+        // @include m(switch-profile) {
+        //   position: relative;
+        //   width: em(250px);
+        //   height: em(100px);
+        //   padding-top: em(50px);
+        //   @include debug($color:$japanese-laurel); //BUG: Debugger Mixin
+             
+
+        // }
+
+        // @include m(switch-theme) {
+        //   position: relative;
+        //   width: em(250px);
+        //   height: em(100px);
+        //   padding-top: em(50px);
+        //   @include debug($color:$japanese-laurel); //BUG: Debugger Mixin
+             
+
+        // }
     
 }
 
