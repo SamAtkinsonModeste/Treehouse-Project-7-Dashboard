@@ -227,16 +227,16 @@ nav {
     background: linear-gradient(to right, rgba(247, 18, 18, 0.4), rgba(238, 180, 6, 0.4));
   }
   70% {
-    background: linear-gradient(to right, rgba(32, 249, 137, 0.4), rgba(238, 180, 6, 0.4));
+    background: linear-gradient(to right, rgba(155, 241, 26, 0.4), rgba(238, 180, 6, 0.4));
   }
   80% {
-    background: linear-gradient(to right, rgba(32, 249, 137, 0.6), rgba(238, 180, 6, 0.6));
+    background: linear-gradient(to right, rgba(155, 241, 26, 0.6), rgba(238, 180, 6, 0.6));
   }
   90% {
-    background: linear-gradient(to right, rgba(32, 249, 137, 0.8), rgba(238, 180, 6, 0.8));
+    background: linear-gradient(to right, rgba(155, 241, 26, 0.8), rgba(238, 180, 6, 0.8));
   }
   100% {
-    background: linear-gradient(to right, #20f989, #eeb406);
+    background: linear-gradient(to right, #9bf11a, #eeb406);
   }
 }
 /* CSS Document */
