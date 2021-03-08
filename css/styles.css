@@ -41,6 +41,7 @@
   --color-btn-sub-bg-grad2: #491d88;
   --color-btn-sub-bg-grad3: #ef0195;
   --color-btn-sub-text-shadw: #f68741;
+  transition: 1s;
 }
 
 .dark {
