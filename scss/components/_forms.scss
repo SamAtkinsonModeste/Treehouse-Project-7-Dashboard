@@ -87,7 +87,7 @@ input[type=checkbox]:checked ~ .label__switch .ball-email,
     -webkit-animation: ballSlide .8s ease-out forwards;
 }
 
-input[type=checkbox]:checked ~ .label__switch  .ball  .ball-text::before {
+input[type=checkbox]:checked ~ .label__switch .ball .ball-text::before{
   animation: changeText .5s ease-out forwards .7s;
   -webkit-animation: changeText .5s ease-out forwards .7s;
 }
