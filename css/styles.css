@@ -1042,6 +1042,7 @@ textarea {
 
 .ball-text::before {
   content: "Off";
+  transition: content;
 }
 
 .material-icons {
