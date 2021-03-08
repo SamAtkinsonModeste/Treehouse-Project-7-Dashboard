@@ -413,6 +413,7 @@ main {
                 right:8px;
                 background: linear-gradient(to right,rgba(255, 0, 0, 1), rgb(238, 180, 6, 1));
                 border-radius: 5px 5px 5px 0;
+                @include box-shdow($hr:1px, $vrt:1px, $col: $haiti);
                 z-index: 1;
                 transition: background .3s ease-in .3s;
                 -webkit-transition: background .3s ease-in .3s;
@@ -432,6 +433,7 @@ main {
                 right:17px;
                 border-radius: 5px 0 0 5px;
                 background: rgba(255, 0, 0, 1);
+                @include box-shdow($hr:1px, $vrt:1px, $col: $haiti);
                 transition: background .3s ease-in 1.5s;
                 -webkit-border-radius:  5px 0 0 5px;
                 -moz-border-radius:  5px 0 0 5px;
