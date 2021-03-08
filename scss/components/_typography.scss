@@ -299,9 +299,18 @@ textarea {
 	letter-spacing: em(1.5px);
 }
 
+.ball {
+	font-family: $font-family--secondary;
+	font-weight: $font-weight--bold;
+	@include text-shdow($hr:0, $vrt:1px, $col:$haiti);
+	color: $white;
+	letter-spacing: em(1.1px);
+}
+
+
 
 .ball-text::before {
     content: "Off";
-	color:black;
+
     
   }

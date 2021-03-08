@@ -70,13 +70,37 @@ input {
 input[type=checkbox] {
   width: em(50px);
   position: absolute;
-  top: em(30px);
-  left:0;
+  top:-29px;
+  left:155px;
   visibility: hidden;
-  @include debug($color:$lipstick); //BUG: Debugger Mixin
+  // @include debug($color:$lipstick); //BUG: Debugger Mixin
              
 
 
+}
+
+input[type=checkbox]:checked ~ .label__switch .ball-email,
+  input[type=checkbox]:checked ~ .label__switch .ball-profile,
+  input[type=checkbox]:checked ~ .label__switch  .ball-mode {
+    z-index: 1000;
+    animation: ballSlide .8s ease-out forwards;
+    -webkit-animation: ballSlide .8s ease-out forwards;
+}
+
+input[type=checkbox]:checked ~ .label__switch  .ball  .ball-text::before {
+  animation: changeText .5s ease-out forwards .7s;
+  -webkit-animation: changeText .5s ease-out forwards .7s;
+}
+
+
+input[type=checkbox]:checked ~ .label__switch.label__switch::before {
+  animation: topTicksBg .5s ease-in forwards .4s;
+  -webkit-animation: topTicksBg .5s ease-in forwards .4s;
+}
+
+input[type=checkbox]:checked ~ .label__switch.label__switch::after {
+  animation: bottomTicksBg .5s ease forwards .2s;
+  -webkit-animation: bottomTicksBg .5s ease forwards .2s;
 }
 
 
@@ -95,60 +119,13 @@ input[type=checkbox] {
     
    }
 
-        // @include m(switch-email) {
-        //   position: relative;
-        //   width: em(75px);
-        //   height: em(75px);
-        //   left: em(170px);
-        //   padding-top: em(50px);
-        //   @include debug($color:$japanese-laurel); //BUG: Debugger Mixin
-             
-
-        // }
-
-        // @include m(switch-profile) {
-        //   position: relative;
-        //   width: em(250px);
-        //   height: em(100px);
-        //   padding-top: em(50px);
-        //   @include debug($color:$japanese-laurel); //BUG: Debugger Mixin
-             
-
-        // }
-
-        // @include m(switch-theme) {
-        //   position: relative;
-        //   width: em(250px);
-        //   height: em(100px);
-        //   padding-top: em(50px);
-        //   @include debug($color:$japanese-laurel); //BUG: Debugger Mixin
-             
-
-        // }
+        
     
 }
 
+
   
 
-
-// @include mq("med"){
-//     width: 450px;
-    
-    
-// }
-
-
-// @include mq("lg"){
-//     width: 400px;
-//     margin: em(153px) auto 0;
-    
-// }
-
-// @include mq("x-lg"){
-    
-//     margin: em(63px) auto 0;
-    
-// }
 
 
 
