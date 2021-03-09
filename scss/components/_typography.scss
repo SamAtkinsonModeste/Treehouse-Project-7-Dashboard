@@ -121,7 +121,8 @@ input {
 	//FORM ELEMENTS
  
 input,
-textarea {
+textarea,
+select {
 	
 	@include text(em(13px), (20px/13px),$font-weight--bold, var( --color-input-text));
 

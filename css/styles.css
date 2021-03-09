@@ -890,7 +890,8 @@ input {
 }
 
 input,
-textarea {
+textarea,
+select {
   font-size: 0.8125em;
   line-height: 1.5384615385;
   font-weight: 700;
@@ -898,7 +899,8 @@ textarea {
 }
 @media (min-width: 768px) {
   input,
-textarea {
+textarea,
+select {
     font-size: 1em;
   }
 }
@@ -1255,7 +1257,6 @@ nav {
 
 main {
   grid-area: main;
-  border: solid 3px #0b0b0b;
   border-width: 2px;
   width: 99%;
   max-width: 1400px;
@@ -1643,7 +1644,8 @@ main {
   fill: var(--color-socialSvg-bg2);
 }
 
-input {
+input,
+select {
   width: 100%;
   height: 1.5625em;
   padding: 0.9375em 0.3125em;
@@ -1654,19 +1656,22 @@ input {
   transition: background-color, border 0.5s ease-in;
 }
 @media (min-width: 768px) {
-  input {
+  input,
+select {
     width: 60%;
     padding: 0.875em 0.625em;
   }
 }
 @media (min-width: 1024px) {
-  input {
+  input,
+select {
     width: 55%;
     padding: 1.125em 0.875em;
   }
 }
 @media (min-width: 1200px) {
-  input {
+  input,
+select {
     width: 40%;
   }
 }
@@ -1676,7 +1681,8 @@ input {
 }
 
 input:focus,
-textarea:focus {
+.textarea:focus,
+select:focus {
   outline: none;
   box-shadow: inset 1px 1px 10px 0 var(--color-input-focus);
   border: 2px solid var(--color-input-focusbrBox);
@@ -1690,6 +1696,23 @@ textarea:focus {
   border: 2px solid var(--color-input-brBox);
   box-shadow: inset 1px 1px 10px 0 var(--color-input-brBox);
   transition: background-color, border 0.5s ease-in;
+}
+
+select {
+  height: 3.75em;
+  padding: 0 1em;
+  padding-left: 2.5em;
+  background: #ef0195;
+  font-size: 0.625em;
+  color: #f7f2f8;
+  border: 4px solid var(--color-input-brBox);
+}
+select:invalid {
+  color: #f7f2f8;
+}
+select:focus {
+  border: 4px solid var(--color-input-focusbrBox);
+  box-shadow: inset 1px 1px 10px 0 var(--color-input-focus);
 }
 
 input[type=checkbox] {
@@ -1737,14 +1760,16 @@ input[type=checkbox]:checked ~ .label__switch.label__switch::after {
 
 .btn {
   background-size: 100% auto;
-  box-shadow: 0 0 0.625em 0.1875em var(--color-btn-sub-boxShdow);
-}
-.btn--submit {
   background: linear-gradient(to right, var(--color-btn-sub-bg-grad1) 0%, var(--color-btn-sub-bg-grad2) 51%, var(--color-btn-sub-bg-grad3) 100%);
+  box-shadow: 0 0 0.625em 0.1875em var(--color-btn-sub-boxShdow);
   border: 0.0625em solid var(--color-btn-sub-border);
 }
-.btn--submit:hover {
+.btn:hover {
   background: linear-gradient(to right, var(--color-btn-sub-bg-grad3) 0%, var(--color-btn-sub-bg-grad2) 51%, var(--color-btn-sub-bg-grad1) 100%);
+}
+.btn:active {
+  background: linear-gradient(to right, var(--color-btn-sub-bg-grad3) 0%, var(--color-btn-sub-bg-grad2) 51%, var(--color-btn-sub-bg-grad1) 100%);
+  border: 0.0625em solid var(--color-btn-sub-border);
 }
 
 /*# sourceMappingURL=styles.css.map */
