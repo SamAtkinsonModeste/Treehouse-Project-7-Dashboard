@@ -1054,6 +1054,10 @@ select {
   -webkit-animation: changeText 0.5s ease-out backwards 0.7s;
 }
 
+footer {
+  text-align: center;
+}
+
 .material-icons {
   display: block;
   position: absolute;
