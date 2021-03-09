@@ -1,45 +1,45 @@
 //BALL 
 @keyframes ballSlide {
     0% {
-      transform: translate(25px, 2px) scale(0);
-      -webkit-transform: translate(25px, 2px) scale(0);
-      -moz-transform: translate(25px, 2px) scale(0);
-      -ms-transform: translate(25px, 2px) scale(0);
-      -o-transform: translate(25px, 2px) scale(0);
+      transform: translate(-5px, 45px) scale(0);
+      -webkit-transform: translate(-5px, 45px) scale(0);
+      -moz-transform: translate(-5px, 45px) scale(0);
+      -ms-transform: translate(-5px, 45px) scale(0);
+      -o-transform: translate(-5px, 45px) scale(0);
   }
     2% {
-      transform: translate(47px, 2px) scale(0.2);
-      -webkit-transform: translate(47px, 2px) scale(0.2);
-      -moz-transform: translate(47px, 2px) scale(0.2);
-      -ms-transform: translate(47px, 2px) scale(0.2);
-      -o-transform: translate(47px, 2px) scale(0.2);
+      transform: translate(33px, 45px) scale(0.2);
+      -webkit-transform: translate(33px, 45px) scale(0.2);
+      -moz-transform: translate(33px, 45px) scale(0.2);
+      -ms-transform: translate(33px, 45px) scale(0.2);
+      -o-transform: translate(33px, 45px) scale(0.2);
   }
   
   60% {
-    transform: translate(47px, 2px) scale(0.5);
-    -webkit-transform: translate(47px, 2px) scale(0.5);
-    -moz-transform: translate(47px, 2px) scale(0.5);
-    -ms-transform: translate(47px, 2px) scale(0.5);
-    -o-transform: translate(47px, 2px) scale(0.5);
+    transform: translate(43px, 45px) scale(0.5);
+    -webkit-transform: translate(43px, 45px) scale(0.5);
+    -moz-transform: translate(43px, 45px) scale(0.5);
+    -ms-transform: translate(43px, 45px) scale(0.5);
+    -o-transform: translate(43px, 45px) scale(0.5);
   }
   
   
   
   
     80% {
-      transform: translate(47px, -110px) scale(1.5);
-      -webkit-transform: translate(47px, -110px) scale(1.5);
-      -moz-transform: translate(47px, -110px) scale(1.5);
-      -ms-transform: translate(47px, -110px) scale(1.5);
-      -o-transform: translate(47px, -110px) scale(1.5);
+      transform: translate(47px, -80px) scale(1.5);
+      -webkit-transform: translate(43px, -80px) scale(1.5);
+      -moz-transform: translate(43px, -80px) scale(1.5);
+      -ms-transform: translate(43px, -80px) scale(1.5);
+      -o-transform: translate(43px, -80px) scale(1.5);
   }
   
     100% {
-      transform: translate(47px, -75px) scale(1);
-      -webkit-transform: translate(47px, -75px) scale(1);
-      -moz-transform: translate(47px, -75px) scale(1);
-      -ms-transform: translate(47px, -75px) scale(1);
-      -o-transform: translate(47px, -75px) scale(1);
+      transform: translate(43px, -30px) scale(1);
+      -webkit-transform: translate(43px, -30px) scale(1);
+      -moz-transform: translate(43px, -30px) scale(1);
+      -ms-transform: translate(43px, -30px) scale(1);
+      -o-transform: translate(43px, -30px) scale(1);
   }
   }
   
@@ -48,12 +48,19 @@
   @keyframes changeText {
     0% {
       content: "Off";
+      @include text-shdow($hr:0, $vrt:1px, $col:$haiti);
+	    color: $white;
+	    letter-spacing: em(1.1px);
     }
     50% {
-      color:  rgb(238, 180, 6, 1);
+      content:"";
+      
     }
     100% {
       content: "On";
+      @include text-shdow($hr:0, $vrt:1px, $col:$haiti);
+	    color: $white;
+	    letter-spacing: em(1.1px);
     }
   }
 

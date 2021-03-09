@@ -154,50 +154,56 @@ nav {
 
 @keyframes ballSlide {
   0% {
-    transform: translate(25px, 2px) scale(0);
-    -webkit-transform: translate(25px, 2px) scale(0);
-    -moz-transform: translate(25px, 2px) scale(0);
-    -ms-transform: translate(25px, 2px) scale(0);
-    -o-transform: translate(25px, 2px) scale(0);
+    transform: translate(-5px, 45px) scale(0);
+    -webkit-transform: translate(-5px, 45px) scale(0);
+    -moz-transform: translate(-5px, 45px) scale(0);
+    -ms-transform: translate(-5px, 45px) scale(0);
+    -o-transform: translate(-5px, 45px) scale(0);
   }
   2% {
-    transform: translate(47px, 2px) scale(0.2);
-    -webkit-transform: translate(47px, 2px) scale(0.2);
-    -moz-transform: translate(47px, 2px) scale(0.2);
-    -ms-transform: translate(47px, 2px) scale(0.2);
-    -o-transform: translate(47px, 2px) scale(0.2);
+    transform: translate(33px, 45px) scale(0.2);
+    -webkit-transform: translate(33px, 45px) scale(0.2);
+    -moz-transform: translate(33px, 45px) scale(0.2);
+    -ms-transform: translate(33px, 45px) scale(0.2);
+    -o-transform: translate(33px, 45px) scale(0.2);
   }
   60% {
-    transform: translate(47px, 2px) scale(0.5);
-    -webkit-transform: translate(47px, 2px) scale(0.5);
-    -moz-transform: translate(47px, 2px) scale(0.5);
-    -ms-transform: translate(47px, 2px) scale(0.5);
-    -o-transform: translate(47px, 2px) scale(0.5);
+    transform: translate(43px, 45px) scale(0.5);
+    -webkit-transform: translate(43px, 45px) scale(0.5);
+    -moz-transform: translate(43px, 45px) scale(0.5);
+    -ms-transform: translate(43px, 45px) scale(0.5);
+    -o-transform: translate(43px, 45px) scale(0.5);
   }
   80% {
-    transform: translate(47px, -110px) scale(1.5);
-    -webkit-transform: translate(47px, -110px) scale(1.5);
-    -moz-transform: translate(47px, -110px) scale(1.5);
-    -ms-transform: translate(47px, -110px) scale(1.5);
-    -o-transform: translate(47px, -110px) scale(1.5);
+    transform: translate(47px, -80px) scale(1.5);
+    -webkit-transform: translate(43px, -80px) scale(1.5);
+    -moz-transform: translate(43px, -80px) scale(1.5);
+    -ms-transform: translate(43px, -80px) scale(1.5);
+    -o-transform: translate(43px, -80px) scale(1.5);
   }
   100% {
-    transform: translate(47px, -75px) scale(1);
-    -webkit-transform: translate(47px, -75px) scale(1);
-    -moz-transform: translate(47px, -75px) scale(1);
-    -ms-transform: translate(47px, -75px) scale(1);
-    -o-transform: translate(47px, -75px) scale(1);
+    transform: translate(43px, -30px) scale(1);
+    -webkit-transform: translate(43px, -30px) scale(1);
+    -moz-transform: translate(43px, -30px) scale(1);
+    -ms-transform: translate(43px, -30px) scale(1);
+    -o-transform: translate(43px, -30px) scale(1);
   }
 }
 @keyframes changeText {
   0% {
     content: "Off";
+    text-shadow: 0 1px #10133a;
+    color: #ffffff;
+    letter-spacing: 0.06875em;
   }
   50% {
-    color: #eeb406;
+    content: "";
   }
   100% {
     content: "On";
+    text-shadow: 0 1px #10133a;
+    color: #ffffff;
+    letter-spacing: 0.06875em;
   }
 }
 @keyframes bottomTicksBg {
@@ -1042,7 +1048,8 @@ textarea {
 
 .ball-text::before {
   content: "Off";
-  transition: content;
+  animation: changeText 0.5s ease-out backwards 0.7s;
+  -webkit-animation: changeText 0.5s ease-out backwards 0.7s;
 }
 
 .material-icons {
@@ -1520,12 +1527,12 @@ main {
   position: relative;
   width: 4.6875em;
   height: 4.6875em;
-  left: 155px;
+  left: 158px;
   bottom: 72px;
   transform: rotate(45deg);
 }
 .label__switch::before {
-  width: 10px;
+  width: 14px;
   height: 58px;
   display: block;
   content: "";
@@ -1544,11 +1551,11 @@ main {
 }
 .label__switch::after {
   width: 20px;
-  height: 10px;
+  height: 14px;
   display: block;
   content: "";
   position: absolute;
-  top: 58px;
+  top: 54px;
   right: 17px;
   border-radius: 5px 0 0 5px;
   background: red;
@@ -1564,14 +1571,12 @@ main {
   width: 34px;
   height: 34px;
   position: absolute;
-  bottom: 0;
-  right: 50px;
   padding: 0.25em;
   border-radius: 50%;
   background: #eeb406;
   box-shadow: inset 0 0 3px 1px #0b0b0b;
   transform: rotate(45deg);
-  transform: translateX(1px) translateY(2px);
+  transform: translateX(-5px) translateY(45px);
   border: solid 1px #0b0b0b;
 }
 

@@ -310,7 +310,9 @@ textarea {
 
 
 .ball-text::before {
+	
     content: "Off";
-    transition: content;
+	animation: changeText .5s ease-out backwards .7s;
+    -webkit-animation: changeText .5s ease-out backwards .7s;
     
   }
