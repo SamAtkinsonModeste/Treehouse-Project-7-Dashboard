@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="1 0 32 32"  xmlns:v="https://vecta.io/nano">
+<defs>
+                          <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="130%">
+                                <stop offset="0%" style="stop-color:rgb(246, 135, 65);stop-opacity:1" />
+                                <stop offset="40%" style="stop-color:rgb(73, 29, 136);stop-opacity:1" />
+                                <stop offset="60%" style="stop-color:rgb(239, 1, 149);stop-opacity:1" />
+                          </linearGradient>
+                        </defs>
+
+<path d="M25 18c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3zm-1-4h2v2h-2v-2zm1 12c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3zm-1-4h2v2h-2v-2zm-7 4c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3zm-1-4h2v2h-2v-2zM28 0H6C3.8 0 2 1.8 2 4v24c0 2.2 1.8 4 4 4h22c2.2 0 4-1.8 4-4V4c0-2.2-1.8-4-4-4zm2 28c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2V8h26v20zm0-22H4V4c0-1.1.9-2 2-2h22c1.1 0 2 .9 2 2v2zM17 18c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3zm-1-4h2v2h-2v-2zM9 26c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3zm-1-4h2v2H8v-2zm1-4c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3zm-1-4h2v2H8v-2z" fill="url(#grad1)" stroke="rgb(16, 19, 58)" stroke-width="0.5%"/></svg>

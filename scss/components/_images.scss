@@ -1,0 +1,60 @@
+.avatar {
+    @extend %img;
+    border-radius:$br-round;
+      
+			@include m(user) {
+				margin: 0 0;
+				margin-right: em(5px);
+				width: 75px;
+				@include br-default($colu: transparent);
+				@include box-shdow($hr:1px, $vrt:1px, $blur:5px, $col: $haiti);
+				// @include debug($luckyPoint); //BUG: Debugger Mixin
+				
+							@include mq("med") {
+								width: 80px;
+								margin: 0 em(5px);
+							}
+				
+							@include mq("lg") {
+								width: 100px;
+								
+							}
+				
+							
+			}  
+
+			@include m(member) {
+				padding: 0;
+				@include br-default($pix: em(3px), $colu:rgba($salomie, .5));
+				width: 50%;
+				max-width: 130px;
+				@include box-shdow($vrt:1px, $blur: 6px, $sphd:2px, $col:$haiti);
+				
+						@include mq("med") {
+							margin: 0;
+							margin-right: 10px;
+							margin-left: 5px;
+						}
+
+						@include mq("lg") {
+							width: 18%;
+						}
+			}
+				
+	
+
+}
+
+.notficat-img {
+	@extend %img;
+    border-radius:$br-round;
+	border-color: transparent;
+	width: 40px;
+	margin:0 em(10px) 0 em(1px);
+	@include box-shdow($vrt:1px, $blur:3px, $sphd:1px, $col:$haiti);
+
+			@include mq("med") {
+				width: 70px;
+			}
+	
+}

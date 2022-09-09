@@ -1,0 +1,259 @@
+//==========================
+//FORMS
+//==========================
+
+	
+	
+input,
+select {
+    width: 100%;
+    height: em(25px);
+    padding: em(15px) em(5px);
+    border-radius: $br-rad;
+    background: var( --color-input-background);
+    @include br-default($pix: 2px, $colu:var(--color-input-brBox));
+    @include box-shdow($in:inset, $hr:1px, $vrt:1px,  $sphd:0, $blur:10px, $col:var(--color-input-brBox));
+    transition: background-color, border .5s ease-in;
+
+
+
+
+        @include mq("med"){
+                    width: 60%;
+                    padding: em(14px) em(10px);
+        }
+
+        @include mq("lg"){
+            width: 55%;
+            padding: em(18px) em(14px);
+        }
+
+        @include mq("x-lg"){
+          width: 40%;
+          
+        }
+       
+}
+
+
+.input {
+        
+        @include m(searchMember) {
+          width: 100%;
+          margin-bottom: em(30px);
+        }
+}
+
+
+  
+
+input:focus,
+.textarea:focus,
+select:focus {
+            
+        outline: none;
+        @include box-shdow($in:inset, $hr:1px, $vrt:1px,  $sphd:0, $blur:10px, $col:var( --color-input-focus));
+        @include br-default($pix: 2px, $colu:var(--color-input-focusbrBox));
+}
+
+
+
+.input--searchMember:active + span,
+.input--searchMember:focus + span {
+  display: none;
+}
+
+
+.textarea {
+
+    width: 100%;
+    padding: em(15px) em(5px);
+    border-radius: $br-rad;
+    background: var( --color-input-background);
+    @include br-default($pix: 2px, $colu:var(--color-input-brBox));
+    @include box-shdow($in:inset, $hr:1px, $vrt:1px,  $sphd:0, $blur:10px, $col:var(--color-input-brBox));
+    transition: background-color, border .5s ease-in;
+
+}
+
+
+select {
+  height: em(60px);
+  padding: 0 em(16px);
+  padding-left: em(40px);
+  background: $hollywoodCerise;
+  font-size: em(10px);
+  color: $whisper;
+  @include br-default($pix: 4px, $colu:var(--color-input-brBox));
+  
+  &:invalid {
+    color: $whisper;
+  }
+
+  &:focus {
+
+        @include br-default($pix: 4px, $colu:var(--color-input-focusbrBox));
+         @include box-shdow($in:inset, $hr:1px, $vrt:1px,  $sphd:0, $blur:10px, $col:var( --color-input-focus));
+  }
+
+
+          @include mq("med") {
+            display: block;
+            margin: 10px auto;
+            width: 92%;
+          }
+
+          @include mq("lg") {
+            display: block;
+            margin: 104px auto 16px;
+            width: 99%;
+          }
+}
+
+
+
+input[type=checkbox] {
+  width: 50px;
+  visibility: hidden;
+  // @include debug($color:$lipstick); //BUG: Debugger Mixin           
+
+}
+
+//BALL SLIDE ANIMATION ON CHECKED
+input[type=checkbox]:checked ~ .label__switch .ball-email,
+input[type=checkbox]:checked ~ .label__switch .ball-profile,
+input[type=checkbox]:checked ~ .label__switch  .ball-mode {
+    z-index: 1000;
+    animation: ballSlide .8s ease-out forwards;
+    -webkit-animation: ballSlide .8s ease-out forwards;
+}
+
+//TEXT ANIMATION FOR BALL ON CHECKED
+input[type=checkbox]:checked ~ .label__switch .ball .ball-text::before{
+  animation: changeText .5s ease-out forwards .7s;
+  -webkit-animation: changeText .5s ease-out forwards .7s;
+}
+
+//TALL PART OF TICK ANIMATION ON CHECKED
+input[type=checkbox]:checked ~ .label__switch.label__switch::before {
+  animation: topTicksBg .5s ease-in forwards .4s;
+  -webkit-animation: topTicksBg .5s ease-in forwards .4s;
+}
+
+//SMALL PART OF TICK ANIMATION ON CHECKED
+input[type=checkbox]:checked ~ .label__switch.label__switch::after {
+  animation: bottomTicksBg .5s ease forwards .2s;
+  -webkit-animation: bottomTicksBg .5s ease forwards .2s;
+}
+
+
+//ALL LABELS ESPECIALLY FOR CHECKBOXES
+
+.label{
+    display: block;
+    margin-bottom: em(10px);
+    color: var(--color-social-text);
+    @include text-shdow($col: var(--color-social-textShdow));
+    
+     
+
+        @include m(search-label) {
+            color: var(--color-social-text);
+            @include text-shdow($col: var(--color-social-textShdow));
+            margin-bottom: em(8px);
+          
+        }
+
+        @include m(switch-email) {
+            width: em(60px);
+          height: em(60px);
+          top: 42px;
+          left: 231px;
+
+                  @include mq("med") {
+                    width: em(80px);
+                    height: em(80px);
+                    top: 89px;
+                    left: 475px;              
+                  }  
+
+                  @include mq("lg") {
+                    width: em(80px);
+                    height: em(80px);
+                    top: 79px;
+                    left: 326px;           
+                  }  
+
+                  @include mq("xx-lg") {
+                    width: em(80px);
+                    height: em(80px);
+                    top: 79px;
+                    left: 426px;           
+                  }  
+        }
+
+        @include m(switch-profile) {
+          width: em(60px);
+          height: em(60px);
+          top:   130px;
+          left: 231px;
+
+                @include mq("med") {
+                  width: em(80px);
+                  height: em(80px);
+                  top: 196px;
+                  left:475px;           
+                } 
+                
+                @include mq("lg") {
+                  width: em(80px);
+                  height: em(80px);
+                  top: 186px;
+                  left: 326px;           
+                }  
+
+                @include mq("xx-lg") {
+                  width: em(80px);
+                  height: em(80px);
+                  top: 186px;
+                  left: 426px;           
+                }  
+        }
+
+
+        @include m(switch-theme) {
+          width: em(60px);
+          height: em(60px);
+          top: 218px;
+          left: 231px;
+
+                @include mq("med") {
+                  width: em(80px);
+                  height: em(80px);
+                  top: 303px;
+                  left: 475px;           
+                }  
+
+                @include mq("lg") {
+                  width: em(80px);
+                  height: em(80px);
+                  top: 289px;
+                  left: 326px;           
+                }  
+
+                @include mq("xx-lg") {
+                  width: em(80px);
+                  height: em(80px);
+                  top:  293px;
+                  left: 426px;           
+                }  
+        }
+ 
+}
+
+
+  
+
+
+
+

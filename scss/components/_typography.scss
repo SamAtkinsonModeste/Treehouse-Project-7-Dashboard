@@ -1,0 +1,530 @@
+// ==========================================================================
+// Typography
+//==========================================================================
+.grid-container {
+	font-family: $font-family--body;
+	@include text($base__font-size, ($base__line/$base__font-size ), $color: var(--color-body-text));
+
+
+	@include mq("med") {
+		@include text($size: em(18px));
+
+	}
+}
+
+
+
+.container--alert strong {
+	color: var(--color-springGreen);
+}
+
+
+time {
+	color: var(--color-date-text);
+	font-size: em(15px);
+	@include text-shdow($hr: 1px, $vrt: 1px, $blur: 1px, $col: color-shade(black, light));
+}
+
+
+
+
+
+.headline--primary {
+	font-family: $font-family--primary;
+}
+
+
+.headline--secondary,
+.link,
+.headline--user,
+input {
+	font-family: $font-family--secondary;
+
+}
+
+
+
+//HEADLINE PRIMARY
+.headline--primary {
+	margin: 0;
+	@extend %h-prim;
+	@include text(em(16px), (38px/16px), $color: $color-primary);
+	text-shadow: 1px 1px 0 $goldenrod,
+		-1px -1px 2px color-shade(black, dark);
+
+	// @include debug($japanese-laurel); //BUG:
+
+
+
+	@include mq("med") {
+
+		@include text($size: em(34px));
+		text-shadow: 1px 1px 0 darken($salomie, 15%),
+			-2px -2px 2px darken($black, 10%);
+
+	}
+
+	@include mq("lg") {
+		@include text(em(45px), (5px/45px));
+
+	}
+
+	@include mq("x-lg") {
+		@include text(em(50px));
+	}
+}
+
+
+
+//HEADLINE SECONDAY
+.headline--secondary,
+.social--name,
+.social--number {
+	@extend %h-sec;
+	padding-left: em(5px);
+	@include text(em(15px), $color: var(--color-text-headSec));
+	@include text-shdow($hr: 0, $vrt: em(1px), $blur: 0, $col: var(--color-textShadow-headSec));
+
+
+	@include mq("med") {
+		@include text(em(22px));
+
+	}
+
+	@include mq("lg") {
+		@include text(em(23px));
+	}
+
+	@include mq("x-lg") {
+		@include text(em(24px));
+	}
+}
+
+
+
+.social--name,
+.social--number {
+
+
+	@include mq("med") {
+		@include text(em(18px));
+
+	}
+
+	@include mq("lg") {
+		@include text(em(23px));
+	}
+
+	@include mq("x-lg") {
+		@include text(em(26px));
+	}
+
+	@include mq("xx-lg") {
+		@include text(em(30px));
+		margin-top: em(-10px);
+	}
+}
+
+
+.headline--secondary {
+
+	@include mq("med") {
+		@include text(em(24px));
+
+	}
+
+	@include mq("lg") {
+		@include text(em(25px));
+	}
+
+	@include mq("x-lg") {
+		@include text(em(26px));
+	}
+
+}
+
+.social--name,
+.social--number {
+	color: var(--color-social-text);
+	@include text-shdow($blur: 0, $col: var(--color-social-textShdow));
+
+}
+
+
+
+
+//HEADLINE MODIFIERS
+
+.headline {
+
+
+	@include m(dashboard) {
+		padding-left: em(10px);
+	}
+
+
+	@include m(user) {
+		@include text(em(10px), (14px/10px), $color: $salomie);
+		letter-spacing: em(1px);
+		text-align: center;
+		padding-right: em(5px);
+		margin: 0 em(6px) 0 0;
+		@include text-shdow($hr: 2px, $vrt: 2px, $blur: 1px, $col: color-shade(black, light));
+		// @include debug( $color:$luckyPoint); //BUG: Debugging Mixin
+
+		@include mq("med") {
+			@include text(em(15px));
+			letter-spacing: em(2px);
+			@include text-shdow($hr: 3px, $vrt: 3px, $blur: 2px, $col: color-shade(black, light));
+
+		}
+
+	}
+
+}
+
+
+
+//FORM ELEMENTS
+input,
+textarea,
+select {
+
+	@include text(em(13px), (20px/13px), $font-weight--bold, var(--color-input-text));
+
+	@include mq("med") {
+		@include text(em(16px));
+	}
+
+}
+
+input {
+	letter-spacing: em(2px);
+}
+
+
+
+:placeholder-shown {
+	/* Standard one last! */
+	color: var(--color-input-placeholder);
+	@include text(em(14px));
+
+}
+
+
+:-moz-placeholder {
+	/* Firefox 18- */
+	color: var(--color-input-placeholder);
+	@include text(em(16px), (28px/16px));
+
+}
+
+::-moz-placeholder {
+	/* Firefox 19+ */
+	color: var(--color-input-placeholder);
+	@include text(em(16px));
+
+}
+
+:-ms-input-placeholder,
+:-ms-textarea-placeholder {
+	/* IE 10+ */
+	color: var(--color-input-placeholder);
+	@include text(em(16px));
+
+}
+
+::-ms-input-placeholder,
+:-ms-textarea-placeholder {
+	/* Edge */
+
+	@include text(em(14px));
+
+}
+
+::-webkit-input-placeholder,
+::-webkit-textarea-placeholder {
+	color: var(--color-input-placeholder);
+	@include text(em(16px));
+
+}
+
+::-webkit-textarea-placeholder {
+	@include text(em(14px));
+
+}
+
+
+.checkbox-labels {
+	@include text($size: em(17px), $weight: $font-weight--bold, $color: var(--color-social-text));
+	@include text-shdow($col: var(--color-social-textShdow));
+	display: inline-block;
+	width: 75%;
+	margin-bottom: em(10px);
+
+	@include mq("med") {
+		font-size: 32px;
+
+	}
+
+	@include mq("lg") {
+		font-size: 24px;
+	}
+}
+
+
+.material-icons {
+
+
+	@include m(search) {
+		color: var(--color-material-icons-search);
+		@include text-shdow();
+	}
+
+	@include m(alert) {
+		color: var(--color-material-icons-alert);
+		@include text-shdow();
+		font-size: em(20px);
+
+		@include mq("med") {
+			font-size: em(25px);
+		}
+	}
+
+
+	@include m(chevron-right) {
+
+		color: $springGreen;
+		font-size: em(48px);
+		@include text-shdow($hr: 1px, $vrt: 1px, $blur: 1px, $col: color-shade(black, light));
+
+
+	}
+
+
+
+}
+
+
+.container {
+
+
+	@include m(alert) {
+
+
+		p {
+			@include text($size: em(10px), $weight: $font-weight--bold, $color: var(--color-alert-text));
+			text-align: center;
+
+
+			@include mq("med") {
+				@include text($size: em(20px));
+				text-align: center;
+
+			}
+
+			@include mq("lg") {
+				@include text($size: em(25px));
+
+
+			}
+		}
+
+
+	}
+
+	@include m(member-alert) {
+		p {
+			@include text($size: em(14px), $weight: $font-weight--bold, $color: var(--color-alert-text));
+			text-align: center;
+
+			@include mq("med") {
+				@include text($size: em(16px));
+
+			}
+		}
+
+	}
+
+
+	@include m(member-info) {
+		text-align: center;
+		color: $salomie;
+		@include text-shdow($hr: 2px, $vrt: 2px, $blur: 1px, $col: color-shade(black, light));
+
+		a {
+			color: $springGreen;
+			@include text-shdow($hr: 1px, $vrt: 1px, $blur: 1px, $col: color-shade(black, light));
+
+		}
+
+
+		@include mq("med") {
+			text-align: left;
+		}
+	}
+
+
+	@include m(members-message) {
+		text-align: center;
+		color: $salomie;
+		@include text-shdow($hr: 2px, $vrt: 2px, $blur: 1px, $col: color-shade(black, light));
+
+		.time {
+			color: $springGreen;
+			@include text-shdow($hr: 1px, $vrt: 1px, $blur: 1px, $col: color-shade(black, light));
+
+			@include mq("med") {
+				text-align: left;
+			}
+
+		}
+
+		.members--text-actions {
+			text-align: center;
+
+			@include mq("med") {
+				text-align: left;
+			}
+
+		}
+
+
+
+
+
+	}
+
+
+	@include m(notify) {
+		@include text($size: em(8px), $weight: $font-weight--bold, $color: var(--color-alert-text));
+	}
+
+
+}
+
+
+.notifi {
+	@include text-shdow($hr: 0.5px, $vrt: 0.5px, $blur: 0.5px, $col: color-shade(black, light));
+
+	@include m(close) {
+		.noti-message {
+			text-align: center;
+			font-size: em(20px);
+
+			@include mq("med") {
+				font-size: em(25px);
+			}
+		}
+	}
+
+	@include m(1) {
+		.noti-message {
+			letter-spacing: em(1px);
+		}
+	}
+
+
+	@include mq("med") {
+		font-size: em(28px);
+	}
+}
+
+
+.material-icons {
+	@include m(notifi) {
+		font-size: em(34px);
+	}
+}
+
+.nav__traffic {
+	@include text($size: em(14px), $weight: $font-weight--bold , $color: var(--color-traffic-text));
+	@include text-shdow($hr: 0.2px, $vrt: 0.2px, $col: var(--color-traffic-nav-txSha));
+	line-height: em(15px);
+	text-align: center;
+	border-radius: em(8px);
+	letter-spacing: em(0.9px);
+
+	@include mq("xx-lg") {
+		font-size: em(16px);
+	}
+
+}
+
+.notifi-circle {
+	color: $white;
+	@include text-shdow($col: $black);
+	text-align: center;
+}
+
+
+
+.social {
+	margin: em(5px) auto;
+	align-self: center;
+
+	@include m(number) {
+		font-weight: $font-weight--bold;
+
+	}
+
+}
+
+
+.btn {
+	font-family: $font-family--primary;
+	font-weight: $font-weight--bold;
+	@include text-shdow($hr: 0, $vrt: 1px, $col: var(--color-btn-sub-text-shadw));
+	color: $mystic;
+	letter-spacing: em(1.5px);
+}
+
+.ball {
+	font-family: $font-family--secondary;
+	font-weight: $font-weight--bold;
+	font-size: em(10px);
+	@include text-shdow($hr: 0, $vrt: 1px, $col: $haiti);
+	color: $white;
+	letter-spacing: em(1.1px);
+}
+
+
+
+.ball-text::before {
+
+	content: "Off";
+	animation: changeText .5s ease-out backwards .7s;
+	-webkit-animation: changeText .5s ease-out backwards .7s;
+
+}
+
+
+//AUTOCOMPLETE
+.autocomplete-items div {
+	@include text($size: em(14px), $weight: $font-weight--bold , $color: var(--color-traffic-text));
+	@include text-shdow($hr: 0.2px, $vrt: 0.2px, $col: var(--color-traffic-nav-txSha));
+	letter-spacing: em(2px);
+}
+
+
+
+.autocomplete-items div strong,
+.autocomplete-items.autocomplete-active strong {
+	color: var(--color-auto-strong-letter);
+}
+
+
+option {
+	font-size: em(16px);
+
+	@include mq("med") {
+		font-size: em(20px);
+	}
+}
+
+
+footer {
+	text-align: center;
+	color: var(--color-traffic-nav-txSha);
+	padding: em(16px) 0;
+}

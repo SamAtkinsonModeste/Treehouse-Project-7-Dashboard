@@ -1,0 +1,56 @@
+.material-icons {
+    display: block;
+    position: absolute;//NEED POSITION FIXED HERE
+    
+    
+        @include m(search) {
+            right: em(10px);
+        }
+
+        @include m(alert) {
+            top:-6px;
+            right: em(-3px);
+            padding: em(8px);
+            cursor: pointer;
+
+                    @include mq("med") {
+                        top:em(2px);
+                   }
+        }
+
+
+        @include m(searchMembers) {
+            top: em(2px);
+            right: em(4px);
+        }
+
+        @include m(notifi) {
+            right:-4px;
+            top: -7px;
+            padding: em(10px);
+            
+        }
+
+        @include m(checkbox) {
+            color: var(--color-traffic-nav-txSha);
+            font-size: em(100px);       
+
+        }
+    
+}
+
+
+.material-icons--chevron-right {
+    display: none;
+              
+        @include mq("med") {
+            display: block;
+            position: relative;
+            align-self: center;
+            
+        }
+}
+
+
+
+

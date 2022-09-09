@@ -1,0 +1,172 @@
+// ======================================================================================================
+// Mixins  Text Shadows Gradient Border BG-Img  Pseudo Element flexbox BEM Media Query Debug
+//=======================================================================================================
+//Text Properties
+@mixin text($size, $l-height: null, $weight: null, $color:null) {
+	font-size: $size;
+	line-height: $l-height;
+	font-weight: $weight;
+	color: $color;
+}
+
+//SHADOWS
+
+//Text Shadow
+@mixin text-shdow($hr: 0.5px, $vrt:0.5px, $blur:null, $col:null) {
+	text-shadow: $hr $vrt $blur $col;
+}
+
+//Box Shadow
+@mixin box-shdow($in:null, $hr:0, $vrt:0, $blur:null, $sphd:null, $col:null) {
+    box-shadow: $in $hr $vrt $blur $sphd $col;
+}
+
+
+//Gradient
+
+@mixin grad($dir:0deg, $color1, $color2) {
+    background: -webkit-linear-gradient($dir, $color1, $color2);
+	background: -moz-linear-gradient($dir, $color1, $color2);
+	background: -o-linear-gradient($dir, $color1, $color2);
+	background: linear-gradient($dir, $color1, $color2);
+
+}
+
+//Border 
+@mixin br-default ($pix:1px, $styl:solid, $colu:null) {
+	border: $pix $styl $colu;
+}
+
+//Background Images
+@mixin bg-img(  $img,
+			    $repeat: no-repeat,
+				$attach:null, 
+				$posit: null, 
+				$size: cover) {
+  background-image:url("#{$path-svg}/#{$img}");
+  background-repeat: $repeat;
+  background-attachment: $attach;
+  background-position: $posit;
+  background-size: $size;
+
+
+}
+
+//Background Colours and Border Radius
+@mixin grid-br-radius-bg 
+ {
+    background: linear-gradient(217deg, var(--color-grid-linear13-bg) 20%, var(--color-grid-linearMed-bg) 100%);
+	border-radius: em(15px);
+	margin-bottom: em(10px);
+	-webkit-box-shadow: 0 3px 2px -2px var(--color-grid-box-shdow);
+    -moz-box-shadow: 0 3px 2px -2px var(--color-grid-box-shdow);
+    box-shadow: 0 3px 2px -2px var(--color-grid-box-shdow);
+			 @include mq ("med") {
+				-webkit-box-shadow: 0 3px 2px -2px var(--color-grid-box-shdow);
+                -moz-box-shadow: 0 3px 2px -2px var(--color-grid-box-shdow);
+                box-shadow: 0 3px 2px -2px var(--color-grid-box-shdow);
+			 }
+			 @include mq ("lg") {
+				-webkit-box-shadow: 0 5px 3px -3px var(--color-grid-box-shdow);
+				-moz-box-shadow: 0 5px 3px -3px var(--color-grid-box-shdow);
+				 box-shadow: 0 5px 3px -3px var(--color-grid-box-shdow);
+			 }
+			 @include mq ("x-lg") {
+				-webkit-box-shadow: 0 7px 4px -4px var(--color-grid-box-shdow);
+				-moz-box-shadow: 0 7px 4px -4px var(--color-grid-box-shdow);
+				 box-shadow: 0 7px 4px -4px var(--color-grid-box-shdow);
+			 }
+	@content;
+
+
+}
+
+
+//PSEUDO ELEMENT
+
+@mixin pseudo-el ($el, $el-w:null, $el-h:null){
+	&::#{$el} {
+		@extend %pseudo;
+		width: $el-w;
+		height: $el-h;
+		@content;
+
+	}
+	 
+	  
+}
+
+//Without Placeholder
+@mixin indepent-pseudo ($el, $el-w:null, $el-h:null){
+	&::#{$el} {
+		width: $el-w;
+		height: $el-h;
+		@content;
+
+	}
+	 
+	  
+}
+  
+
+
+
+
+//Flex Box
+@mixin flexy ($disp: flex,
+			 $dir: null,
+			 $wrap: null,
+			 $just: null,
+			 $align: null) {
+  display: $disp;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $just;
+  align-items: $align;
+
+}
+
+//BEM Selectors
+
+@mixin e($element){
+	&__#{$element} {
+		@content;
+	}
+	
+}
+
+
+@mixin m($modifier){
+	&--#{$modifier} {
+		@content;
+	}
+	
+}
+
+
+//Media Query 
+
+@mixin mq($break) {
+    $brk-value : map-get($breakpoints, $break);
+    $med       : map-get($breakpoints, "med");
+  
+        @if $brk-value < $med {
+              @media (max-width: $brk-value ){
+                  @content;
+              }
+              
+        }  
+      
+        @else {
+              @media (min-width: $brk-value) {
+                  @content;
+              }
+        }
+  }
+  
+  
+  //DEBUGING 
+  @mixin debug ($pix:1px, $color:null) {
+      border: solid $pix $color;
+      
+  }

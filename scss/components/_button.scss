@@ -1,0 +1,59 @@
+.btn {
+    @extend %btn;
+    background-size: 100% auto;
+    background: linear-gradient(to right,var( --color-btn-sub-bg-grad1) 0%, var( --color-btn-sub-bg-grad2)  51%, var( --color-btn-sub-bg-grad3)  100%);
+    @include box-shdow( $blur: em(2px), $sphd: em(1px), $col:var(--color-btn-sub-boxShdow));
+    @include br-default($pix: em(1px), $colu:var(--color-btn-sub-border));
+
+   
+    &:hover {
+        background: linear-gradient(to right,var( --color-btn-sub-bg-grad3) 0%, var( --color-btn-sub-bg-grad2)  51%, var( --color-btn-sub-bg-grad1)  100%);
+   }
+
+   &:active {
+    background: linear-gradient(to right,var( --color-btn-sub-bg-grad3) 0%, var( --color-btn-sub-bg-grad2)  51%, var( --color-btn-sub-bg-grad1)  100%);
+    @include br-default($pix: em(1px), $colu:var(--color-btn-sub-border));
+
+   }
+
+   @include m(submit) {
+       width: 99%;
+       
+
+        @include mq("med") {
+            margin:0;
+            margin-top: em(10px);
+           
+           
+        }
+   }
+    
+    @include m(reset) {
+        width: 48%;
+        display: inline-block;        
+    }
+
+    @include m(save) {
+        width: 48%;
+        display: inline-block;
+    }
+
+    @include m(alert) {
+        width: 80px;
+    padding-top: em(5px);
+    padding-bottom: em(5px);
+    margin-top: em(30px);
+    
+        @include mq("med") {
+            margin-top: em(20px);
+        }
+
+    }    
+
+}
+
+
+
+
+
+ 

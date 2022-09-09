@@ -1,0 +1,127 @@
+// ==========================================================================
+// Place Holders
+//==========================================================================
+
+//SPACING
+
+//Padding
+
+%pad-all {
+	padding: em(16px);
+}
+
+%pad-sides {
+padding: 0 em(16px);
+
+}
+
+//Margin 
+
+%marg-cen {
+	margin: 0 auto;
+}
+
+
+
+//Nav
+//Basic display
+%nav-item-dis {
+	margin: 0 em(3px);
+	display: block;
+	
+}
+
+//Word links 
+%nav-item-link {
+	display: block;
+	padding: em(8px, 20px);
+	text-decoration: none;
+	text-align: center;
+	border-radius: $br-rad;
+	
+}
+
+//Links base styles
+
+%link-deflt {
+	text-decoration: none;
+	
+}
+
+
+//Pseudo elements base styles
+%pseudo {
+    content: "";
+    display: block;
+    position: absolute;
+   }
+
+
+
+//Primary and Secondary Headings
+%h-prim {
+	margin-bottom: em(10px);
+	
+}
+
+
+%h-sec {
+	letter-spacing: $letter-spacing;
+	margin-right: em(5px);
+	
+}
+
+
+
+
+//Background Image links 
+%nav-link-bg-img {
+	display: block;
+	margin: 0 auto;
+	padding: em(8px, 20px);
+	border-radius: $br-rad;
+	width: 100%;
+	height: 100%;
+}
+
+
+//Image base styles
+%img {
+	display: block;
+	padding: em(5px);
+	margin: 0 auto;
+	margin-bottom: em(5px);
+	max-width: 100%;
+	height: auto;
+}
+
+
+%svg {
+	display: block;
+	padding: em(5px);
+	margin: 0 auto;
+	margin-bottom: em(5px);
+	height: auto;
+	width: 100%;
+}
+
+
+%svg-cent-can {
+	transform-origin: 50% 50%;
+	transform-box: fill-box;
+}
+
+
+
+//BUTTONS
+%btn {
+	margin: em(7px) auto;
+	width: 100%;
+	padding: em(20px,30px);
+	border: 0;
+	border-radius: $br-rad;
+	color: $white;
+	font-size: em(18px);
+	display: block;
+	
+}

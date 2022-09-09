@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spira's Dashboard</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="favcon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favcon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favcon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favcon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favcon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favcon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favcon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favcon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favcon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favcon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favcon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favcon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favcon/favicon-16x16.png">
+  <link rel="manifest" href="favcon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="favcon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!-- CUSTOM ALLERT BOX -->
+  <div id="alert-overlay">
+    <div class="container--alert container--member-alert" id="alert-containers">
+      <div id="alertHead"></div>
+      <div id="alertBody"></div>
+      <div id="alertFooter"></div>
+    </div>
+  </div>
+
+
+
+  <div class="grid-container">
+    <!--  Header   -->
+
+    <header class="top-header">
+
+      <h1 class="headline--primary">Spira App &#8482;</h1>
+      <div class="wrapper--user-bell">
+        <div class="container container--member-user">
+
+          <!--icon Bell-->
+          <div class="container--bell" id="bell-note">
+            <span class="notifi-circle"></span>
+            <title id="bell">Notifications</title>
+            <svg class="svgImg svgImg--bell" id="notif-bell" aria-labelledby="bell" viewBox="0 0 32 32">
+              <defs>
+                <linearGradient id="gradAfter" x1="0%" y1="0%" x2="0%" y2="90%">
+                  <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+                  <stop offset="90%" style="stop-color:rgb(67,181,161);stop-opacity:1" />
+                </linearGradient>
+              </defs>
+
+              <defs>
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="90%">
+                  <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+                  <stop offset="90%" style="stop-color:rgb(236, 9, 9);stop-opacity:1" />
+                </linearGradient>
+              </defs>
+              <path class="icon--bell"
+                d="M24 18v-8c0-5.5-4.5-10-10-10S4 4.5 4 10v8l-4 8h9.1c.5 2.3 2.5 4 4.9 4s4.4-1.7 4.9-4H28l-4-8zM14 28c-1.3 0-2.4-.8-2.8-2h5.6c-.4 1.2-1.5 2-2.8 2zM3 24l3-6v-8c0-4.4 3.6-8 8-8s8 3.6 8 8v8l3 6H3z" />
+            </svg>
+
+            <!-- Notifications -->
+            <div class="wrapper wrapper--notifications active" id="wrap-notificate">
+              <span class="arrow"></span>
+              <ul class="container container--notify" id="notifications">
+                <li class="notifi notifi--close">
+                  <p class="noti-message" id="last-noti-message">All Notifications</p>
+
+
+                </li>
+                <li class="notifi notifi--1">
+                  <img class="notficat-img" src="images/spiraLogo.png" alt="Spira logo FFX">
+                  <p class="noti-message">Spira's 150th Festival. Create speech for the opening.</p>
+                  <span class="material-icons material-icons--notifi">clear</span>
+                </li>
+
+                <li class="notifi notifi--2">
+                  <img class="notficat-img" src="images/auron.jpg" alt="Auron FFX">
+                  <p class="noti-message">Combat Training at 4pm</p>
+                  <span class="material-icons material-icons--notifi">clear</span>
+                </li>
+
+                <li class="notifi notifi--3">
+                  <img class="notficat-img" src="images/tidus.jpg" alt="Tidus FFX">
+                  <p class="noti-message">Date night with Tidus</p>
+                  <span class="material-icons material-icons--notifi">clear</span>
+                </li>
+
+
+
+                <li class="notifi notifi--close notifi--closeAll">
+                  <p class="noti-message" id="close-noti-message">Close Notifications</p>
+                  <span class="material-icons material-icons--notifi">clear</span>
+
+                </li>
+              </ul>
+            </div>
+
+
+
+
+          </div>
+
+          <img class="avatar avatar--user" src="images/yuna.jpg" alt="Picture of Yuna High Summoner of Spira">
+          <h3 class="headline--user">Yuna Besaidmon</h3>
+        </div>
+      </div>
+
+    </header>
+
+    <!-- Main Nav-->
+    <nav>
+      <ul class="nav nav--top">
+        <li class="nav__icons nav--dash nav--current"><a href="#top"></a></li>
+        <li class="nav__icons nav--visits"><a href="#charts"></a></li>
+        <li class="nav__icons nav--members"><a href="#members"></a></li>
+        <li class="nav__icons nav--set"><a href="#settings"></a></li>
+
+      </ul>
+
+    </nav>
+
+
+
+
+    <!-- MAIN -->
+    <main>
+      <!-- MAIN WRAPPER -->
+      <div class="inner-main">
+
+        <!--  GRID MAIN HEADER JS ALERT BANNER ROW 1-->
+        <section class="grid grid--main-header">
+          <!--Wrapper H2 Dashboard and Search-->
+          <div class="wrapper--dashboard">
+            <h2 class="headline--secondary headline--dashboard">Dashboard</h2>
+            <div class="container--search">
+              <input class="input--search-put" type="text" name="search" id="search" placeholder="Search...">
+              <span class="material-icons material-icons--search">search</span>
+            </div>
+          </div>
+
+
+          <!-- Alert banner for Javascript-->
+          <div id="alert">
+
+          </div>
+        </section>
+
+        <!-- ROW 2 Traffic -->
+
+        <section class="grid grid--traffic" id="charts">
+          <!-- Traffic Nav-->
+          <div class="wrapper--nav-traf">
+            <h2 class="headline--secondary">Traffic</h2>
+            <ul class="nav nav--traffic-nav" id="traffic-nav">
+              <li class="nav__traffic nav--link hourly" id="hourly">Hourly</li>
+              <li class="nav__traffic nav--link daily" id="daily">Daily</li>
+              <li class="nav__traffic nav--link weekly active-traffic" id="weekly">Weekly</li>
+              <li class="nav__traffic nav--link monthly" id="monthly">Monthly</li>
+            </ul>
+          </div>
+          <!--Traffic Chart-->
+          <div class="container container--widget-full">
+            <canvas class="widget--traffic" id="traffic-chart">
+            </canvas>
+          </div>
+        </section>
+
+        <!-- ROW 3 Daily and Mobile Traffic-->
+
+        <!-- Bar Chart-->
+        <section class="grid grid--bar-chart">
+          <h2 class="headline--secondary">Daily Traffic</h2>
+          <div class="container--widget-half">
+            <!-- <img src="https://loremflickr.com/420/340/graph" alt="graph"> -->
+            <canvas class="widget--bar dark" id="bar-chart">
+
+            </canvas>
+          </div>
+        </section>
+        <!--Pie Chart-->
+        <section class="grid grid--pie-chart">
+          <h2 class="headline--secondary">Mobile Users</h2>
+          <div class="container--widget-half">
+            <!-- <img src="https://loremflickr.com/420/340/graph" alt="graph"> -->
+            <canvas class="widget--pie" id="pie-chart">
+
+            </canvas>
+          </div>
+        </section>
+
+        <!-- ROW 4 Social Status-->
+
+        <section class="grid grid--all-social">
+          <!--Twitter-->
+          <section class="grid grid--social wrapper--social-twitter">
+            <div class="container__svg container--svg-tweet">
+              <!--Inline SVG goes HERE-->
+              <svg class="svgImg__social svgImg--tweety" aria-hidden="true" viewBox="0 0 32 32">
+
+                <defs>
+                  <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:rgb(16, 19, 58);stop-opacity:1" />
+                    <stop offset="50%" style="stop-color:rgb(73, 29, 136);stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:rgb(239, 1, 149);stop-opacity:1" />
+
+                  </linearGradient>
+                </defs>
+
+                <defs>
+                  <linearGradient id="gradDark" x1="0%" y1="0%" x2="0%" y2="100%">
+
+                    <stop offset="0%" style="stop-color:rgb(67,181,161);stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+
+                  </linearGradient>
+                </defs>
+                <path class="icon--twitter"
+                  d="M32 3.1c-1.2.5-2.4.9-3.8 1 1.4-.8 2.4-2.1 2.9-3.6-1.3.8-2.7 1.3-4.2 1.6C25.8.8 24 0 22.2 0c-3.6 0-6.6 2.9-6.6 6.6 0 .5.1 1 .2 1.5-5.5-.3-10.3-2.9-13.6-6.9-.6 1-.9 2.1-.9 3.3 0 2.3 1.2 4.3 2.9 5.5-1.1 0-2.1-.3-3-.8v.1c0 3.2 2.3 5.8 5.3 6.4-.6.1-1.1.2-1.7.2-.4 0-.8 0-1.2-.1.8 2.6 3.3 4.5 6.1 4.6-2.2 1.8-5.1 2.8-8.2 2.8-.5 0-1.1 0-1.6-.1 2.9 1.9 6.4 3 10.1 3 12.1 0 18.7-10 18.7-18.7v-.8c1.3-1 2.4-2.2 3.3-3.5z" />
+              </svg>
+            </div>
+            <div class="wrapper--social-text">
+              <h3 class="social--name">Twitter</h3>
+              <p class="social--number">10,345</p>
+            </div>
+          </section>
+
+          <!-- Facebook -->
+          <section class="grid grid--social wrapper--social-facebook">
+            <div class="container__svg container--svg-faceB.social">
+              <!--Inline SVG goes HERE-->
+              <svg class="svgImg__social svgImg--face-book" araia-hidden="true" viewBox="10 6 44 50">
+                <path class="icon--bookface"
+                  d="M40.43 21.739h-7.645v-5.014c0-1.883 1.248-2.322 2.127-2.322h5.395V6.125l-7.43-.029c-8.248 0-10.125 6.174-10.125 10.125v5.518h-4.77v8.53h4.77v24.137h10.033V30.269h6.77l.875-8.53z" />
+              </svg>
+            </div>
+            <div class="wrapper--social-text">
+              <h3 class="social--name">Facebook</h3>
+              <p class="social--number">8,739</p>
+            </div>
+          </section>
+
+          <!-- Google -->
+          <section class="grid grid--social wrapper--social-google">
+            <div class="container__svg container--svg-google">
+              <!--Inline SVG goes HERE-->
+              <svg class="svgImg__social svgImg--google" aria-hidden="true" viewBox="0 0 32 32">
+                <path class="icon--goo"
+                  d="M17.7 25.7c0-.3 0-.5-.1-.8-.1-.2-.1-.5-.2-.7s-.2-.4-.3-.7c-.2-.2-.3-.4-.4-.6s-.3-.3-.5-.6l-.5-.5c-.1-.1-.3-.3-.6-.5s-.5-.4-.6-.4-.3-.2-.6-.4-.5-.4-.6-.4h-1l-2 .1c-.7.1-1.4.2-2.1.5-.7.2-1.3.5-1.9.9s-1 .8-1.3 1.4a4.65 4.65 0 0 0-.5 2.1c0 .9.2 1.7.7 2.3.5.7 1.1 1.2 1.8 1.6s1.5.7 2.3.9 1.6.3 2.4.3 1.5-.1 2.2-.2c.7-.2 1.3-.4 1.9-.8a3.16 3.16 0 0 0 1.4-1.4 4.65 4.65 0 0 0 .5-2.1zM15.4 9.1c0-.8-.1-1.6-.3-2.5a10.64 10.64 0 0 0-.9-2.5c-.4-.8-.9-1.5-1.6-2s-1.5-.8-2.3-.8c-1.2 0-2.1.4-2.8 1.3s-1 1.9-1 3.2c0 .6.1 1.2.2 1.9s.4 1.3.7 2 .7 1.3 1.1 1.8.9 1 1.5 1.3 1.2.5 1.9.5c1.2 0 2.1-.4 2.7-1.2.5-.7.8-1.7.8-3zM12.9 0h8.4l-2.6 1.5h-2.6a6.11 6.11 0 0 1 2.1 2.4c.5 1 .8 2.1.8 3.2 0 .9-.1 1.8-.4 2.5s-.7 1.3-1.1 1.8c-.4.4-.8.9-1.3 1.2l-1.1 1.2c-.3.4-.4.8-.4 1.3a1.93 1.93 0 0 0 .3 1c.2.3.5.6.8.9s.7.6 1.1.9.8.7 1.2 1.1.8.8 1.1 1.3.6 1 .8 1.6.3 1.3.3 2c0 2.1-.9 3.9-2.7 5.4-1.9 1.7-4.6 2.5-8.1 2.5-.8 0-1.5-.1-2.3-.2s-1.6-.3-2.3-.6c-.8-.3-1.5-.7-2.1-1.1s-1.1-1-1.5-1.7C1 27.6.8 26.9.8 26c0-.8.2-1.6.7-2.6.4-.8 1-1.5 1.8-2.1s1.8-1.1 2.8-1.4 2-.5 3-.7l2.9-.3c-.8-1.1-1.2-2-1.2-2.9v-.5c0-.1.1-.3.1-.4s.1-.2.2-.4.1-.3.1-.4c-.5.1-1 .1-1.3.1-1.9 0-3.5-.6-4.9-1.9S3 9.7 3 7.8C3 6 3.6 4.4 4.8 3A8.54 8.54 0 0 1 9.3.4c1.2-.3 2.4-.4 3.6-.4zm19.9 4.9v2.5h-4.9v4.9h-2.5V7.4h-4.9V4.9h4.9V0h2.5v4.9h4.9z" />
+              </svg>
+            </div>
+            <div class="wrapper--social-text">
+              <h3 class="social--name">Google+</h3>
+              <p class="social--number">2,530</p>
+            </div>
+          </section>
+
+        </section>
+
+        <!--Row 5 Members Widget-->
+
+        <!-- New Memebers Widget-->
+        <section class="grid grid--members-contact" id="members">
+          <h2 class="headline--secondary">New Members</h2>
+
+
+          <!--Member Rikku-->
+          <div class="container--member">
+            <img class="avatar avatar--member" src="images/rikku.jpg" alt="Picture of Rikku Yuna's cousin">
+            <div class="container--member-info">
+              <h3 class="members--name">Rikku Gullwing</h3>
+              <a class="memberEmail" href="#">rikku.gullwing@spiramail.com</a>
+            </div>
+
+            <div class="container--join-date">
+              <p>
+                <time datetime="2021-07-07">07/07/21</time>
+              </p>
+            </div>
+
+          </div>
+
+          <!--Member Tidus-->
+          <div class="container--member">
+            <img class="avatar avatar--member" src="images/tidus.jpg" alt="Picture of Tidus Yuna's love">
+            <div class="container--member-info">
+              <h3 class="members--name">Tidus Blitzon</h3>
+              <a class="memberEmail" href="#">titus.blitzon@spiramail.com</a>
+            </div>
+            <div class="container--join-date">
+              <p>
+                <time datetime="2021-07-07">07/07/21</time>
+              </p>
+            </div>
+
+          </div>
+
+
+          <!--Member Paine-->
+          <div class="container--member">
+            <img class="avatar avatar--member" src="images/paine.jpg" alt="Picture of Paine Yuna's friend">
+            <div class="container--member-info">
+              <h3 class="members--name">Paine Crimson</h3>
+              <a class="memberEmail" href="#">paine.crimson@spiramail.com</a>
+            </div>
+            <div class="container--join-date">
+              <p>
+                <time datetime="2021-07-07">07/07/21</time>
+              </p>
+            </div>
+
+          </div>
+
+          <!--Member Auron -->
+          <div class="container--member">
+            <img class="avatar avatar--member" src="images/auron.jpg" alt="Picture of Auron the best guardian of spira">
+            <div class="container--member-info">
+              <h3 class="members--name">Auron Guardian</h3>
+              <a class="memberEmail" href="#">auron.guardin@spiramail.com</a>
+            </div>
+            <div class="container--join-date">
+              <p>
+                <time datetime="2021-07-07">07/07/21</time>
+              </p>
+            </div>
+
+          </div>
+        </section>
+
+        <!--Recent Activity Widget-->
+        <section class="grid grid--members-active">
+          <h2 class="headline--secondary">Recent Activity</h2>
+
+          <!--Member Rikku-->
+          <div class="container--members-act">
+            <img class="avatar avatar--member" src="images/rikku.jpg" alt="Picture of Rikku Yuna's cousin">
+            <div class="container--members-message">
+              <p class="members--text-actions">Rikku Gullwing commented on Spira's App machina tips.</p>
+              <p class="time">4 hours ago</p>
+            </div>
+            <span class="material-icons material-icons--chevron-right">chevron_right</span>
+          </div>
+
+          <!--Member Tidus-->
+          <div class="container--members-act">
+            <img class="avatar avatar--member" src="images/tidus.jpg" alt="Picture of Tidus Yuna's love">
+            <div class="container--members-message">
+              <p class="members--text-actions">Tidus Biltzon liked the Facebook's page for Biltz Tournament.</p>
+              <p class="time">5 hours ago</p>
+            </div>
+            <span class="material-icons material-icons--chevron-right">chevron_right</span>
+          </div>
+          <!--Member Paine-->
+          <div class="container--members-act">
+            <img class="avatar avatar--member" src="images/paine.jpg" alt="Picture of Paine Yuna's friend">
+            <div class="container--members-message">
+              <p class="members--text-actions">Paine Crimson wasn't sure about New Yevons tweet. </p>
+              <p class="time">6 hours ago</p>
+            </div>
+            <span class="material-icons material-icons--chevron-right">chevron_right</span>
+          </div>
+
+          <!--Member Auron -->
+          <div class="container--members-act">
+            <img class="avatar avatar--member" src="images/auron.jpg" alt="Picture of Auron the best guardian of spira">
+            <div class="container--members-message">
+              <p class="members--text-actions">Auron Guardian shows some nice fight moves on Instagram.</p>
+              <p class="time">1 day ago</p>
+            </div>
+            <span class="material-icons material-icons--chevron-right">chevron_right</span>
+          </div>
+
+        </section>
+        <!-- Row 6 Message and Settings -->
+
+        <!--Messaging Widget-->
+        <section class="grid grid--message">
+          <h2 class="headline--secondary">Message User</h2>
+          <form class="container--form-widget" id="member-form">
+            <label class="label label--search-label" for="userField">Search for Members by Name</label>
+            <div class="container--autocomplete">
+              <input type="text" name="search-user" id="memberInput" class="input--searchMember"
+                placeholder="Members Name">
+
+              <span id="member-search" class="material-icons material-icons--searchMembers">search</span>
+            </div>
+
+            <label class="label label--message-label" for="messageField">Message For A Member</label>
+            <textarea class="textarea textarea--message-user" name="message-to-user" id="messageField" cols="30"
+              rows="10" placeholder="Type your message to a member..."></textarea>
+
+
+            <button class="btn btn--submit" id="send">Send</button>
+
+          </form>
+        </section>
+        <!--Settings Widget-->
+
+        <section class="grid grid--settings" id="settings">
+          <h2 class="headline--secondary">Settings</h2>
+          <div class="container--settings">
+
+            <!-- custom CSS Toggle Email-->
+            <div class="container--checkboxes-settings">
+              <h3 class="checkbox-labels">Send Email Notifications</h3>
+              <input type="checkbox" name="settings" id="email" class="checkbox">
+              <label class="label label__switch label--switch-email" for="email">
+                <div class="ball ball-email"><span class="ball-text"></span></div>
+              </label>
+            </div>
+
+
+            <!-- custom CSS Toggle Profile-->
+            <div class="container--checkboxes-settings">
+              <h3 class="checkbox-labels">Set Profile to Public</h3>
+              <input type="checkbox" name="settings" id="profile" class="checkbox">
+              <label class="label label__switch label--switch-profile" for="profile">
+                <div class="ball ball-profile"><span class="ball-text"></span></div>
+              </label>
+            </div>
+
+
+            <!-- custom CSS Toggle code Dark Mode-->
+            <div class=container--checkboxes-settings>
+              <h3 class="checkbox-labels"> Set Dark Colour Theme</h3>
+              <input type="checkbox" name="settings" id="dark-mode" class="checkbox" data-switch-dark>
+              <label class="label label__switch label--switch-theme" for="dark-mode">
+                <div class="ball ball-mode"><span class="ball-text"></span></div>
+              </label>
+            </div>
+
+
+            <!-- Time Zone-->
+
+            <select class="select select--timezone" name="timezone" id="timezone">
+              <option selected="true" disabled="disabled" hidden>Select Timezone</option>
+              <option value="-12:00 Zanarkand Ruin">(GMT -12:00) Zanarkand Ruins/Pilgrim End</option>
+              <option value="-11:00 Mount Gagazet">(GMT -11:00)Mount Gagazet,Ronso Territory</option>
+              <option value="-10:00 Gagazet Ruins">(GMT -10:00) Gagazet Ruins/ Gagazet Old</option>
+              <option value="-09:50 Calm Lands">(GMT -9:30) Calm Lands</option>
+              <option value="-09:00 Bevelle">(GMT -9:00) Bevelle / Monk City</option>
+              <option value="-08:00 Bikanel Island">(GMT -8:00) Bikanel Island/ Al Bhed Desert</option>
+              <option value="-07:00 Mushroom Rock Road">(GMT -7:00) Mushroom Rock Road/Greater 'Mi'ihen </option>
+              <option value="-06:00 Mi'ihen Highroad">(GMT -6:00) Mi'ihen Highroad</option>
+              <option value="-05:00 Djose">(GMT -5:00) Djose/South 'Mi'ihen</option>
+              <option value="-04:50 Cavern of the Stolen Fayth">(GMT -4:30) Cavern of the Stolen Fayth</option>
+              <option value="-04:00 Baaj Temple ">(GMT -4:00) Baaj Temple (Zanarkand Out Waste)</option>
+              <option value="-03:50 Thunder Plains">(GMT -3:30) Thunder Plains</option>
+              <option value="-03:00 Guadosalam">(GMT -3:00) Guadosalam</option>
+              <option value="-02:00 Mid-Farplane">(GMT -2:00) Mid-Farplane</option>
+              <option value="-01:00 Farplane">(GMT -1:00) Farplane</option>
+              <option value="+00:00 Besaid Island">(GMT-00:00) Besaid Island</option>
+              <option value="+01:00 Kilika Island">(GMT +1:00) Kilika Island</option>
+              <option value="+02:00 Luca">(GMT +2:00) Luca</option>
+              <option value="+03:00 Moonflow">(GMT +3:00) Moonflow</option>
+              <option value="+03:50 Macalania">(GMT +3:30) Macalania</option>
+              <option value="+04:00 Dream Zanarkand">(GMT +4:00) Dream Zanarkand</option>
+              <option value="+04:50 Omega Ruins">(GMT +4:30) Omega Ruins</option>
+            </select>
+            <!--Settings Buttons-->
+            <div class="container--setting-buttons">
+              <button class="btn btn--save" id="save">Save</button>
+              <button class="btn btn--reset" id="reset">Reset</button>
+            </div>
+
+
+          </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+      <small class="footer__copy">&copy; Sam Atkinson Modeste 2021</small>
+    </footer>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+    integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+    crossorigin="anonymous"></script>
+  <script src="js/chartApp.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

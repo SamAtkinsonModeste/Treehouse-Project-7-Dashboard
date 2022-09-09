@@ -1,0 +1,154 @@
+:root {
+    //BODY
+    --color-body-background:          #{$mystic};
+    --color-body-text:                #{$black};
+    --color-lin1-body:                #{$hollywoodCeriseBody};
+    --color-lin2-body:                #{$daisyBushBody};
+    --color-lin3-body:                #{$hollywoodCeriseBody};
+    --color-border:                   #{$daisyBush};
+    --color-text-shdow:               #{$luckyPoint};
+    //NAV
+    --color-nav-background:           #{$keppel};
+    --color-nav-boxShdow:             #{$haiti};
+    --color-traffic-nav-bg:           #{$hollywoodCerise};
+    --color-traffic-nav-text:         #{$mystic};
+    --color-traffic-nav-txSha:        #{$haiti};
+    --color-traffic-nav-bgHover:      #{$violet};
+    //NOTIFICATION
+    --color-notify-bg-grad1:         #{$haiti}; 
+    --color-notify-bg-grad2:         #{$daisyBush};
+    --color-notify-bg-grad3:         #{$hollywoodCerise};
+    //GRIDS
+    --color-grid-linear13-bg:         #{$mystic};
+    --color-grid-linearMed-bg:        #{$white};
+    --color-grid-box-shdow:           #{$daisyBush};
+    //HEADERS
+    --color-text-headSec:             #{$haiti};
+    --color-textShadow-headSec:       #{$keppel};
+    //FORM
+    --color-input-background:         #{$mystic};
+    --color-input-brBox:              #{$haiti};
+    --color-input-text:               #{$luckyPoint};
+    --color-input-placeholder:        #{$daisyBush};
+    --color-input-focus:              #{$hollywoodCerise};
+    --color-input-focusbrBox:         #{$daisyBush};
+    //MATERIAL
+    --color-material-icons-search:    #{$haiti};
+    --color-material-icons-alert:     #{$salomie};
+    //ALERT
+    --color-alert-bg-lin1:            #{$hollywoodCerise};
+    --color-alert-bg-lin2:            #{$daisyBush};
+    --color-alert-border:             #{$jaffa};
+    --color-alert-text:               #{$salomie};
+    //CHARTS
+    --color-traffic-border:           #{$daisyBushBorder};
+    --color-traffic-text:             #{$haiti};
+    --color-bar-pie-border:           #{$dodgerBlueBorder};
+    //SVGS
+    --color-social-border:            #{$daisyBush};
+    --color-svg-con-boxShdow:         #{$suvaGray};
+    --color-social-text:              #{$hollywoodCerise};
+    --color-social-textShdow:         #{$daisyBush};
+    --color-socialSvg-bg:             #{$svg-fill-1};
+    --color-socialSvg-bg2:            #{$svg-fill-2};
+    --color-bell-after:               #{$svg-after};
+    //BUTTONS
+    --color-btn-sub-border:           #{$dodgerBlue};
+    --color-btn-sub-boxShdow:         #{$suvaGray};
+    --color-btn-sub-bg-grad1:         #{$haiti}; 
+    --color-btn-sub-bg-grad2:         #{$daisyBush};
+    --color-btn-sub-bg-grad3:         #{$hollywoodCerise};
+    --color-btn-sub-text-shadw:       #{$jaffa};
+    //JAVASCRIPT AUTOCOMPLETE
+    --color-auto-strong-letter:        #{$hollywoodCerise};
+    --color-auto-hover-bg:             #{$malachite};
+    --color-auto-text:                 #{$haiti};
+    --color-auto-activeKey-bg:         #{$brightTurquoise};
+    //OVERLAY ALERT CONTAINERS
+    --color-overlayAert-bg:            #{$haitiBody};
+    //DATE
+    --color-date-text:                 #{$brightTurquoise};
+    //CHECKBOX LABELS
+    --color-checkbox-label:            #{$haiti};
+
+    
+    
+}
+
+
+[data-theme='dark'] {
+        //BODY
+        --color-lin1-body:          #{$black};
+        --color-lin2-body:          #{$haiti};
+        --color-lin3-body:          #{$black};
+        --color-body-text:          #{$mystic};
+         //NOTIFICATION
+        --color-notify-bg-grad1:    #{$mystic}; 
+        --color-notify-bg-grad2:    #{$whisper};
+        --color-notify-bg-grad3:    #{$mystic};
+        //NAV
+        --color-nav-background:     #{$haiti};
+        --color-nav-boxShdow:       #{$daisyBush};
+        --color-traffic-nav-bg:     #{$springGreen};
+        --color-traffic-nav-text:   #{$luckyPoint};
+        --color-traffic-nav-txSha:  #{$mystic};
+        --color-traffic-nav-bgHover:#{$violet};
+        //GRID
+        --color-grid-linear13-bg:   #{$hollywoodCeriseDark};
+        --color-grid-linearMed-bg:  #{$violet};
+        --color-grid-box-shdow:     #{$keppelDark};
+        //HEADER
+        --color-text-headSec:       #{$springGreen};
+        --color-textShadow-headSec: #{$haiti};
+        //FORM
+    --color-input-background:       #{$haiti};
+    --color-input-brBox:            #{$keppel};
+    --color-input-placeholder:      #{$mystic};
+    --color-input-focus:            #{$salomie};
+    --color-input-focusbrBox:       #{$springGreen};
+    --color-input-text:             #{$salomie};
+    //MATERIAL
+    --color-material-icons-search:  #{$mystic};
+    --color-material-icons-alert:   #{$springGreen};
+    //ALERT
+    --color-alert-bg-lin1:          #{$hollywoodCerise};
+    --color-alert-bg-lin2:          #{$salomie};
+    --color-alert-border:           #{$keppel};
+    --color-alert-text:             #{$haiti};
+    //CHARTS
+    --color-traffic-border:         #{$dodgerBlueBorder};
+    --color-traffic-text:           #{$salomie};
+    --color-bar-pie-border:         #{$salomie};
+    //SVG SOCIAL
+    --color-social-border:          #{$springGreen};
+    --color-svg-con-boxShdow:       #{$haiti};
+    --color-social-text:            #{$springGreen};
+    --color-social-textShdow:       #{$haiti};
+    --color-socialSvg-bg:           #{$svg-fill-1};
+    --color-socialSvg-bg2:          #{$svg-fill-dark};
+    
+    //BUTTONS
+    --color-btn-sub-border:           #{$haiti};
+    --color-btn-sub-boxShdow:         #{$suvaGray};
+    --color-btn-sub-bg-grad1:         #{$salomie}; 
+    --color-btn-sub-bg-grad2:         #{$keppel};
+    --color-btn-sub-bg-grad3:         #{$springGreen};
+    --color-btn-sub-text-shadw:       #{$haiti};
+
+   //JAVASCRIPT AUTOCOMPLETE
+   --color-auto-strong-letter:        #{$brightTurquoise};
+   --color-auto-hover-bg:             #{$hollywoodCerise};
+   --color-auto-text:                 #{$corn};
+   --color-auto-activeKey-bg:         #{$brightTurquoise};
+
+   //OVERLAY ALERT CONTAINERS
+   --color-overlayAert-bg:            #{$hollywoodCeriseBody};
+   //DATE
+   --color-date-text:                 #{$jaffa};
+    //CHECKBOX LABELS
+    --color-checkbox-label:            #{$springGreen};
+
+}
+
+
+

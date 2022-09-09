@@ -1,0 +1,191 @@
+//BALL SLIDING PATH OF TICK
+@keyframes ballSlide {
+    0% {
+      transform: translate(2px, 34px) scale(0);
+      -webkit-transform: translate(2px, 34px) scale(0);
+      -moz-transform: translate(2px, 34px) scale(0);
+      -ms-transform: translate(2px, 34px) scale(0);
+      -o-transform: translate(2px, 34px) scale(0);
+      background: rgba(255, 0, 0, 1);
+  }
+    30% {
+      transform: translate(34px, 34px) scale(0.2);
+      -webkit-transform: translate(34px, 34px) scale(0.2);
+      -moz-transform: translate(34px, 34px) scale(0.2);
+      -ms-transform: translate(34px, 34px) scale(0.2);
+      -o-transform: translate(34px, 34px) scale(0.2);
+      background: rgba(255, 0, 0, 1);
+  }
+  
+  60% {
+    transform: translate(34px, -27px) scale(0.5);
+    -webkit-transform: translate(34px, -27px) scale(0.5);
+    -moz-transform: translate(34px, -27px) scale(0.5);
+    -ms-transform: translate(34px, -27px) scale(0.5);
+    -o-transform: translate(34px, -27px) scale(0.5);
+    background: rgba(255, 0, 0, 1);
+  }
+  
+  
+  
+  
+    80% {
+      transform: translate(34px, -48px) scale(1.5);
+      -webkit-transform: translate(34px, -48px) scale(1.5);
+      -moz-transform: translate(34px, -48px) scale(1.5);
+      -ms-transform: translate(34px, -48px) scale(1.5);
+      -o-transform: translate(34px, -48px) scale(1.5);
+      background: rgba(155, 241, 26, 1);
+  }
+  
+    100% {
+      transform: translate(34px, -27px) scale(1);
+      -webkit-transform: translate(34px, -27px) scale(1);
+      -moz-transform: translate(34px, -27px) scale(1);
+      -ms-transform: translate(34px, -27px) scale(1);
+      -o-transform: translate(34px, -27px) scale(1);
+      background: rgba(155, 241, 26, 1);
+    }
+  }
+
+//MEDIA QUERY FOR THE BALL SLIDING PATH OF TICK
+        @include mq("med") {
+
+          @keyframes ballSlide {
+            0% {
+              transform: translate(12px, 52px) scale(0);
+              -webkit-transform: translate(12px, 52px) scale(0);
+              -moz-transform: translate(12px, 52px) scale(0);
+              -ms-transform: translate(12px, 52px) scale(0);
+              -o-transform: translate(12px, 52px) scale(0);
+              background: rgba(255, 0, 0, 1);
+          }
+            30% {
+              transform: translate(52px, 52px) scale(0.2);
+              -webkit-transform: translate(52px, 52px) scale(0.2);
+              -moz-transform: translate(52px, 52px) scale(0.2);
+              -ms-transform: translate(52px, 52px) scale(0.2);
+              -o-transform: translate(52px, 52px) scale(0.2);
+              background: rgba(255, 0, 0, 1);
+          }
+          
+          60% {
+            transform: translate(52px, -40px) scale(0.5);
+            -webkit-transform: translate(52px, -40px) scale(0.5);
+            -moz-transform: translate(52px, -40px) scale(0.5);
+            -ms-transform: translate(52px, -40px) scale(0.5);
+            -o-transform: translate(52px, -40px) scale(0.5);
+            background: rgba(255, 0, 0, 1);
+          }
+          
+          
+          
+          
+            80% {
+              transform: translate(52px, -70px) scale(1.5);
+              -webkit-transform: translate(52px, -70px) scale(1.5);
+              -moz-transform: translate(52px, -70px) scale(1.5);
+              -ms-transform: translate(52px, -70px) scale(1.5);
+              -o-transform: translate(52px, -70px) scale(1.5);
+              background: rgba(155, 241, 26, 1);
+          }
+          
+            100% {
+              transform: translate(52px, -40px) scale(1);
+              -webkit-transform: translate(52px, -40px) scale(1);
+              -moz-transform: translate(52px, -40px) scale(1);
+              -ms-transform: translate(52px, -40px) scale(1);
+              -o-transform: translate(52px, -40px) scale(1);
+              background: rgba(155, 241, 26, 1);
+            }
+          
+        }
+
+      }
+
+  //TEXT CHANGE WHEN BALL SLIDES FINISHED
+  @keyframes changeText {
+    0% {
+      content: "Off";
+      @include text-shdow($hr:0, $vrt:1px, $col:$haiti);
+	    color: $white;
+	    letter-spacing: em(1.1px);
+    }
+    50% {
+      content:"";
+      
+    }
+    100% {
+      content: "On";
+      @include text-shdow($hr:0, $vrt:1px, $col:$white);
+	    color: $haiti;
+	    letter-spacing: em(1.1px);
+    }
+  }
+
+
+  //TICK CHANGES COLOUR AS THE BALL TRAVELS THROUGH IT
+  @keyframes bottomTicksBg {
+    0% {
+      background: rgba(247, 18, 18, 0.8);
+    }
+    20% {
+      background: rgba(247, 18, 18, 0.4);
+    }
+    70% {
+      background: rgba(155, 241, 26, 0.4);
+    }
+    80% {
+      background: rgba(155, 241, 26, 0.6);
+    }
+    90% {
+      background: rgba(155, 241, 26, 0.8);
+    }
+    100% {
+      background:rgba(155, 241, 26, 1);
+    }
+  }
+
+
+
+  //TICK CHANGE COLOURS WHEN BALL GOES THROUGH IT
+  @keyframes topTicksBg {
+    0% {
+        background:linear-gradient(to right,rgb(255, 0, 0) 30%, rgb(238, 180, 6, 1) 105%);
+      }
+      20% {
+          background: linear-gradient(to right,rgba(247, 18, 18, 0.4)30%, rgb(238, 180, 6, 0.4) 105%);
+        
+      }
+      70% {
+       
+        background: linear-gradient(to right,rgba(155, 241, 26, 0.4)30%, rgb(238, 180, 6, 0.4)105%);
+      }
+      80% {
+        background: linear-gradient(to right,rgba(155, 241, 26, 0.6)30%, rgb(238, 180, 6, 0.6) 105%);
+        
+      }
+      90% {
+        background: linear-gradient(to right,rgba(155, 241, 26, 0.8)30%, rgb(238, 180, 6, 0.8) 105%);
+        
+      }
+      100% {
+        background: linear-gradient(to right,rgba(155, 241, 26, 1) 30%, rgb(238, 180, 6, 1) 105%);
+        
+      }
+  }
+
+
+//NOTIFICATION BELL
+  @keyframes ring {
+       0% { transform: rotate(35deg);  }
+    12.5% { transform: rotate(-30deg); }
+      25% { transform: rotate(25deg);  }
+    37.5% { transform: rotate(-20deg); }
+      50% { transform: rotate(15deg);  }
+    62.5% { transform: rotate(-10deg); }
+      25% { transform: rotate(5deg);   }
+     100% { transform: rotate(0);      }
+  
+}
+  

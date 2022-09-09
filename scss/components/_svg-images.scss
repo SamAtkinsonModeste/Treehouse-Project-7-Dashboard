@@ -1,0 +1,32 @@
+.svgImg {
+    @extend %svg;
+    @extend %svg-cent-can;
+    width: em(40px);
+
+       @include m(bell) {
+          fill: var(--color-socialSvg-bg);
+          
+
+                @include mq ("med") {
+                    margin-left: 0;
+                    margin-top: em(5px);
+                    width: em(45px);
+                    
+                }
+
+                @include mq ("lg") {
+                    margin-left: em(10px);
+                    margin-top: 0;
+                    width: em(50px);
+                    
+                }
+
+       }
+
+
+       @include e(social) {
+           fill: var(--color-socialSvg-bg2);
+       }
+}
+
+

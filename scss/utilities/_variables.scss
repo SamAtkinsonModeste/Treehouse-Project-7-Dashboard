@@ -1,0 +1,140 @@
+// ==========================================================================
+// Variables
+//==========================================================================
+
+// Fonts
+$icon-font--google      : "https://fonts.googleapis.com/icon?family=Material+Icons";
+$font-url--google       :"https://fonts.googleapis.com/css2?family=Federo&family=Jura&family=Megrim&display=swap";
+$font-family--primary   : 'Megrim', 'cursive', Helvetica, Arial, 'sans-serif';
+$font-family--secondary : 'Federo', Helvetica, Arial, 'sans-serif';
+
+$font-family--body       : 'Jura', Helvetica, Arial, 'sans-serif';
+// Font Weights
+
+$font-weight--regular    : 400;
+$font-weight--medium     : 500;
+$font-weight--bold       : 700;  
+
+//Text
+
+$base__font-size        : 16px;
+$base__line             : 24px;
+$letter-spacing         : 1px;
+
+//Asset Paths
+$path-img               : '../images';
+$path-svg               : '../icons';
+
+
+
+//Border Radius
+$br-rad                  : 0.25em;
+$br-round                : 50%;
+
+
+//Breakpoints
+$brkpoint-xs            :375px;
+$brkpoint-sm            :425px;
+$brkpoint-md            :768px;
+$brkpoint-lg            :1024px;
+$brkpoint-xlg           :1200px;
+$brkpoint-xxlg          :1440px;
+$brkpoint-xxxlg         :2000px;
+
+
+//Breakpoint Map
+
+$breakpoints: (
+xs    :  $brkpoint-xs,
+sm    :  $brkpoint-sm,
+med   :  $brkpoint-md,
+lg    :  $brkpoint-lg,
+x-lg  :  $brkpoint-xlg,
+xx-lg :  $brkpoint-xxlg,
+xxx-lg:  $brkpoint-xxxlg,
+
+);
+
+$svg-fill-1           : url(#grad1);
+$svg-fill-2           : url(#grad2);
+$svg-after            : url(#gradAfter);
+$svg-fill-dark        : url(#gradDark);
+
+
+
+//DEBUG COLOURS
+//COLORS
+$black                  : #0b0b0b;
+$lipstick               : #db006d;
+$japanese-laurel        : #009700;
+$jaffa                  : #f68741;
+$luckyPoint             : #13185d;
+
+//DASHBOARD COLOUR PALETTE
+//COLORS
+$white                  : #ffffff;
+$mystic                 : #e5edf0; //blue white
+$whisper                : #f7f2f8;//pink white
+$salomie                : #fcdf88;
+$goldenrod              : #FAD871;
+$corn                   : #eeb406;
+$jaffa                  : #f68741;
+$malachite              : #0aeb2f;
+$springGreen            : #20F989;
+$keppel                 : #43b5a0;
+$keppelDark             : #2b6d61;
+$hollywoodCerise        : #ef0195;
+$hollywoodCeriseDark    : #a7166f;
+$brightTurquoise        : #07e0f0;
+$dodgerBlue             : #1b96f3;
+$veniceBlue             : #064b8b;
+$daisyBush              : #491d88;
+$violet                 : #220B41;
+$luckyPoint             : #13185d;
+$haiti                  : #10133a;
+$suvaGray               : #837F83;
+$grey                   : #272829;
+
+
+
+
+
+//END COLORS
+
+//Colour Usage
+$color-primary          : $keppel ;      //aqua blue
+$color-secondary        : $daisyBush;   //purple
+$color-accent           : $salomie ;    //goldish
+
+//THEME RGBA COLOURS
+//Linear Gradient Colours for body
+$haitiBody                 :rgba(16, 19, 58, .3);
+$daisyBushBody             :rgba(73, 29, 136, .3);
+$hollywoodCeriseBody       :rgba(252, 155, 215, 0.3);
+$daisyBushBorder           :rgba(73, 29, 136, 0.5);
+$dodgerBlueBorder          :rgba(27, 150, 243, .5);
+
+
+
+
+
+
+$color-shades: (
+      grey:(
+
+       xx-light:    ligthen($grey, 43%),
+        x-light:    ligthen($grey, 35%),
+        light  :    ligthen($grey, 12%),
+        base   :    $grey,
+        dark   :    darken($grey, 8%),
+        x-dark :    darken($grey, 16%),
+
+    ),
+
+    black:(
+
+        light:   lighten($black, 10%),
+        base :   $black,  
+        dark :   darken($black, 10%),
+    ),
+);
