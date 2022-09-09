@@ -1957,13 +1957,13 @@ main {
   align-items: center;
   width: 70%;
   margin-left: auto;
-  border-radius: 0 0.9375em 0 0.9375em;
+  border-radius: 0.125em 0.9375em 0.125em 0.9375em;
   background: linear-gradient(45deg, rgba(16, 19, 58, 0.5), rgba(73, 29, 136, 0.5), rgba(239, 1, 149, 0.5));
-  padding: 0.625em;
+  padding: 1.25em;
 }
 @media (min-width: 768px) {
   .container--search {
-    top: -11px;
+    top: -13px;
     right: -11px;
   }
 }
